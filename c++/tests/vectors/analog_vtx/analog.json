@@ -1,0 +1,146 @@
+{
+ "fs": 61440000.0,
+ "fc": 5009595606.0,
+ "n_frames": 62499,
+ "nfft": 64,
+ "best": {
+  "score": 76.19578586577883,
+  "std": "ntsc",
+  "ppm": 126.70805465774868,
+  "b0": 20,
+  "k0": 30
+ },
+ "detect_s": 2.6577229499816895,
+ "emissions": [
+  {
+   "family": "analog_vtx",
+   "label": "ntsc",
+   "start_us": 0.0,
+   "end_us": 32552.1,
+   "f_lo_mhz": 4988.956,
+   "f_hi_mhz": 5023.516,
+   "center_mhz": 5015.678,
+   "snr_db": 24.3,
+   "confidence": 0.934379573053979,
+   "decoded": null,
+   "features": {
+    "standard": "ntsc",
+    "line_rate_hz": 15734.7263,
+    "line_rate_ppm": 29.38,
+    "line_rate_ppm_sigma": 0.65,
+    "line_period_us": 63.553695,
+    "sync_phase_us": 5.586,
+    "sync_tip_mhz": 5013.754,
+    "sync_offset_mhz": -1.925,
+    "polarity": "sync_low",
+    "rms_dev_mhz": 3.857,
+    "deviation_mhz": 2.22,
+    "bw_mhz": 34.56,
+    "snr_db": 24.3,
+    "score": 76.2,
+    "band_edge_truncated": true,
+    "scan_bin_mhz": 0.96,
+    "ppm_search_best": 126.7,
+    "vbi_us": [
+     3818.8,
+     20501.7
+    ],
+    "lines_per_field": 262.5,
+    "scan": "interlaced",
+    "field_rate_source": "measured_vbi",
+    "field_rate_hz": 59.94181,
+    "sync_level_mhz": -1.909,
+    "blank_level_mhz": -0.691,
+    "white_level_mhz": 2.534,
+    "deviation_demod_mhz": 2.221,
+    "burst_db": {
+     "f4_43": 2.9,
+     "f3_58": 18.1
+    },
+    "color_burst_mhz": 3.58,
+    "chroma_candidates": {
+     "ntsc": {
+      "coherence": 0.958,
+      "prominence_db": 9.0,
+      "swing_deg": 0.3,
+      "fsc_hz": 3579650.2
+     },
+     "pal_m": {
+      "coherence": 0.0,
+      "prominence_db": 9.0,
+      "swing_deg": 59.7,
+      "fsc_hz": 3575616.7
+     }
+    },
+    "color": true,
+    "color_standard": "ntsc",
+    "chroma_fsc_hz": 3579650.2,
+    "burst_swing_deg": 0.3,
+    "chroma_coherence": 0.958,
+    "audio_prominence_db": 28.2,
+    "audio_subcarrier_mhz": 6.5,
+    "audio_subcarrier_hz": 6499966.0,
+    "audio_dev_rms_khz": 5.16,
+    "audio_peak_hz": 239.1,
+    "audio_peak_db": 21.4,
+    "audio_flatness": 0.128,
+    "deviation_source": "discriminator",
+    "spectrum_source": "line_locked",
+    "channel": null,
+    "center_mhz": 5015.678
+   }
+  }
+ ],
+ "video_shape": [
+  511,
+  720
+ ],
+ "fields": [
+  {
+   "shape": [
+    240,
+    720
+   ],
+   "meta": {
+    "line_rate_hz": 15734.726,
+    "line_rate_ppm": 29.4,
+    "vsync": true,
+    "lines": 240,
+    "noise": 0.028,
+    "denoise": false,
+    "sync_jitter_us": 0.019,
+    "standard": "ntsc",
+    "center_mhz": 5015.678,
+    "color": true,
+    "burst_ratio": 32.18,
+    "burst_field": 47.83,
+    "burst_gate_us": 0.4,
+    "sync_compressed": false
+   },
+   "rgb": true
+  },
+  {
+   "shape": [
+    240,
+    720
+   ],
+   "meta": {
+    "line_rate_hz": 15734.724,
+    "line_rate_ppm": 29.3,
+    "vsync": true,
+    "lines": 240,
+    "noise": 0.024,
+    "denoise": false,
+    "sync_jitter_us": 0.017,
+    "standard": "ntsc",
+    "center_mhz": 5015.678,
+    "color": true,
+    "burst_ratio": 33.6,
+    "burst_field": 47.5,
+    "burst_gate_us": 0.4,
+    "sync_compressed": false
+   },
+   "rgb": true
+  }
+ ]
+}

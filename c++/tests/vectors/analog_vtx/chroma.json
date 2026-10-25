@@ -1,0 +1,214 @@
+{
+ "fs": 20480000.0,
+ "cases": [
+  {
+   "file": "chroma_0.f32",
+   "std": "ntsc",
+   "line_std": "ntsc",
+   "rate": 15734.736027919998,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "ntsc": {
+      "coherence": 0.924,
+      "prominence_db": 22.6,
+      "swing_deg": 0.9,
+      "fsc_hz": 3579652.4
+     },
+     "pal_m": {
+      "coherence": 0.001,
+      "prominence_db": 22.6,
+      "swing_deg": 22.3,
+      "fsc_hz": 3575688.0
+     }
+    },
+    "color": true,
+    "color_standard": "ntsc",
+    "chroma_fsc_hz": 3579652.4,
+    "burst_swing_deg": 0.9,
+    "chroma_coherence": 0.924
+   }
+  },
+  {
+   "file": "chroma_1.f32",
+   "std": "pal_m",
+   "line_std": "ntsc",
+   "rate": 15734.500013960002,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "ntsc": {
+      "coherence": 0.001,
+      "prominence_db": 23.1,
+      "swing_deg": 45.5,
+      "fsc_hz": 3579767.8
+     },
+     "pal_m": {
+      "coherence": 0.923,
+      "prominence_db": 23.1,
+      "swing_deg": 44.9,
+      "fsc_hz": 3575665.1
+     }
+    },
+    "color": true,
+    "color_standard": "pal_m",
+    "chroma_fsc_hz": 3575665.1,
+    "burst_swing_deg": 44.9,
+    "chroma_coherence": 0.923
+   }
+  },
+  {
+   "file": "chroma_2.f32",
+   "std": "pal",
+   "line_std": "pal",
+   "rate": 15624.375,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "pal": {
+      "coherence": 0.925,
+      "prominence_db": 23.1,
+      "swing_deg": 45.0,
+      "fsc_hz": 4433441.4
+     },
+     "pal_n": {
+      "coherence": 0.87,
+      "prominence_db": 9.8,
+      "swing_deg": 44.5,
+      "fsc_hz": 3581913.0
+     }
+    },
+    "color": true,
+    "color_standard": "pal",
+    "chroma_fsc_hz": 4433441.4,
+    "burst_swing_deg": 45.0,
+    "chroma_coherence": 0.925
+   }
+  },
+  {
+   "file": "chroma_3.f32",
+   "std": "pal_n",
+   "line_std": "pal",
+   "rate": 15624.6875,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "pal": {
+      "coherence": 0.864,
+      "prominence_db": 11.1,
+      "swing_deg": 42.0,
+      "fsc_hz": 4433530.1
+     },
+     "pal_n": {
+      "coherence": 0.922,
+      "prominence_db": 24.5,
+      "swing_deg": 45.3,
+      "fsc_hz": 3581984.6
+     }
+    },
+    "color": true,
+    "color_standard": "pal_n",
+    "chroma_fsc_hz": 3581984.6,
+    "burst_swing_deg": 45.3,
+    "chroma_coherence": 0.922
+   }
+  },
+  {
+   "file": "chroma_4.f32",
+   "std": "pal",
+   "line_std": "pal",
+   "rate": 15625.0,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "pal": {
+      "coherence": 0.09,
+      "prominence_db": 0.0,
+      "swing_deg": 32.6,
+      "fsc_hz": 4433145.7
+     },
+     "pal_n": {
+      "coherence": 0.046,
+      "prominence_db": 0.0,
+      "swing_deg": 31.2,
+      "fsc_hz": 3582422.5
+     }
+    },
+    "secam_test": {
+     "alternation": 0.034,
+     "t_stat": 0.5,
+     "prominence_db": 0.1
+    },
+    "color": false
+   }
+  },
+  {
+   "file": "chroma_5.f32",
+   "std": "secam",
+   "line_std": "pal",
+   "rate": 15625.0,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "pal": {
+      "coherence": 0.037,
+      "prominence_db": 20.9,
+      "swing_deg": 68.8,
+      "fsc_hz": 4433374.6
+     },
+     "pal_n": {
+      "coherence": 0.052,
+      "prominence_db": 7.4,
+      "swing_deg": 32.0,
+      "fsc_hz": 3581888.4
+     }
+    },
+    "secam_test": {
+     "alternation": 0.654,
+     "t_stat": 32.0,
+     "prominence_db": 21.0,
+     "db_hz": 4250000.0,
+     "dr_hz": 4405000.0
+    },
+    "color": true,
+    "color_standard": "secam",
+    "secam_db_hz": 4250000.0,
+    "secam_dr_hz": 4405000.0
+   }
+  },
+  {
+   "file": "chroma_6.f32",
+   "std": "secam",
+   "line_std": "pal",
+   "rate": 15625.390624999998,
+   "t0": 0.0,
+   "out": {
+    "chroma_candidates": {
+     "pal": {
+      "coherence": 0.083,
+      "prominence_db": 20.9,
+      "swing_deg": 41.2,
+      "fsc_hz": 4434202.6
+     },
+     "pal_n": {
+      "coherence": 0.069,
+      "prominence_db": 7.6,
+      "swing_deg": 47.9,
+      "fsc_hz": 3582451.0
+     }
+    },
+    "secam_test": {
+     "alternation": 0.679,
+     "t_stat": 102.4,
+     "prominence_db": 21.2,
+     "db_hz": 4250000.0,
+     "dr_hz": 4405000.0
+    },
+    "color": true,
+    "color_standard": "secam",
+    "secam_db_hz": 4250000.0,
+    "secam_dr_hz": 4405000.0
+   }
+  }
+ ]
+}

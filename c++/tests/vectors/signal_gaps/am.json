@@ -1,0 +1,273 @@
+{
+ "air_channel": [
+  [
+   121500000.0,
+   0.0,
+   {
+    "service": "VHF air band",
+    "channel_mhz": 121.5,
+    "offset_hz": 0,
+    "emergency": "aeronautical emergency 121.5 MHz"
+   }
+  ],
+  [
+   121503000.0,
+   0.0,
+   {
+    "service": "VHF air band",
+    "channel_mhz": 121.5,
+    "offset_hz": 3000,
+    "emergency": "aeronautical emergency 121.5 MHz"
+   }
+  ],
+  [
+   118262500.0,
+   0.0,
+   {
+    "service": "VHF air band",
+    "channel_mhz": 118.25,
+    "offset_hz": 12500
+   }
+  ],
+  [
+   243000000.0,
+   2.0,
+   {
+    "service": "UHF military air band",
+    "channel_mhz": 243.0,
+    "offset_hz": 486,
+    "emergency": "military emergency 243.0 MHz"
+   }
+  ],
+  [
+   300710000.0,
+   0.0,
+   {
+    "service": "UHF military air band",
+    "channel_mhz": 300.7,
+    "offset_hz": 10000
+   }
+  ],
+  [
+   399990000.0,
+   0.0,
+   {
+    "service": "UHF military air band",
+    "channel_mhz": 400.0,
+    "offset_hz": -10000
+   }
+  ],
+  [
+   446000000.0,
+   0.0,
+   {}
+  ],
+  [
+   136990000.0,
+   10.0,
+   {
+    "service": "VHF air band",
+    "channel_mhz": 137.0,
+    "offset_hz": -8630
+   }
+  ]
+ ],
+ "fs": 2000000.0,
+ "fc": 121700000.0,
+ "emissions": [
+  {
+   "label": "am_voice",
+   "features": {
+    "center_mhz": 121.900001,
+    "modulation_rms": 0.423,
+    "channel_bw_khz": 25.0,
+    "keyed_s": 0.25,
+    "keyed_fraction": 1.0,
+    "envelope_cv": 0.428,
+    "voice_activity": 1.0,
+    "phase_rms_hz": 122,
+    "snr_db": 19.8,
+    "evidence": [
+     "carrier with speech-band envelope modulation",
+     "envelope speech rms 42 % of the carrier (noise alone 4.0 %)",
+     "phase quiet: discriminator speech-band rms 122 Hz",
+     "speech in 100 % of 20 ms frames",
+     "keyed 0.25 s",
+     "VHF air band, channel 121.9 MHz (+1 Hz)"
+    ],
+    "service": "VHF air band",
+    "channel_mhz": 121.9,
+    "offset_hz": 1,
+    "segments_s": [
+     [
+      0.0,
+      0.25
+     ]
+    ]
+   },
+   "confidence": 0.8,
+   "f_lo_mhz": 121.89600135031766,
+   "f_hi_mhz": 121.90400135031766
+  },
+  {
+   "label": "am_voice",
+   "features": {
+    "center_mhz": 121.500001,
+    "modulation_rms": 0.161,
+    "channel_bw_khz": 25.0,
+    "keyed_s": 0.25,
+    "keyed_fraction": 1.0,
+    "envelope_cv": 0.183,
+    "voice_activity": 0.5,
+    "phase_rms_hz": 142,
+    "snr_db": 19.1,
+    "evidence": [
+     "carrier with speech-band envelope modulation",
+     "envelope speech rms 16 % of the carrier (noise alone 4.4 %)",
+     "phase quiet: discriminator speech-band rms 142 Hz",
+     "speech in 50 % of 20 ms frames",
+     "keyed 0.25 s",
+     "aeronautical emergency 121.5 MHz"
+    ],
+    "service": "VHF air band",
+    "channel_mhz": 121.5,
+    "offset_hz": 1,
+    "emergency": "aeronautical emergency 121.5 MHz",
+    "segments_s": [
+     [
+      0.0,
+      0.25
+     ]
+    ]
+   },
+   "confidence": 0.8,
+   "f_lo_mhz": 121.49600077169946,
+   "f_hi_mhz": 121.50400077169945
+  },
+  {
+   "label": "nbfm_voice",
+   "features": {
+    "center_mhz": 122.150002,
+    "deviation_hz": 2121,
+    "channel_bw_khz": 12.5,
+    "keyed_s": 0.25,
+    "keyed_fraction": 1.0,
+    "envelope_cv": 0.08,
+    "voice_activity": 0.417,
+    "voice_rms_hz": 420,
+    "voice_kurtosis": 10.69,
+    "snr_db": 19.0,
+    "evidence": [
+     "constant-envelope narrowband FM carrier",
+     "peak deviation 2121 Hz",
+     "keyed 0.25 s",
+     "speech-band activity 42% of 20 ms frames"
+    ],
+    "segments_s": [
+     [
+      0.0,
+      0.25
+     ]
+    ]
+   },
+   "confidence": 0.6,
+   "f_lo_mhz": 122.14448083086465,
+   "f_hi_mhz": 122.15552233870096
+  }
+ ],
+ "scene": {
+  "fs": 2000000.0,
+  "fc": 121700000.0,
+  "signals": [
+   {
+    "label": "Analog AM voice (aeronautical emergency 121.5 MHz)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "center_mhz": 121.500001,
+     "modulation_rms": 0.161,
+     "channel_bw_khz": 25.0,
+     "service": "VHF air band",
+     "channel_mhz": 121.5,
+     "offset_hz": 1,
+     "emergency": "aeronautical emergency 121.5 MHz",
+     "keyed_s": 0.25,
+     "keyed_fraction": 1.0,
+     "voice_activity": 0.5,
+     "phase_rms_hz": 142,
+     "envelope_cv": 0.183,
+     "snr_db": 19.1,
+     "segments_s": [
+      [
+       0.0,
+       0.25
+      ]
+     ],
+     "audio": "am",
+     "audio_s": 0.25,
+     "audio_squelch_open": 1.0
+    },
+    "f0": 121496000.77169946,
+    "f1": 121504000.77169946
+   },
+   {
+    "label": "Analog AM voice (VHF air band, 121.9 MHz)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "center_mhz": 121.900001,
+     "modulation_rms": 0.423,
+     "channel_bw_khz": 25.0,
+     "service": "VHF air band",
+     "channel_mhz": 121.9,
+     "offset_hz": 1,
+     "keyed_s": 0.25,
+     "keyed_fraction": 1.0,
+     "voice_activity": 1.0,
+     "phase_rms_hz": 122,
+     "envelope_cv": 0.428,
+     "snr_db": 19.8,
+     "segments_s": [
+      [
+       0.0,
+       0.25
+      ]
+     ],
+     "audio": "am",
+     "audio_s": 0.25,
+     "audio_squelch_open": 1.0
+    },
+    "f0": 121896001.35031766,
+    "f1": 121904001.35031766
+   },
+   {
+    "label": "Analog FM voice (122.1500 MHz)",
+    "status": "partial",
+    "confidence": 0.6,
+    "fields": {
+     "center_mhz": 122.150002,
+     "deviation_hz": 2121,
+     "channel_bw_khz": 12.5,
+     "keyed_s": 0.25,
+     "keyed_fraction": 1.0,
+     "voice_activity": 0.417,
+     "voice_rms_hz": 420,
+     "voice_kurtosis": 10.69,
+     "envelope_cv": 0.08,
+     "snr_db": 19.0,
+     "segments_s": [
+      [
+       0.0,
+       0.25
+      ]
+     ],
+     "audio": "nbfm",
+     "audio_s": 0.25,
+     "audio_squelch_open": 1.0
+    },
+    "f0": 122144480.83086465,
+    "f1": 122155522.33870097
+   }
+  ]
+ }
+}

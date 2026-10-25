@@ -1,0 +1,118 @@
+{
+ "cases": [
+  {
+   "offset": 0,
+   "n": 7048,
+   "found": [
+    [
+     2500,
+     0.9666271283034596,
+     {
+      "s1": "000",
+      "s2": "0000",
+      "preamble": "T2_SISO",
+      "fft_gi": "2K, any GI",
+      "mixed": false,
+      "carrier_offset": 7,
+      "s1_margin": 0.907,
+      "s2_margin": 0.952
+     }
+    ]
+   ]
+  },
+  {
+   "offset": 7048,
+   "n": 7048,
+   "found": [
+    [
+     2501,
+     0.8239295384600926,
+     {
+      "s1": "001",
+      "s2": "0110",
+      "preamble": "T2_MISO",
+      "fft_gi": "1K, any GI",
+      "mixed": false,
+      "carrier_offset": 7,
+      "s1_margin": 0.877,
+      "s2_margin": 0.966
+     }
+    ]
+   ]
+  },
+  {
+   "offset": 14096,
+   "n": 7048,
+   "found": [
+    [
+     2500,
+     0.7019985458387386,
+     {
+      "s1": "011",
+      "s2": "1001",
+      "preamble": "T2_LITE_SISO",
+      "fft_gi": "16K, GI 1/32 / 1/16 / 1/8 / 1/4",
+      "mixed": true,
+      "carrier_offset": 7,
+      "s1_margin": 1.029,
+      "s2_margin": 0.894
+     }
+    ]
+   ]
+  },
+  {
+   "offset": 21144,
+   "n": 7048,
+   "found": [
+    [
+     2500,
+     0.9392142872556836,
+     {
+      "s1": "010",
+      "s2": "0000",
+      "preamble": "Non-T2 (FEF)",
+      "fft_gi": "undefined FEF part",
+      "mixed": false,
+      "carrier_offset": 7,
+      "s1_margin": 0.915,
+      "s2_margin": 0.959
+     }
+    ]
+   ]
+  }
+ ],
+ "capture": {
+  "fs": 15360000.0,
+  "fc": 650000000.0,
+  "emissions": [
+   {
+    "label": "dvbt2",
+    "f_lo": 647.691,
+    "f_hi": 655.309,
+    "center": 651.5,
+    "conf": 0.95,
+    "features": {
+     "standard": "DVB-T2 (EN 302 755) P1 preamble",
+     "channel_bw_mhz": 8.0,
+     "occupied_mhz": 7.617,
+     "elementary_rate_mhz": 9.142852,
+     "p1_count": 1,
+     "p1_metric": 0.841,
+     "p1_start_us": 6562.5,
+     "p1": {
+      "s1": "001",
+      "s2": "0010",
+      "preamble": "T2_MISO",
+      "fft_gi": "8K, GI 1/32 / 1/16 / 1/8 / 1/4",
+      "mixed": false,
+      "carrier_offset": 0,
+      "s1_margin": 1.021,
+      "s2_margin": 0.959
+     },
+     "carrier_mhz": 651.5,
+     "level_db": 9.0
+    }
+   }
+  ]
+ }
+}

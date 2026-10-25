@@ -1,0 +1,68 @@
+{
+ "note": "DJI O4 links, 61.44 MSps, sidecar metadata ignored (fc from filename); stretches before the recorder jump",
+ "links": [
+  {
+   "name": "today 2.4G 20MHz c0",
+   "path": "/Users/srikanth/Documents/modules/signal-vault/signal-vault-data/recordings/hopping/test_signal-20261016_065855_2428MHz_ch2_chunk0000/test_signal-20261016_065855_2428MHz_ch2_chunk0000.sigmf-data",
+   "fc": 2428000000.0,
+   "f0": 2415490000.0,
+   "bw": 18000000.0,
+   "a": 0,
+   "b": 1000000
+  },
+  {
+   "name": "today 2.4G 20MHz c1",
+   "path": "/Users/srikanth/Documents/modules/signal-vault/signal-vault-data/recordings/hopping/test_signal-20261016_065855_2428MHz_ch2_chunk0001/test_signal-20261016_065855_2428MHz_ch2_chunk0001.sigmf-data",
+   "fc": 2428000000.0,
+   "f0": 2415490000.0,
+   "bw": 18000000.0,
+   "a": 100000,
+   "b": 1000000
+  },
+  {
+   "name": "today 2.4G 20MHz c2",
+   "path": "/Users/srikanth/Documents/modules/signal-vault/signal-vault-data/recordings/hopping/test_signal-20261016_065855_2428MHz_ch2_chunk0002/test_signal-20261016_065855_2428MHz_ch2_chunk0002.sigmf-data",
+   "fc": 2428000000.0,
+   "f0": 2415490000.0,
+   "bw": 18000000.0,
+   "a": 100000,
+   "b": 1000000
+  },
+  {
+   "name": "today 5.8G 20MHz c3 (after hop)",
+   "path": "/Users/srikanth/Documents/modules/signal-vault/signal-vault-data/recordings/hopping/test_signal-20261016_065855_5840MHz_ch2_chunk0003/test_signal-20261016_065855_5840MHz_ch2_chunk0003.sigmf-data",
+   "fc": 5840000000.0,
+   "f0": 5823530000.0,
+   "bw": 18000000.0,
+   "a": 0,
+   "b": 1000000
+  },
+  {
+   "name": "today 5.73G 10MHz (+12 min)",
+   "path": "/Users/srikanth/Documents/modules/signal-vault/signal-vault-data/recordings/debug_detection/test_signal_debug-20261016_071042_5728MHz_ch2_chunk0000/test_signal_debug-20261016_071042_5728MHz_ch2_chunk0000.sigmf-data",
+   "fc": 5728000000.0,
+   "f0": 5730490000.0,
+   "bw": 9000000.0,
+   "a": 0,
+   "b": 1000000
+  },
+  {
+   "name": "testdata Mini 4 Pro 10MHz",
+   "path": "/Users/srikanth/Documents/modules/spectrum_intelligence/testdata/DJI_Mini_Pro_4_20251119-172214/D_20251119-172214.sigmf-data",
+   "fc": 5760000000.0,
+   "f0": 5770480000.0,
+   "bw": 9000000.0,
+   "a": 0,
+   "b": 1000000
+  },
+  {
+   "name": "D_20260609 ch0 20MHz",
+   "path": "/Users/srikanth/Documents/modules/spectrum_intelligence/tmpdata/D_20260609-151042/D_20260609-151042_ch0.sigmf-data",
+   "fc": 5770000000.0,
+   "f0": 5770550000.0,
+   "bw": 18000000.0,
+   "a": 0,
+   "b": 1000000
+  }
+ ]
+}

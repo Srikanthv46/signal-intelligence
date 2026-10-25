@@ -1,0 +1,298 @@
+{
+ "description": "What each receiver needs from an IQ block. min_sample_rate_hz: below it the signal does not fit in the capture. min_duration_s: below it the receiver cannot work at all (one sync period / one packet). recommended_duration_s: long enough for the receiver's full output (identity + payload). bands_hz: where the receiver looks (informational; each receiver's own band check is authoritative). Used for the response's 'coverage' block and warnings; it never gates a receiver. Shared by the Python and C++ implementations.",
+ "version": "1.0",
+ "pipeline": {
+  "min_samples": 65536,
+  "recommended_samples": 2097152,
+  "recommended_duration_s": 0.032,
+  "note": "Measured on testdata (Phantom 4 capture, 61.44 MSps): below 16384 samples the 16384-point fine spectrogram cannot be formed; 16384-65536 samples (0.3-1 ms) run but the per-bin noise floor rests on too few frames and gives spurious detections; real decodes start near 131072 samples (2 ms). Blocks under min_samples are refused (status insufficient_input); under recommended_samples / recommended_duration_s a SHORT_BLOCK warning is added. Accumulate small blocks (2048, 4096, ...) with StreamAnalyzer first. 2^21 samples = 34.1 ms at 61.44 MSps covers one LTE/NR sync period with margin and one analog video field."
+ },
+ "receivers": {
+  "wifi": {
+   "min_sample_rate_hz": 20000000.0,
+   "min_duration_s": 0.0002,
+   "recommended_duration_s": 0.1024,
+   "bands_hz": [
+    [
+     2400000000.0,
+     2500000000.0
+    ],
+    [
+     5150000000.0,
+     5925000000.0
+    ],
+    [
+     5925000000.0,
+     6000000000.0
+    ]
+   ],
+   "why": "one OFDM PPDU (preamble 20 us) or one 802.11b PPDU (192 us preamble); every AP beacons once per 102.4 ms. Non-standard-clock links are searched in any band."
+  },
+  "rc_link": {
+   "min_sample_rate_hz": 2000000.0,
+   "min_duration_s": 0.0004,
+   "recommended_duration_s": 0.5,
+   "bands_hz": [
+    [
+     433050000.0,
+     434790000.0
+    ],
+    [
+     865000000.0,
+     868000000.0
+    ],
+    [
+     902000000.0,
+     928000000.0
+    ],
+    [
+     2400000000.0,
+     2483500000.0
+    ]
+   ],
+   "why": "a BLE advert is <= 376 us; a LoRa packet needs its 8-symbol preamble + header (SF7/125 kHz: ~12 ms; SF12: ~0.3 s)."
+  },
+  "dji": {
+   "min_sample_rate_hz": 15360000.0,
+   "min_duration_s": 0.01,
+   "recommended_duration_s": 0.7,
+   "bands_hz": [
+    [
+     2400000000.0,
+     2483500000.0
+    ],
+    [
+     5150000000.0,
+     5250000000.0
+    ],
+    [
+     5725000000.0,
+     5850000000.0
+    ]
+   ],
+   "why": "OcuSync video frames and RC hops repeat every few ms; DroneID bursts are reported roughly every 0.6 s (published reverse engineering, not measured here). 20 MHz video needs 30.72 MSps."
+  },
+  "analog_vtx": {
+   "min_sample_rate_hz": 20000000.0,
+   "min_duration_s": 0.005,
+   "recommended_duration_s": 0.04,
+   "bands_hz": [
+    [
+     1060000000.0,
+     1380000000.0
+    ],
+    [
+     2330000000.0,
+     2530000000.0
+    ],
+    [
+     4900000000.0,
+     6000000000.0
+    ]
+   ],
+   "why": "the sync-tip fold needs tens of video lines (64 us each); a full picture needs one field (16.7 ms NTSC, 20 ms PAL)."
+  },
+  "jammer": {
+   "min_sample_rate_hz": 20000000.0,
+   "min_duration_s": 0.003,
+   "recommended_duration_s": 0.03,
+   "bands_hz": [
+    [
+     300000000.0,
+     6000000000.0
+    ]
+   ],
+   "why": "the sweep must be wider than 10 MHz to be told from FSK / FM video, and the fold needs >= 8 sweep periods (300 Hz-120 kHz sweeps: 30 ms holds 8 periods of the slowest)."
+  },
+  "voice_fm": {
+   "min_sample_rate_hz": 50000.0,
+   "min_duration_s": 0.01,
+   "recommended_duration_s": 0.4,
+   "bands_hz": [
+    [
+     136000000.0,
+     174000000.0
+    ],
+    [
+     300000000.0,
+     520000000.0
+    ],
+    [
+     806000000.0,
+     870000000.0
+    ]
+   ],
+   "why": "the carrier and deviation need ~10 ms of keying; CTCSS needs >= 0.3 s and DCS >= 0.35 s."
+  },
+  "pmr_digital": {
+   "min_sample_rate_hz": 50000.0,
+   "min_duration_s": 0.03,
+   "recommended_duration_s": 1.02,
+   "bands_hz": [
+    [
+     136000000.0,
+     174000000.0
+    ],
+    [
+     300000000.0,
+     520000000.0
+    ],
+    [
+     806000000.0,
+     876000000.0
+    ],
+    [
+     915000000.0,
+     921000000.0
+    ]
+   ],
+   "why": "a DMR burst is 27.5 ms (SYNC in its middle) and a TETRA timeslot 14.17 ms, so 30 ms holds a DMR SYNC and two TETRA slots (a synchronisation burst is not in every slot); one TETRA multiframe (1.02 s) always carries the BSCH; an NXDN frame is 40 ms (80 ms at 2400 sym/s)."
+  },
+  "digital_vtx": {
+   "min_sample_rate_hz": 1920000.0,
+   "min_duration_s": 0.01,
+   "recommended_duration_s": 0.02,
+   "bands_hz": [
+    [
+     2330000000.0,
+     2530000000.0
+    ],
+    [
+     4900000000.0,
+     6000000000.0
+    ]
+   ],
+   "why": "Herelink: the LTE PSS repeats every 5 ms and the fold needs several half-frames; blind OFDM numerology needs a few bursts."
+  },
+  "lte": {
+   "min_sample_rate_hz": 1920000.0,
+   "min_duration_s": 0.01,
+   "recommended_duration_s": 0.02,
+   "bands_hz": [
+    [
+     758000000.0,
+     803000000.0
+    ],
+    [
+     869000000.0,
+     894000000.0
+    ],
+    [
+     925000000.0,
+     960000000.0
+    ],
+    [
+     1805000000.0,
+     1880000000.0
+    ],
+    [
+     2110000000.0,
+     2170000000.0
+    ],
+    [
+     2300000000.0,
+     2400000000.0
+    ],
+    [
+     2496000000.0,
+     2690000000.0
+    ]
+   ],
+   "why": "PSS every 5 ms (folded over half-frames); SSS needs both subframe 0 and 5 (10 ms). MIB/SIB are not decoded yet."
+  },
+  "nr": {
+   "min_sample_rate_hz": 3840000.0,
+   "min_duration_s": 0.02,
+   "recommended_duration_s": 0.04,
+   "bands_hz": [
+    [
+     758000000.0,
+     803000000.0
+    ],
+    [
+     869000000.0,
+     894000000.0
+    ],
+    [
+     925000000.0,
+     960000000.0
+    ],
+    [
+     1805000000.0,
+     1880000000.0
+    ],
+    [
+     2110000000.0,
+     2170000000.0
+    ],
+    [
+     2300000000.0,
+     2400000000.0
+    ],
+    [
+     2496000000.0,
+     2690000000.0
+    ],
+    [
+     3300000000.0,
+     3670000000.0
+    ]
+   ],
+   "why": "SSBs repeat every 20 ms by default (initial access); combining several bursts improves the MIB. 30 kHz SSBs (n78) need 7.68 MSps."
+  },
+  "gsm": {
+   "min_sample_rate_hz": 500000.0,
+   "min_duration_s": 0.047,
+   "recommended_duration_s": 0.24,
+   "bands_hz": [
+    [
+     925000000.0,
+     960000000.0
+    ],
+    [
+     1805000000.0,
+     1880000000.0
+    ]
+   ],
+   "why": "FCCH repeats every 10 TDMA frames (46.15 ms) and SCH follows one frame later; BCCH system information needs the 235 ms 51-multiframe."
+  },
+  "adsb": {
+   "min_sample_rate_hz": 2000000.0,
+   "min_duration_s": 0.00012,
+   "recommended_duration_s": 10.0,
+   "bands_hz": [
+    [
+     1088000000.0,
+     1092000000.0
+    ]
+   ],
+   "why": "a Mode S frame is 64 or 120 us (8 MSps preferred); an airborne position needs an even/odd CPR pair within 10 s."
+  },
+  "emitters": {
+   "min_sample_rate_hz": 0,
+   "min_duration_s": 0,
+   "recommended_duration_s": 0,
+   "bands_hz": [],
+   "why": "associates the drone receivers' bursts; no IQ of its own."
+  },
+  "devices": {
+   "min_sample_rate_hz": 0,
+   "min_duration_s": 0,
+   "recommended_duration_s": 0.1024,
+   "bands_hz": [],
+   "why": "reads decoded 802.11 frames; a device inventory needs at least one beacon interval."
+  },
+  "cofdm": {
+   "min_sample_rate_hz": 2500000.0,
+   "min_duration_s": 0.005,
+   "recommended_duration_s": 0.07,
+   "bands_hz": [
+    [
+     200000000.0,
+     6000000000.0
+    ]
+   ],
+   "why": "the 2 MHz COFDM mode needs >= 2.3 MSps; a TPS frame (68 symbols) lasts 17 ms (2K, 8 MHz) to 68 ms (2K at 2 MHz or 8K at 8 MHz), the CP fold needs >= 8 symbols"
+  }
+ }
+}

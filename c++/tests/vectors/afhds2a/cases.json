@@ -1,0 +1,175 @@
+{
+ "fs": 7680000.0,
+ "fc": 2440000000.0,
+ "labels": [
+  "afhds2a",
+  "afhds2a",
+  "afhds2a",
+  "afhds2a_id"
+ ],
+ "decoded": [
+  {
+   "protocol": "FlySky AFHDS 2A (A7105)",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 0,
+   "polarity_inverted": false,
+   "crc_ok": true,
+   "packet_type": "0x58",
+   "packet_name": "sticks",
+   "tx_id": "01020304",
+   "rx_id": "05060708",
+   "binding": false,
+   "fec_corrections": 0,
+   "packet_hex": "5801020304050607085f1109c217a2338baf03ecef0da1c6fe36d1b9f24cb0625ab8fa6537e7",
+   "convention": {
+    "fec": "systematic",
+    "nibble": "high first",
+    "crc_poly": "0x1021",
+    "crc_init": "0x0000"
+   }
+  },
+  {
+   "protocol": "FlySky AFHDS 2A (A7105)",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 1,
+   "polarity_inverted": false,
+   "crc_ok": true,
+   "packet_type": "0xAA",
+   "packet_name": "settings / telemetry",
+   "tx_id": "01020304",
+   "rx_id": "05060708",
+   "binding": false,
+   "fec_corrections": 2,
+   "packet_hex": "aa01020304050607083a2a9de264795e4959aaa12cb82bc802b0fbf97eb368a84abeee42ae59",
+   "convention": {
+    "fec": "systematic",
+    "nibble": "high first",
+    "crc_poly": "0x1021",
+    "crc_init": "0x0000"
+   }
+  },
+  {
+   "protocol": "FlySky AFHDS 2A (A7105)",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 3,
+   "polarity_inverted": false,
+   "crc_ok": true,
+   "packet_type": "0x58",
+   "packet_name": "sticks",
+   "tx_id": "01020304",
+   "rx_id": "05060708",
+   "binding": false,
+   "fec_corrections": 12,
+   "packet_hex": "5801020304050607080ef3e5c6af6336874e29163b800ae668c7b00c7ce7150363e2bf0f2a36",
+   "convention": {
+    "fec": "classic",
+    "nibble": "low first",
+    "crc_poly": "0x8005",
+    "crc_init": "0xFFFF"
+   }
+  },
+  {
+   "protocol": "FlySky AFHDS 2A-like (A7105 ID code)",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 0,
+   "polarity_inverted": false,
+   "crc_ok": null,
+   "note": "ID code only: FEC / CRC convention not verified (research)"
+  }
+ ],
+ "field": {
+  "packets": 4,
+  "crc_ok": 3,
+  "tx_ids": [
+   "01020304"
+  ],
+  "rx_ids": [
+   "05060708"
+  ],
+  "packet_types": [
+   "0x58",
+   "0xAA"
+  ],
+  "binding": false,
+  "convention": {
+   "fec": "systematic",
+   "nibble": "high first",
+   "crc_poly": "0x1021",
+   "crc_init": "0x0000"
+  }
+ },
+ "crc": [
+  [
+   "",
+   4129,
+   0,
+   0
+  ],
+  [
+   "",
+   4129,
+   65535,
+   65535
+  ],
+  [
+   "",
+   32773,
+   0,
+   0
+  ],
+  [
+   "",
+   32773,
+   65535,
+   65535
+  ],
+  [
+   "67",
+   4129,
+   0,
+   7233
+  ],
+  [
+   "67",
+   4129,
+   65535,
+   64945
+  ],
+  [
+   "67",
+   32773,
+   0,
+   33105
+  ],
+  [
+   "67",
+   32773,
+   65535,
+   31827
+  ],
+  [
+   "419a37d3647253591b3e6a1c81f5981f9388e56bbea0c9389bc22dd5905be5b8c45f8c5b965b",
+   4129,
+   0,
+   44673
+  ],
+  [
+   "419a37d3647253591b3e6a1c81f5981f9388e56bbea0c9389bc22dd5905be5b8c45f8c5b965b",
+   4129,
+   65535,
+   57566
+  ],
+  [
+   "419a37d3647253591b3e6a1c81f5981f9388e56bbea0c9389bc22dd5905be5b8c45f8c5b965b",
+   32773,
+   0,
+   38745
+  ],
+  [
+   "419a37d3647253591b3e6a1c81f5981f9388e56bbea0c9389bc22dd5905be5b8c45f8c5b965b",
+   32773,
+   65535,
+   39785
+  ]
+ ]
+}

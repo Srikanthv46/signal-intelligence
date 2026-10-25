@@ -1,0 +1,546 @@
+{
+ "description": "Stable machine-readable technology codes for spectrum-intel signals. Rules are tried in order; the first whose 'decoder' (receiver plugin that defined or decoded the signal, or null for any) and 'label' regex (Python re / ECMAScript compatible, case-sensitive, searched anywhere) both match wins. Shared by the Python and C++ implementations: change it here only, and add a test vector to tests when you do.",
+ "version": "1.13",
+ "families": {
+  "cellular": "public mobile networks (2G/3G/4G/5G)",
+  "wlan": "Wi-Fi / 802.11",
+  "short_range": "Bluetooth, LoRa and other short-range / IoT links",
+  "drone": "drone video, control and identification links",
+  "voice": "land-mobile and walkie-talkie voice",
+  "aviation": "aeronautical radio (SSR, ADS-B, DME, radar altimeters)",
+  "radar": "pulsed radars",
+  "jamming": "intentional interference (jammers)",
+  "broadcast": "broadcast TV / radio",
+  "satellite": "satellite services",
+  "other": "classified emissions without a more specific family",
+  "artifact": "receiver artifacts, not emissions",
+  "unknown": "not identified"
+ },
+ "identifier_keys": [
+  "pci",
+  "nid1",
+  "nid2",
+  "earfcn",
+  "nr_arfcn",
+  "arfcn",
+  "bsic",
+  "band",
+  "channel",
+  "service",
+  "ssids",
+  "bssids",
+  "device_macs",
+  "icao",
+  "emitter_ids",
+  "serial",
+  "uas_id",
+  "standard",
+  "dcs_code",
+  "ctcss_hz",
+  "clock_mhz",
+  "center_mhz",
+  "mcc",
+  "mnc",
+  "colour_code"
+ ],
+ "rules": [
+  {
+   "technology": "lo_leakage",
+   "family": "artifact",
+   "decoder": null,
+   "label": "^LO leakage"
+  },
+  {
+   "technology": "iq_image",
+   "family": "artifact",
+   "decoder": null,
+   "label": "^IQ image"
+  },
+  {
+   "technology": "receiver_spur",
+   "family": "artifact",
+   "decoder": null,
+   "label": "^Receiver spur"
+  },
+  {
+   "technology": "lo_harmonic_response",
+   "family": "artifact",
+   "decoder": null,
+   "label": "^LO-harmonic"
+  },
+  {
+   "technology": "wifi_nonstandard_clock",
+   "family": "wlan",
+   "decoder": "wifi_ofdm_scaled",
+   "label": ""
+  },
+  {
+   "technology": "wifi_ofdm",
+   "family": "wlan",
+   "decoder": null,
+   "label": "^Wi-Fi 802\\.11 OFDM"
+  },
+  {
+   "technology": "wifi_dsss",
+   "family": "wlan",
+   "decoder": null,
+   "label": "^Wi-Fi 802\\.11b|^Barker-11 DSSS"
+  },
+  {
+   "technology": "remote_id_ble",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Drone Remote ID \\(Bluetooth"
+  },
+  {
+   "technology": "bluetooth_bredr",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^Bluetooth BR/EDR"
+  },
+  {
+   "technology": "ble_tracker",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^Bluetooth LE tracker"
+  },
+  {
+   "technology": "ble",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^Bluetooth LE"
+  },
+  {
+   "technology": "bluetooth",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^Bluetooth"
+  },
+  {
+   "technology": "esb_like_link",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^2\\.4 GHz GFSK link \\(ESB-like"
+  },
+  {
+   "technology": "sik_telemetry",
+   "family": "drone",
+   "decoder": null,
+   "label": "^SiK telemetry"
+  },
+  {
+   "technology": "ieee802154",
+   "family": "drone",
+   "decoder": null,
+   "label": "^IEEE 802\\.15\\.4"
+  },
+  {
+   "technology": "crossfire",
+   "family": "drone",
+   "decoder": null,
+   "label": "^TBS Crossfire"
+  },
+  {
+   "technology": "adsl",
+   "family": "drone",
+   "decoder": null,
+   "label": "^ADS-L"
+  },
+  {
+   "technology": "ogn_tracker",
+   "family": "drone",
+   "decoder": null,
+   "label": "^OGN tracker"
+  },
+  {
+   "technology": "fanet",
+   "family": "drone",
+   "decoder": null,
+   "label": "^FANET"
+  },
+  {
+   "technology": "hott",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Graupner HoTT"
+  },
+  {
+   "technology": "hitec",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Hitec"
+  },
+  {
+   "technology": "sfhss",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Futaba S-FHSS"
+  },
+  {
+   "technology": "uat",
+   "family": "drone",
+   "decoder": null,
+   "label": "^UAT 978"
+  },
+  {
+   "technology": "flarm",
+   "family": "drone",
+   "decoder": null,
+   "label": "^FLARM"
+  },
+  {
+   "technology": "frsky",
+   "family": "drone",
+   "decoder": null,
+   "label": "^FrSky"
+  },
+  {
+   "technology": "afhds2a",
+   "family": "drone",
+   "decoder": null,
+   "label": "^FlySky AFHDS"
+  },
+  {
+   "technology": "xn297_toy",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Bayang|^XN297"
+  },
+  {
+   "technology": "toy_drone",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Toy drone"
+  },
+  {
+   "technology": "radiolink",
+   "family": "drone",
+   "decoder": null,
+   "label": "^RadioLink"
+  },
+  {
+   "technology": "hubsan",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Hubsan"
+  },
+  {
+   "technology": "mlrs",
+   "family": "drone",
+   "decoder": null,
+   "label": "mLRS|mlrs"
+  },
+  {
+   "technology": "expresslrs",
+   "family": "drone",
+   "decoder": null,
+   "label": "ExpressLRS|elrs"
+  },
+  {
+   "technology": "lora",
+   "family": "short_range",
+   "decoder": null,
+   "label": "LoRa|^lora"
+  },
+  {
+   "technology": "fsk_rc_link",
+   "family": "drone",
+   "decoder": "rc_link",
+   "label": ""
+  },
+  {
+   "technology": "dji_droneid",
+   "family": "drone",
+   "decoder": null,
+   "label": "^DJI DroneID"
+  },
+  {
+   "technology": "dji_ocusync_uplink",
+   "family": "drone",
+   "decoder": null,
+   "label": "^DJI OcuSync RC uplink"
+  },
+  {
+   "technology": "dji_ocusync",
+   "family": "drone",
+   "decoder": null,
+   "label": "^DJI"
+  },
+  {
+   "technology": "hdzero",
+   "family": "drone",
+   "decoder": null,
+   "label": "^HDZero"
+  },
+  {
+   "technology": "herelink",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Herelink"
+  },
+  {
+   "technology": "analog_fpv_video",
+   "family": "drone",
+   "decoder": null,
+   "label": "^Analog FPV video"
+  },
+  {
+   "technology": "ofdm_data_link",
+   "family": "drone",
+   "decoder": "digital_vtx",
+   "label": ""
+  },
+  {
+   "technology": "am_voice",
+   "family": "voice",
+   "decoder": null,
+   "label": "^Analog AM voice"
+  },
+  {
+   "technology": "aprs",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^APRS"
+  },
+  {
+   "technology": "ax25_packet",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^AX.25 packet radio"
+  },
+  {
+   "technology": "fm_voice",
+   "family": "voice",
+   "decoder": null,
+   "label": "^Analog FM voice"
+  },
+  {
+   "technology": "lte_or_nr",
+   "family": "cellular",
+   "decoder": null,
+   "label": "^LTE/NR-like"
+  },
+  {
+   "technology": "nr",
+   "family": "cellular",
+   "decoder": null,
+   "label": "^5G NR"
+  },
+  {
+   "technology": "lte",
+   "family": "cellular",
+   "decoder": null,
+   "label": "^LTE"
+  },
+  {
+   "technology": "gsm",
+   "family": "cellular",
+   "decoder": null,
+   "label": "^GSM"
+  },
+  {
+   "technology": "umts",
+   "family": "cellular",
+   "decoder": null,
+   "label": "^UMTS"
+  },
+  {
+   "technology": "mode_s_adsb",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^Mode S"
+  },
+  {
+   "technology": "ssr_mode_ac",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^SSR Mode A/C"
+  },
+  {
+   "technology": "ils_glide_slope",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^ILS glide slope"
+  },
+  {
+   "technology": "ils_localizer",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^ILS localizer"
+  },
+  {
+   "technology": "vor",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^VOR beacon"
+  },
+  {
+   "technology": "ssr_interrogation",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^SSR interrogation"
+  },
+  {
+   "technology": "dme_tacan",
+   "family": "aviation",
+   "decoder": null,
+   "label": "^DME"
+  },
+  {
+   "technology": "pulsed_radar",
+   "family": "radar",
+   "decoder": null,
+   "label": "^Pulsed radar"
+  },
+  {
+   "technology": "pulsed_radar",
+   "family": "radar",
+   "decoder": null,
+   "label": "^Wind profiler"
+  },
+  {
+   "technology": "cofdm_video_link",
+   "family": "drone",
+   "decoder": null,
+   "label": "^COFDM video link"
+  },
+  {
+   "technology": "fm_broadcast",
+   "family": "broadcast",
+   "decoder": null,
+   "label": "^FM broadcast"
+  },
+  {
+   "technology": "dvb_t2",
+   "family": "broadcast",
+   "decoder": null,
+   "label": "^DVB-T2"
+  },
+  {
+   "technology": "tetra",
+   "family": "voice",
+   "decoder": null,
+   "label": "^TETRA"
+  },
+  {
+   "technology": "dmr",
+   "family": "voice",
+   "decoder": null,
+   "label": "^DMR"
+  },
+  {
+   "technology": "nxdn",
+   "family": "voice",
+   "decoder": null,
+   "label": "^NXDN"
+  },
+  {
+   "technology": "pmr",
+   "family": "voice",
+   "decoder": null,
+   "label": "^PMR"
+  },
+  {
+   "technology": "ais",
+   "family": "other",
+   "decoder": null,
+   "label": "^AIS"
+  },
+  {
+   "technology": "radiosonde",
+   "family": "other",
+   "decoder": null,
+   "label": "^Radiosonde"
+  },
+  {
+   "technology": "ism_srd",
+   "family": "short_range",
+   "decoder": null,
+   "label": "^ISM short-range"
+  },
+  {
+   "technology": "gnss_gps_l1",
+   "family": "satellite",
+   "decoder": null,
+   "label": "^GNSS: GPS"
+  },
+  {
+   "technology": "iridium",
+   "family": "satellite",
+   "decoder": null,
+   "label": "^Iridium"
+  },
+  {
+   "technology": "cw_carrier",
+   "family": "other",
+   "decoder": null,
+   "label": "^CW carrier"
+  },
+  {
+   "technology": "gnss_spoofing",
+   "family": "jamming",
+   "decoder": null,
+   "label": "^GNSS spoofing"
+  },
+  {
+   "technology": "gnss_jamming",
+   "family": "jamming",
+   "decoder": null,
+   "label": "^GNSS jamming"
+  },
+  {
+   "technology": "noise_jammer",
+   "family": "jamming",
+   "decoder": null,
+   "label": "^Jammer \\((barrage noise|noise-FM)\\)"
+  },
+  {
+   "technology": "swept_jammer",
+   "family": "jamming",
+   "decoder": null,
+   "label": "^Jammer"
+  },
+  {
+   "technology": "swept_carrier",
+   "family": "other",
+   "decoder": "jammer",
+   "label": "^Swept carrier"
+  },
+  {
+   "technology": "radio_altimeter",
+   "family": "aviation",
+   "decoder": "radalt",
+   "label": "^Radio altimeter"
+  },
+  {
+   "technology": "tpms",
+   "family": "short_range",
+   "decoder": "ism_devices",
+   "label": "^TPMS"
+  },
+  {
+   "technology": "ook_remote",
+   "family": "short_range",
+   "decoder": "ism_devices",
+   "label": "^OOK fixed-code remote"
+  },
+  {
+   "technology": "keeloq_remote",
+   "family": "short_range",
+   "decoder": "ism_devices",
+   "label": "^KeeLoq"
+  },
+  {
+   "technology": "ism_device",
+   "family": "short_range",
+   "decoder": "ism_devices",
+   "label": "^(OOK|FSK) device-like"
+  },
+  {
+   "technology": "unknown",
+   "family": "unknown",
+   "decoder": null,
+   "label": ""
+  }
+ ]
+}

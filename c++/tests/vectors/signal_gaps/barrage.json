@@ -1,0 +1,130 @@
+{
+ "fs": 61440000.0,
+ "fc": 1842500000.0,
+ "cases": [
+  {
+   "f0": 1832500000.0,
+   "f1": 1852500000.0,
+   "analyse": {
+    "plateau_bw_mhz": 20.0,
+    "flatness": 1.0,
+    "edge_db": [
+     12.3,
+     12.3
+    ],
+    "line_db": 3.5,
+    "plateau_ok": true,
+    "envelope_k": 2.006,
+    "kurtosis_i": 2.994,
+    "kurtosis_q": 3.029,
+    "cp_corr": 0.0133,
+    "cp_lag_us": 60.64,
+    "cyclic_env_db": -2.4,
+    "cyclic_conj_db": -2.8,
+    "stationarity_db": 0.03,
+    "covers_band": [],
+    "class": "barrage"
+   }
+  },
+  {
+   "f0": 1830500000.0,
+   "f1": 1854500000.0,
+   "analyse": {
+    "plateau_bw_mhz": 24.0,
+    "flatness": 0.75,
+    "edge_db": [
+     13.4,
+     13.7
+    ],
+    "line_db": 5.8,
+    "plateau_ok": false,
+    "envelope_k": 1.07,
+    "kurtosis_i": 1.603,
+    "kurtosis_q": 1.607,
+    "cp_corr": 0.0149,
+    "cp_lag_us": 86.87,
+    "cyclic_env_db": -3.1,
+    "cyclic_conj_db": -2.3,
+    "stationarity_db": 0.02,
+    "covers_band": [],
+    "if_std_mhz": 4.846,
+    "if_kurtosis": 2.582,
+    "cyclic_if_db": -1.6,
+    "class": "noise_fm"
+   }
+  },
+  {
+   "f0": 1833500000.0,
+   "f1": 1851500000.0,
+   "analyse": {
+    "plateau_bw_mhz": 18.0,
+    "flatness": 1.0,
+    "edge_db": [
+     4.7,
+     4.8
+    ],
+    "line_db": 3.2,
+    "plateau_ok": false,
+    "envelope_k": 1.997,
+    "kurtosis_i": 2.986,
+    "kurtosis_q": 2.999,
+    "cp_corr": 0.0439,
+    "cp_lag_us": 66.67,
+    "cyclic_env_db": -2.8,
+    "cyclic_conj_db": -1.9,
+    "stationarity_db": 0.02,
+    "covers_band": [],
+    "class": null
+   }
+  }
+ ],
+ "covers": [
+  [
+   1805000000.0,
+   1880000000.0,
+   [
+    "b3_dl"
+   ]
+  ],
+  [
+   2400000000.0,
+   2483500000.0,
+   [
+    "ism_24"
+   ]
+  ]
+ ],
+ "scene": {
+  "fs": 61440000.0,
+  "fc": 1842500000.0,
+  "signals": [
+   {
+    "label": "Jammer (barrage noise)-like",
+    "status": "partial",
+    "confidence": 0.6,
+    "fields": {
+     "plateau_bw_mhz": 20.1,
+     "flatness": 1.0,
+     "edge_db": [
+      12.2,
+      12.3
+     ],
+     "line_db": 3.5,
+     "plateau_ok": true,
+     "envelope_k": 2.004,
+     "kurtosis_i": 2.996,
+     "kurtosis_q": 3.03,
+     "cp_corr": 0.0136,
+     "cp_lag_us": 60.62,
+     "cyclic_env_db": -2.6,
+     "cyclic_conj_db": -2.5,
+     "stationarity_db": 0.03,
+     "covers_band": [],
+     "class": "barrage"
+    },
+    "f0": 1832450000.0,
+    "f1": 1852550000.0
+   }
+  ]
+ }
+}

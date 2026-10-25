@@ -1,0 +1,485 @@
+{
+ "ad": [
+  [
+   "1eff4c001219d4000000000000000000000000000000000000000000000000",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "1219d4000000000000000000000000000000000000000000000000",
+    "device": {
+     "vendor": "Apple",
+     "kind": "Find My",
+     "label": "Apple Find My / AirTag",
+     "device_type": "AirTag",
+     "offline_finding": true,
+     "maintained": true,
+     "battery": "full",
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "07ff4c0012022400",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "12022400",
+    "device": {
+     "vendor": "Apple",
+     "kind": "Find My",
+     "label": "Apple Find My / Apple device",
+     "device_type": "Apple device",
+     "offline_finding": false,
+     "maintained": true,
+     "battery": "critical",
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "1aff4c000215000102030405060708090a0b0c0d0e0f00010002c5",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "0215000102030405060708090a0b0c0d0e0f00010002c5",
+    "device": {
+     "vendor": "Apple",
+     "kind": "iBeacon",
+     "label": "iBeacon",
+     "proximity_uuid": "000102030405060708090a0b0c0d0e0f",
+     "major": 1,
+     "minor": 2,
+     "measured_power_dbm": -59,
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "0aff4c000705010e205566",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "0705010e205566",
+    "device": {
+     "vendor": "Apple",
+     "kind": "proximity pairing",
+     "label": "Apple AirPods Pro",
+     "model_id": "0x0E20",
+     "model": "AirPods Pro",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "0aff4c0007050199995566",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "07050199995566",
+    "device": {
+     "vendor": "Apple",
+     "kind": "proximity pairing",
+     "label": "Apple device",
+     "model_id": "0x9999",
+     "model": null,
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "0dff4c00100501184400000c0100",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "100501184400000c0100",
+    "device": {
+     "vendor": "Apple",
+     "kind": "Continuity",
+     "label": "Apple device (Continuity)",
+     "continuity_types": [
+      "0x10",
+      "0x0C"
+     ],
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "04ff4c0012",
+   {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "12"
+   }
+  ],
+  [
+   "0bff06000300804d6f757365",
+   {
+    "company_id": "0x0006",
+    "company": "Microsoft",
+    "manufacturer_data_hex": "0300804d6f757365",
+    "device": {
+     "vendor": "Microsoft",
+     "kind": "Swift Pair",
+     "label": "Microsoft Swift Pair",
+     "pairing": "LE",
+     "display_name": "Mouse",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "06ff0600030180",
+   {
+    "company_id": "0x0006",
+    "company": "Microsoft",
+    "manufacturer_data_hex": "030180",
+    "device": {
+     "vendor": "Microsoft",
+     "kind": "Swift Pair",
+     "label": "Microsoft Swift Pair",
+     "pairing": "BR/EDR",
+     "display_name": null,
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "06ff0600030580",
+   {
+    "company_id": "0x0006",
+    "company": "Microsoft",
+    "manufacturer_data_hex": "030580"
+   }
+  ],
+  [
+   "17165afd550000000000000000000000e000000000000000",
+   {
+    "service_data": [
+     {
+      "uuid16": "FD5A",
+      "data_hex": "550000000000000000000000e000000000000000"
+     }
+    ],
+    "device": {
+     "vendor": "Samsung",
+     "kind": "SmartTag",
+     "label": "Samsung SmartTag",
+     "registered": true,
+     "state": "lost",
+     "battery": "full",
+     "uwb": true,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "171659fd9500000000000000000000004000000000000000",
+   {
+    "service_data": [
+     {
+      "uuid16": "FD59",
+      "data_hex": "9500000000000000000000004000000000000000"
+     }
+    ],
+    "device": {
+     "vendor": "Samsung",
+     "kind": "SmartTag",
+     "label": "Samsung SmartTag",
+     "registered": false,
+     "state": "paired",
+     "battery": "low",
+     "uwb": false,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "17165afd156bfa00c84062b28f00e260c3000000ad018b47",
+   {
+    "service_data": [
+     {
+      "uuid16": "FD5A",
+      "data_hex": "156bfa00c84062b28f00e260c3000000ad018b47"
+     }
+    ]
+   }
+  ],
+  [
+   "1916aafe41000000000000000000000000000000000000000020",
+   {
+    "service_data": [
+     {
+      "uuid16": "FEAA",
+      "data_hex": "41000000000000000000000000000000000000000020"
+     }
+    ],
+    "device": {
+     "vendor": "Google",
+     "kind": "Find My Device (FMDN)",
+     "label": "Google Find My (FMDN)",
+     "unwanted_tracking_protection": true,
+     "eid_bytes": 20,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "2416aafe400000000000000000000000000000000000000000000000000000000000000000",
+   {
+    "service_data": [
+     {
+      "uuid16": "FEAA",
+      "data_hex": "400000000000000000000000000000000000000000000000000000000000000000"
+     }
+    ],
+    "device": {
+     "vendor": "Google",
+     "kind": "Find My Device (FMDN)",
+     "label": "Google Find My (FMDN)",
+     "unwanted_tracking_protection": false,
+     "eid_bytes": 32,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "0d16aafe10eb036578616d706c65",
+   {
+    "service_data": [
+     {
+      "uuid16": "FEAA",
+      "data_hex": "10eb036578616d706c65"
+     }
+    ],
+    "device": {
+     "vendor": "Eddystone",
+     "kind": "URL",
+     "label": "Eddystone-URL",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "1116aafe2000000000000000000000000000",
+   {
+    "service_data": [
+     {
+      "uuid16": "FEAA",
+      "data_hex": "2000000000000000000000000000"
+     }
+    ],
+    "device": {
+     "vendor": "Eddystone",
+     "kind": "TLM",
+     "label": "Eddystone-TLM",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "06162cfe123456",
+   {
+    "service_data": [
+     {
+      "uuid16": "FE2C",
+      "data_hex": "123456"
+     }
+    ],
+    "device": {
+     "vendor": "Google",
+     "kind": "Fast Pair",
+     "label": "Google Fast Pair",
+     "model_id": "123456",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "07162cfe00401122",
+   {
+    "service_data": [
+     {
+      "uuid16": "FE2C",
+      "data_hex": "00401122"
+     }
+    ],
+    "device": {
+     "vendor": "Google",
+     "kind": "Fast Pair",
+     "label": "Google Fast Pair (paired)",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "0716edfe02001122",
+   {
+    "service_data": [
+     {
+      "uuid16": "FEED",
+      "data_hex": "02001122"
+     }
+    ],
+    "device": {
+     "vendor": "Tile",
+     "kind": "Tile",
+     "label": "Tile-like",
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "051633fe0001",
+   {
+    "service_data": [
+     {
+      "uuid16": "FE33",
+      "data_hex": "0001"
+     }
+    ],
+    "device": {
+     "vendor": "Chipolo",
+     "kind": "Chipolo",
+     "label": "Chipolo-like",
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "041669fd01",
+   {
+    "service_data": [
+     {
+      "uuid16": "FD69",
+      "data_hex": "01"
+     }
+    ],
+    "device": {
+     "vendor": "Samsung",
+     "kind": "Samsung Find My Mobile",
+     "label": "Samsung Find My Mobile-like",
+     "tracker": false
+    }
+   }
+  ],
+  [
+   "0616b2fc0501aa",
+   {
+    "service_data": [
+     {
+      "uuid16": "FCB2",
+      "data_hex": "0501aa"
+     }
+    ],
+    "device": {
+     "vendor": "DULT",
+     "kind": "tracker",
+     "label": "Tracker (DULT, near-owner)",
+     "near_owner": true,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "0516b2fc0500",
+   {
+    "service_data": [
+     {
+      "uuid16": "FCB2",
+      "data_hex": "0500"
+     }
+    ],
+    "device": {
+     "vendor": "DULT",
+     "kind": "tracker",
+     "label": "Tracker (DULT, separated)",
+     "near_owner": false,
+     "tracker": true
+    }
+   }
+  ],
+  [
+   "0516b2fc0503",
+   {
+    "service_data": [
+     {
+      "uuid16": "FCB2",
+      "data_hex": "0503"
+     }
+    ]
+   }
+  ],
+  [
+   "0201060516edfe0200050954494c45",
+   {
+    "flags": 6,
+    "service_data": [
+     {
+      "uuid16": "FEED",
+      "data_hex": "0200"
+     }
+    ],
+    "local_name": "TILE",
+    "device": {
+     "vendor": "Tile",
+     "kind": "Tile",
+     "label": "Tile-like",
+     "tracker": true
+    }
+   }
+  ]
+ ],
+ "fs": 61440000.0,
+ "fc": 2420000000.0,
+ "label": "Bluetooth LE tracker (Apple Find My / AirTag)",
+ "ble_devices": [
+  {
+   "vendor": "Apple",
+   "kind": "Find My",
+   "label": "Apple Find My / AirTag",
+   "device_type": "AirTag",
+   "offline_finding": true,
+   "maintained": true,
+   "battery": "full",
+   "tracker": true,
+   "adv_addr": "C6:55:44:33:22:11"
+  }
+ ],
+ "evidence": "1 burst(s) matched by LoRa/FSK/BLE/ESB receiver: {'ble_adv': 1}; 1 CRC-verified payload(s); item tracker(s) in the adverts: Apple Find My / AirTag",
+ "decoded": [
+  {
+   "aa": "8E89BED6",
+   "crc_ok": true,
+   "channel_index_rf": 37,
+   "whitening_channel": 37,
+   "channel_mismatch": false,
+   "pdu_type": 2,
+   "pdu_len": 37,
+   "pdu_name": "ADV_NONCONN_IND",
+   "tx_addr_random": true,
+   "adv_addr": "C6:55:44:33:22:11",
+   "adv_data_hex": "1eff4c001219d4000000000000000000000000000000000000000000000000",
+   "ad": {
+    "company_id": "0x004C",
+    "company": "Apple",
+    "manufacturer_data_hex": "1219d4000000000000000000000000000000000000000000000000",
+    "device": {
+     "vendor": "Apple",
+     "kind": "Find My",
+     "label": "Apple Find My / AirTag",
+     "device_type": "AirTag",
+     "offline_finding": true,
+     "maintained": true,
+     "battery": "full",
+     "tracker": true
+    }
+   },
+   "demod": "coherent",
+   "bit_corrections": 0,
+   "aa_bit_errors": 0,
+   "mod_index": 0.5,
+   "aa_ncorr": 1.0
+  }
+ ]
+}

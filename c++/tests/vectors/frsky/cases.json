@@ -1,0 +1,97 @@
+{
+ "fs": 7680000.0,
+ "fc": 2440000000.0,
+ "labels": [
+  "frsky_d8",
+  "frsky_d16",
+  "frsky_d16",
+  "frsky_d16"
+ ],
+ "decoded": [
+  {
+   "protocol": "FrSky D8 (ACCST)",
+   "variant": "D8",
+   "sync": "0xD391",
+   "length": 17,
+   "tx_id": "0x1234",
+   "crc_ok": true,
+   "crc": "hardware 0x8005",
+   "packet_hex": "11341241b0f8f3790aea6e4b7ff7a7d862edc91e",
+   "polarity_inverted": false
+  },
+  {
+   "protocol": "FrSky D16 v1 (ACCST)",
+   "variant": "D16 v1",
+   "sync": "0xD391D391",
+   "length": 29,
+   "tx_id": "0x1234",
+   "crc_ok": true,
+   "crc": "software",
+   "packet_hex": "1d34128116beed0c3bc0de24a76243a8fa49e1ff920d02ca467297b83fe7",
+   "polarity_inverted": false
+  },
+  {
+   "protocol": "FrSky D16 v2 (ACCST)",
+   "variant": "D16 v2",
+   "sync": "0xD391D391",
+   "length": 29,
+   "tx_id": "0x1234",
+   "crc_ok": true,
+   "crc": "software + hardware",
+   "packet_hex": "1d3412ebeff7bf7024e16e5bc8eba2dbc605d80d1bc38aa979ea4c9c24dfe173",
+   "polarity_inverted": false
+  },
+  {
+   "protocol": "FrSky D16 LBT v1 (ACCST)",
+   "variant": "D16 LBT v1",
+   "sync": "0xD391D391",
+   "length": 32,
+   "tx_id": "0x1234",
+   "crc_ok": true,
+   "crc": "software",
+   "packet_hex": "203412a4c618fa2ce9852fe80bba90135b7dd4456a807083181795f5a8f1bd4e9b",
+   "polarity_inverted": false
+  }
+ ],
+ "field": {
+  "packets": 4,
+  "crc_ok": 4,
+  "variants": [
+   "D16 LBT v1",
+   "D16 v1",
+   "D16 v2",
+   "D8"
+  ],
+  "tx_ids": [
+   "0x1234"
+  ],
+  "sync": "0xD391"
+ },
+ "crc": [
+  [
+   "",
+   65535,
+   0
+  ],
+  [
+   "cf",
+   65440,
+   16123
+  ],
+  [
+   "87bc2225f6734594a9fba4a2f3dcee1a96a0",
+   55468,
+   63139
+  ],
+  [
+   "67ed84634c4bed7bbf7f5e0632042ea15f4684b0e05ef63ab3f64772d1",
+   2066,
+   65344
+  ],
+  [
+   "ab3e476e92278c9a9626108959db83f3ddf4f4491deaa9d8201cc07bde5f0976a5",
+   36409,
+   53562
+  ]
+ ]
+}

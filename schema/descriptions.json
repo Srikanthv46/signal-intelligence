@@ -1,0 +1,449 @@
+{
+ "description": "Plain-language description of every signal the library returns (shared by the Python and C++ implementations): what the signal is and what the device does (drones are named only where the signal is drone-specific). Entries are tried in order; the first whose technology matches and whose label regex (if any) is found in the signal's label gives the text. A technology without an entry falls back to its family description in technologies.json.",
+ "version": "1.0",
+ "entries": [
+  {
+   "technology": "lo_leakage",
+   "text": "Not a real transmitter: a tone the receiver itself leaks at the centre of its tuning (local-oscillator leakage). It can be ignored."
+  },
+  {
+   "technology": "iq_image",
+   "text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+  },
+  {
+   "technology": "receiver_spur",
+   "text": "Not a real transmitter: a tone generated inside the receiver by its own clocks. It can be ignored."
+  },
+  {
+   "technology": "lo_harmonic_response",
+   "text": "Probably not a transmitter at this frequency: a strong signal from a much higher band (usually a mobile-phone tower at 1.8-2.6 GHz) leaking in through the receiver mixer's harmonics. The real transmitter is on the other band."
+  },
+  {
+   "technology": "wifi_ofdm",
+   "label": "drone link-like",
+   "text": "Wi-Fi traffic that includes a drone link: a drone or its controller is using Wi-Fi to send video and receive commands, as camera drones such as DJI Spark / Mavic Air / Tello, Parrot, Holy Stone or Ruko do. The decoded fields name the drone when it identifies itself, or explain why its traffic looks like a drone streaming video to one phone."
+  },
+  {
+   "technology": "wifi_dsss",
+   "label": "drone link-like",
+   "text": "Wi-Fi traffic that includes a drone link: a drone or its controller is using Wi-Fi to send video and receive commands, as camera drones such as DJI Spark / Mavic Air / Tello, Parrot, Holy Stone or Ruko do. The decoded fields name the drone when it identifies itself, or explain why its traffic looks like a drone streaming video to one phone."
+  },
+  {
+   "technology": "wifi_nonstandard_clock",
+   "label": "Dji",
+   "text": "DJI drone Wi-Fi link (DJI 'Enhanced Wi-Fi'): a DJI drone such as the Spark, Mavic Air or Mavic Mini talking to its remote controller over Wi-Fi run on a narrow, non-standard channel. Seeing it means one of these DJI drones or its controller is switched on nearby."
+  },
+  {
+   "technology": "wifi_nonstandard_clock",
+   "label": "drone link-like",
+   "text": "Wi-Fi traffic that includes a drone link: a drone or its controller is using Wi-Fi to send video and receive commands, as camera drones such as DJI Spark / Mavic Air / Tello, Parrot, Holy Stone or Ruko do. The decoded fields name the drone when it identifies itself, or explain why its traffic looks like a drone streaming video to one phone."
+  },
+  {
+   "technology": "wifi_nonstandard_clock",
+   "label": "Microhard",
+   "text": "Industrial data radio built on Wi-Fi chips (Microhard), used for long-range telemetry, video and data links, for example on professional drones, robots and remote sites. The decoded fields name the radios heard."
+  },
+  {
+   "technology": "wifi_nonstandard_clock",
+   "text": "A Wi-Fi-based radio link running on a non-standard channel width or frequency, typical of point-to-point data radios and industrial links. The decoded fields give the equipment vendor when its frames could be read."
+  },
+  {
+   "technology": "wifi_ofdm",
+   "text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+  },
+  {
+   "technology": "wifi_dsss",
+   "text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+  },
+  {
+   "technology": "remote_id_ble",
+   "text": "Drone Remote ID over Bluetooth: an aircraft broadcasting its identity, position and height, and its pilot's position, as drone regulations require. Seeing it means a drone (or a Remote ID module fitted to one) is switched on nearby; the decoded fields hold its ID and the positions."
+  },
+  {
+   "technology": "ble",
+   "text": "Bluetooth Low Energy advertising: everyday devices such as phones, watches, earbuds, fitness bands and item trackers announcing themselves. The decoded fields give the device address and, when sent, its name and maker."
+  },
+  {
+   "technology": "bluetooth",
+   "text": "Bluetooth traffic (classic or Low Energy) from phones, headsets, speakers, cars and similar devices, hopping quickly across the 2.4 GHz band."
+  },
+  {
+   "technology": "esb_like_link",
+   "text": "A 2.4 GHz short-range digital link of the Nordic 'Enhanced ShockBurst' kind, used by wireless mice, keyboards, presenters, game pads and some toy remotes."
+  },
+  {
+   "technology": "ism_srd",
+   "text": "A short-range device in the licence-free 433 or 865-868 MHz bands, such as a remote control, doorbell, car key, wireless sensor or alarm."
+  },
+  {
+   "technology": "lora",
+   "text": "LoRa long-range, low-power radio, used mainly by IoT sensors, smart meters and LoRaWAN networks to send small amounts of data over several kilometres."
+  },
+  {
+   "technology": "sik_telemetry",
+   "text": "Drone telemetry radio (SiK type: 3DR, Holybro, mRo, RFD900) linking a drone's autopilot (ArduPilot or PX4) to the pilot's ground-control laptop or tablet. It carries position, battery and commands, so an autopilot-based drone or its ground station is active nearby."
+  },
+  {
+   "technology": "ieee802154",
+   "text": "IEEE 802.15.4 radio (XBee / Zigbee type), used by smart-home devices, industrial sensors and telemetry modules to send small data packets. The decoded fields name the device when they can."
+  },
+  {
+   "technology": "crossfire",
+   "text": "TBS Crossfire long-range radio control (868 / 915 MHz) for FPV drones and RC aircraft. It carries the pilot's stick commands to the drone and telemetry back, so a drone and its pilot are nearby, possibly several kilometres apart."
+  },
+  {
+   "technology": "expresslrs",
+   "text": "ExpressLRS radio control, the most common open-source control link for FPV racing and long-range drones (2.4 GHz or 868 / 915 MHz). It carries the pilot's stick commands to the drone, so a drone and its pilot are nearby."
+  },
+  {
+   "technology": "mlrs",
+   "text": "mLRS: an open-source long-range link carrying both radio control and MAVLink telemetry for ArduPilot / PX4 drones. A drone and its ground station are active nearby."
+  },
+  {
+   "technology": "frsky",
+   "text": "FrSky 2.4 GHz radio control (ACCST D8 / D16) used by hobby FPV drones and RC models. It carries the pilot's stick commands, so a drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "afhds2a",
+   "text": "FlySky AFHDS 2.4 GHz radio control used by low-cost hobby drones and RC models. A drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "radiolink",
+   "text": "RadioLink 2.4 GHz radio control for hobby drones and RC models. A drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "hott",
+   "text": "Graupner HoTT 2.4 GHz radio control for RC models and drones, with telemetry from the model back to the pilot. A drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "hitec",
+   "text": "Hitec 2.4 GHz radio control (AFHSS / Optima / Minima) for RC aircraft, helicopters and drones. A drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "sfhss",
+   "text": "Futaba S-FHSS 2.4 GHz radio control for RC models and drones. A drone or model and its pilot are nearby."
+  },
+  {
+   "technology": "hubsan",
+   "text": "Hubsan 2.4 GHz remote control (A7105 chip) for Hubsan toy and hobby quadcopters. A Hubsan drone and its remote are nearby."
+  },
+  {
+   "technology": "xn297_toy",
+   "text": "Remote control of a toy drone (Bayang-type protocol on an XN297 / nRF24 chip, 2.4 GHz), common in cheap mini quadcopters. A toy drone and its handheld remote are nearby, usually within about 100 m."
+  },
+  {
+   "technology": "toy_drone",
+   "text": "Remote control of a toy drone (nRF24 / XN297-class 2.4 GHz chip; brands such as MJX, Syma, JJRC, Eachine). A toy drone and its handheld remote are nearby, usually within about 100 m."
+  },
+  {
+   "technology": "fsk_rc_link",
+   "text": "A frequency-hopping or narrowband digital link of the kind used for radio control and telemetry (for example of drones and RC models), wireless sensors or industrial remotes; the exact protocol was not identified."
+  },
+  {
+   "technology": "adsl",
+   "text": "ADS-L, the European 'iConspicuity' broadcast (868 MHz band) in which aircraft, gliders, paragliders and drones announce their position to each other. Such an aircraft or drone carrying an ADS-L device is nearby."
+  },
+  {
+   "technology": "ogn_tracker",
+   "text": "Open Glider Network tracker: a small beacon carried by gliders, paragliders and some drones that broadcasts its position (868 MHz band) to other aircraft and ground stations."
+  },
+  {
+   "technology": "fanet",
+   "text": "FANET: a LoRa-based position-sharing radio used mainly by paragliders and hang-gliders (also by some FLARM devices), so that pilots and ground crews can see each other's positions."
+  },
+  {
+   "technology": "flarm",
+   "text": "FLARM collision-avoidance beacon (868 MHz band) carried by gliders, light aircraft and helicopters: each aircraft broadcasts its position and flight path so nearby aircraft can warn their pilots."
+  },
+  {
+   "technology": "uat",
+   "text": "UAT (978 MHz) ADS-B: aircraft broadcasting their identity and position, used mainly in the United States. The decoded fields give the aircraft address, position and emitter category."
+  },
+  {
+   "technology": "dji_droneid",
+   "text": "DJI DroneID: a short broadcast a DJI drone sends about every 0.6 seconds with its serial number, position and height, and the pilot's or home position. A DJI drone is switched on nearby; the decoded fields show the details when they are readable."
+  },
+  {
+   "technology": "dji_ocusync_uplink",
+   "text": "DJI remote-controller signal (OcuSync / O3 / O4 uplink): the pilot's controller sending commands to a DJI drone. A DJI pilot is nearby, usually closer than the drone."
+  },
+  {
+   "technology": "dji_ocusync",
+   "label": "video",
+   "text": "DJI drone video link (OcuSync / O3 / O4): the drone sending its live camera picture to the pilot's controller. A DJI drone is in the air or switched on nearby, possibly several kilometres away."
+  },
+  {
+   "technology": "dji_ocusync",
+   "text": "A DJI drone link (OcuSync family: video, control or DroneID). A DJI drone or its controller is switched on nearby."
+  },
+  {
+   "technology": "hdzero",
+   "text": "HDZero digital FPV video transmitter: it sends the camera picture from an FPV drone to the pilot's goggles with very low delay. An FPV drone is switched on nearby, usually within a few kilometres."
+  },
+  {
+   "technology": "herelink",
+   "text": "Herelink (CubePilot): an all-in-one video, control and telemetry link for professional and agricultural drones running ArduPilot / PX4. A drone and its handheld ground station are nearby."
+  },
+  {
+   "technology": "analog_fpv_video",
+   "text": "Analog FPV video transmitter: it sends the camera picture from an FPV drone (racing or freestyle quad, sometimes a plane) to the pilot's goggles as analog TV. An FPV drone is switched on nearby, usually within a few kilometres; anyone with an analog receiver can watch the picture."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "fixed-wireless",
+   "text": "Fixed-wireless internet link (point-to-point or point-to-multipoint, e.g. Cambium PMP 450 class) carrying broadband between buildings or towers."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "RC uplink-like \\(DJI Lightbridge",
+   "text": "Control signal of a drone remote controller, an older DJI Lightbridge-like system (Phantom 4, Inspire 2, Matrice 600 class): the pilot's controller sending commands to the drone. Identified by signal structure, so likely but not certain."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "RC uplink-like",
+   "text": "Control signal from a drone pilot's remote controller (a digital OFDM uplink, hopping or fixed). A drone pilot is nearby; the make is given in the label as far as it could be told."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "Walksnail",
+   "text": "Video transmitter of an FPV drone (Walksnail Avatar class, or another system on the same Artosyn chipset): it sends the camera picture from the drone to the pilot's goggles. An FPV drone is switched on nearby, usually within a few kilometres."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "Lightbridge",
+   "text": "Video link of an older DJI drone system (Lightbridge 2: Phantom 4, Inspire 2, Matrice 600 class) carrying the camera picture to the pilot's controller. Such a drone is switched on nearby; identified by signal structure, so likely but not certain."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "O4",
+   "text": "Video link of a DJI O4-class drone (Mini 4 Pro, Air 3, Avata 2 and similar) carrying the camera picture to the pilot. A DJI drone is switched on nearby; identified by signal structure, so likely but not certain."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "LTE-like",
+   "text": "Digital drone video link with an LTE-like structure, as used by DJI (OcuSync / O3), CubePilot Herelink and Autel drones: the drone sending its camera picture to the pilot. A drone is switched on nearby; the make could not be pinned down further."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "label": "unknown OFDM",
+   "text": "A digital OFDM radio link that matches no known system. It could be a drone video or control link of an unlisted make, or a fixed or industrial data link; the measured numbers in the fields help to identify it."
+  },
+  {
+   "technology": "ofdm_data_link",
+   "text": "Digital video link of a drone (OFDM), recognised by its signal structure: the drone sending its camera picture to the pilot. A drone is switched on nearby; the make is given in the label as far as it could be told."
+  },
+  {
+   "technology": "cofdm_video_link",
+   "text": "COFDM (DVB-T-type) video transmitter, used to send live video from broadcast and news cameras, professional and military drones, and surveillance systems."
+  },
+  {
+   "technology": "dvb_t2",
+   "text": "Digital terrestrial TV broadcast (DVB-T2) from a TV transmitter tower, carrying several TV and radio channels in one signal."
+  },
+  {
+   "technology": "fm_voice",
+   "label": "PMR446",
+   "text": "Walkie-talkie voice on licence-free PMR446 handheld radios, used by the public, events, shops and work crews. The decoded fields give the channel and any privacy code."
+  },
+  {
+   "technology": "fm_voice",
+   "text": "Analog FM voice radio: walkie-talkies, land-mobile, marine or amateur radio. The audio can be listened to directly."
+  },
+  {
+   "technology": "tetra",
+   "text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+  },
+  {
+   "technology": "dmr",
+   "text": "DMR digital two-way radio: business or public-safety walkie-talkies and their repeaters. The decoded fields give the colour code and what the channel is doing."
+  },
+  {
+   "technology": "nxdn",
+   "text": "NXDN digital two-way radio, used by businesses and public services for voice and data."
+  },
+  {
+   "technology": "pmr",
+   "text": "Land-mobile two-way radio: the walkie-talkies and dispatch radios of businesses, police, utilities and transport."
+  },
+  {
+   "technology": "nr",
+   "text": "5G mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, frequency) and the band."
+  },
+  {
+   "technology": "lte",
+   "label": "-like",
+   "text": "A 4G LTE-like mobile-network signal: the structure matches LTE but the cell identity was not decoded."
+  },
+  {
+   "technology": "lte",
+   "text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+  },
+  {
+   "technology": "lte_or_nr",
+   "text": "A 4G / 5G mobile-network signal whose structure matches LTE or NR but whose cell identity was not decoded."
+  },
+  {
+   "technology": "gsm",
+   "text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+  },
+  {
+   "technology": "umts",
+   "text": "3G UMTS mobile-network signal: a cell on a tower or rooftop, or a phone talking to it."
+  },
+  {
+   "technology": "mode_s_adsb",
+   "text": "Aircraft transponder (Mode S / ADS-B, 1090 MHz): airliners and other aircraft broadcasting their identity, altitude and often position. The decoded fields name the aircraft and where it is."
+  },
+  {
+   "technology": "ssr_interrogation",
+   "text": "Secondary-radar interrogation (1030 MHz) from air-traffic control or an aircraft collision-avoidance system, asking aircraft transponders to reply."
+  },
+  {
+   "technology": "dme_tacan",
+   "text": "Aircraft navigation radio (DME / TACAN): an aircraft and a ground beacon exchanging pulse pairs to measure the distance between them."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "solid-state",
+   "text": "Air-traffic control radar (S-band, solid-state): an airport surveillance radar using long chirped pulses (pulse compression) to track aircraft around the airport."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "weather, (S|C)-band",
+   "text": "Weather radar (S-band or C-band): a ground radar of the meteorological department scanning the sky for rain, storms and cyclones. The decoded fields give the pulse width and pulse repetition interval."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "^Wind profiler",
+   "text": "Wind-profiler radar: a fixed upward-looking radar that measures the wind speed and direction at different heights for weather forecasting."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "marine",
+   "text": "Marine navigation radar (S-band): the rotating radar of a ship or coastal station, used to see other vessels and the coastline."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "L-band",
+   "text": "L-band surveillance radar: a long-range air-traffic or air-defence radar in 1.2-1.4 GHz that tracks aircraft at long distance."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "C-band",
+   "text": "C-band radar: a radiolocation or weather radar in the 5.25-5.85 GHz band, shared with 5 GHz Wi-Fi (which must avoid it)."
+  },
+  {
+   "technology": "pulsed_radar",
+   "label": "ATC",
+   "text": "Air-traffic-control surveillance radar (S-band), usually at or near an airport, sweeping the sky to track aircraft."
+  },
+  {
+   "technology": "pulsed_radar",
+   "text": "A pulsed radar (air-traffic, weather, marine, military or counter-drone): short powerful pulses repeated at a fixed rate to detect objects."
+  },
+  {
+   "technology": "radiosonde",
+   "text": "Weather-balloon radiosonde (400-406 MHz) sending temperature, humidity, pressure and position as it rises through the atmosphere."
+  },
+  {
+   "technology": "iridium",
+   "text": "Iridium satellite phone or satellite-modem transmission (1.6 GHz), used for voice and data where there is no mobile network."
+  },
+  {
+   "technology": "swept_jammer",
+   "text": "A jammer: a transmitter sweeping a carrier across the band to block communications, as drone jammers and illegal Wi-Fi / GPS jammers do. Someone nearby is deliberately interfering."
+  },
+  {
+   "technology": "swept_carrier",
+   "text": "A carrier sweeping in frequency (FMCW-like), as radio altimeters and some radars use to measure distance."
+  },
+  {
+   "technology": "cw_carrier",
+   "text": "An unmodulated tone (continuous carrier). It can be leakage from some device, a test transmitter or part of another signal; on its own it cannot be identified."
+  },
+  {
+   "technology": "ssr_mode_ac",
+   "text": "Aircraft transponder replies to secondary radar (Mode A/C, 1090 MHz): each reply carries either the aircraft's four-digit squawk code or its pressure altitude. Codes 7500, 7600 and 7700 signal a hijack, a radio failure and an emergency."
+  },
+  {
+   "technology": "am_voice",
+   "text": "Analog AM voice on an aviation channel: pilots and air-traffic controllers talking (VHF air band 118-137 MHz) or military aircraft (UHF 225-400 MHz). The decoded fields give the channel, and the audio can be played; 121.5 and 243.0 MHz are the emergency frequencies."
+  },
+  {
+   "technology": "ils_glide_slope",
+   "text": "ILS glide slope (329-335 MHz): an airport ground transmitter that guides landing aircraft down the correct descent angle to the runway. The decoded fields give the channel, the paired localizer frequency, and whether the receiver sits above or below the glide path."
+  },
+  {
+   "technology": "ils_localizer",
+   "text": "ILS localizer (108-112 MHz): an airport ground transmitter that guides landing aircraft onto the runway centre-line. The decoded fields give the channel, the paired glide-slope frequency, and which side of the course the receiver is on."
+  },
+  {
+   "technology": "vor",
+   "text": "VOR navigation beacon (108-118 MHz): a ground station that lets aircraft measure their bearing from it. The decoded fields give the channel and the radial (bearing from the station) at the receiver."
+  },
+  {
+   "technology": "gnss_gps_l1",
+   "text": "GPS satellite navigation signals (L1 C/A, 1575.42 MHz), received from the satellites overhead. They sit below the noise and are found by code correlation; the decoded fields list the satellites, their signal strength (C/N0) and Doppler."
+  },
+  {
+   "technology": "gnss_spoofing",
+   "text": "Signs of GNSS spoofing: fake satellite navigation signals that can make receivers nearby (phones, vehicles, drones) compute a false position or time. The decoded fields list which spoofing indicators fired (too-strong or too-uniform satellites, duplicate correlation peaks, a power rise)."
+  },
+  {
+   "technology": "gnss_jamming",
+   "text": "Signs of GNSS jamming: interference in the GPS L1 band that drowns the satellite signals, so receivers nearby lose their position. The decoded fields give the in-band power rise and any narrowband interferers."
+  },
+  {
+   "technology": "ble_tracker",
+   "text": "Bluetooth item tracker (such as an Apple AirTag, Samsung SmartTag, Tile or a Google Find My tag) broadcasting so that its owner's phone network can locate it. One found near you that you do not own may be tracking your movements; the decoded fields give the tracker type and its state, such as separated from its owner and battery level."
+  },
+  {
+   "technology": "fm_broadcast",
+   "text": "FM radio broadcast station (88-108 MHz), such as All India Radio or a private FM channel. The decoded fields give the frequency, whether it is stereo and, when the station sends RDS, its identifier (PI), programme name, programme type and RadioText."
+  },
+  {
+   "technology": "ais",
+   "text": "AIS (Automatic Identification System, 162 MHz): ships, coastal base stations and navigation buoys broadcasting their identity and position. The decoded fields give each station's MMSI, flag country, name, position, speed, course and destination."
+  },
+  {
+   "technology": "aprs",
+   "text": "APRS (Automatic Packet Reporting System): amateur radio stations, vehicles, balloons and weather stations sending short data packets on VHF (typically 144-146 MHz) with their position, status or messages. The decoded fields give the callsigns, digipeater path, position and comment."
+  },
+  {
+   "technology": "ax25_packet",
+   "text": "AX.25 packet radio: amateur or utility data packets sent as 1200 bit/s audio tones over FM. The decoded fields give the callsigns, path and message contents."
+  },
+  {
+   "technology": "radio_altimeter",
+   "text": "Aircraft radio altimeter (4200-4400 MHz): a frequency-sweeping radar under an aircraft or helicopter that measures its height above the ground. The decoded fields give the sweep rate, shape, bandwidth and period."
+  },
+  {
+   "technology": "tpms",
+   "text": "Tyre pressure sensor (TPMS, 315 / 433 MHz): a sensor in a car wheel that reports tyre pressure and temperature to the vehicle. The decoded fields give the sensor ID, pressure and temperature."
+  },
+  {
+   "technology": "ook_remote",
+   "text": "Fixed-code radio remote (315 / 433 MHz): a gate, shutter, doorbell or alarm remote that sends the same code every time. The decoded fields give its code, ID and button data."
+  },
+  {
+   "technology": "keeloq_remote",
+   "text": "Code-hopping radio remote (KeeLoq, 315 / 433 MHz): a car, garage or gate key fob whose code changes with every press. The decoded fields give only its clear serial number and buttons."
+  },
+  {
+   "technology": "ism_device",
+   "text": "Short-range radio device (315 / 433 MHz) using on-off or frequency keying whose protocol is not recognised: a remote, sensor or similar gadget."
+  },
+  {
+   "technology": "noise_jammer",
+   "text": "Noise jammer: a transmitter that fills a whole band with random noise (barrage) or a noise-modulated carrier (noise-FM) to block the radios there. The decoded fields give the measurements that separate it from real services."
+  },
+  {
+   "technology": "bluetooth_bredr",
+   "text": "Bluetooth Classic (BR/EDR) link: audio headsets, car kits and older devices. The decoded fields give the 24-bit LAP (lower address part) of the link's master device; the full address and vendor are not sent over the air."
+  },
+  {
+   "technology": "unknown",
+   "text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+  }
+ ]
+}

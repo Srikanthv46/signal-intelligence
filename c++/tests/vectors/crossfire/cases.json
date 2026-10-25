@@ -1,0 +1,106 @@
+{
+ "fs": 7680000.0,
+ "fc": 864000000.0,
+ "decoded": [
+  {
+   "sync": "0x3E6B3E",
+   "polarity_inverted": false,
+   "packet_bytes": 23,
+   "packet_hex": "8a35566440f90f25e5e19247faff5884918651c94e3bf2",
+   "dewhitened_hex": "75b2ee3df758c301b2bfd9dbf416b2d4bb38e5d2f88baf",
+   "crc_ok": null,
+   "crc_note": "per-hop CRC init unknown: packet not verifiable (research)",
+   "grid": {
+    "band": "868",
+    "channel": 3,
+    "link": "uplink"
+   }
+  },
+  {
+   "sync": "0x3E6B3E",
+   "polarity_inverted": false,
+   "packet_bytes": 23,
+   "packet_hex": "8a35566440f90f25e5e19247faff5884918651c94e3bf2",
+   "dewhitened_hex": "75b2ee3df758c301b2bfd9dbf416b2d4bb38e5d2f88baf",
+   "crc_ok": null,
+   "crc_note": "per-hop CRC init unknown: packet not verifiable (research)",
+   "grid": {
+    "band": "868",
+    "channel": 9,
+    "link": "uplink"
+   }
+  },
+  {
+   "sync": "0x3E6B3E",
+   "polarity_inverted": false,
+   "packet_bytes": 23,
+   "packet_hex": "8a35566440f90f25e5e19247faff5884918651c94e3bf2",
+   "dewhitened_hex": "75b2ee3df758c301b2bfd9dbf416b2d4bb38e5d2f88baf",
+   "crc_ok": null,
+   "crc_note": "per-hop CRC init unknown: packet not verifiable (research)",
+   "grid": {
+    "band": "868",
+    "channel": 15,
+    "link": "uplink"
+   }
+  }
+ ],
+ "field": {
+  "packets": 3,
+  "sync": "0x3E6B3E",
+  "band": "868",
+  "channels": [
+   [
+    "uplink",
+    3
+   ],
+   [
+    "uplink",
+    9
+   ],
+   [
+    "uplink",
+    15
+   ]
+  ],
+  "note": "packets read but not CRC-verified (per-hop CRC init unknown)"
+ },
+ "grid": [
+  [
+   861985000.0,
+   {
+    "band": "868",
+    "channel": 7,
+    "link": "uplink"
+   }
+  ],
+  [
+   874990000.0,
+   {
+    "band": "868",
+    "channel": 7,
+    "link": "downlink"
+   }
+  ],
+  [
+   902945000.0,
+   {
+    "band": "915",
+    "channel": 3,
+    "link": "uplink"
+   }
+  ],
+  [
+   864213000.0,
+   {
+    "band": "868 CE",
+    "channel": 10,
+    "link": "unknown"
+   }
+  ],
+  [
+   861000000.0,
+   null
+  ]
+ ]
+}

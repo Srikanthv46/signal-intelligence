@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spectrum-intel"
+version = "0.2.0"
+description = "Detect, localise, identify and decode every signal in SigMF snapshots (300 MHz - 6 GHz, India band prior)"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "matplotlib", "pillow", "py3gpp", "pyModeS"]
+
+[project.scripts]
+spectrum-intel = "spectrum_intel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["spectrum_intel*"]
+
+[tool.setuptools.package-data]
+"spectrum_intel.receivers.wifi" = ["data/*.gz"]

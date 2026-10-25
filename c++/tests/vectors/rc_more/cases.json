@@ -1,0 +1,565 @@
+{
+ "fs": 7680000.0,
+ "fc": 2440000000.0,
+ "labels": [
+  "radiolink",
+  "afhds1",
+  "afhds1_like",
+  "hubsan",
+  "toy_drone",
+  "elrs_gfsk"
+ ],
+ "decoded": [
+  {
+   "sync": "0xABCD",
+   "length": 33,
+   "crc_ok": true,
+   "packet_hex": "2123fc110d2084731ce644c73adb014f79d4f31efae4c73f03425083560b00001091",
+   "protocol": "RadioLink (air)",
+   "sub_protocol": "air",
+   "packet_name": "data",
+   "header": "0x23",
+   "telemetry_request": true,
+   "tx_id": "fc110d20",
+   "channels": [
+    900,
+    910,
+    920,
+    930,
+    940,
+    950,
+    960,
+    970,
+    980,
+    990,
+    1000,
+    1010,
+    1020,
+    1030,
+    1040,
+    1050
+   ],
+   "pseudo": 2902,
+   "hop_slot": 6,
+   "replaced_slot": 16,
+   "checksum_ok": true,
+   "hop_channels": [
+    132,
+    144,
+    180,
+    168,
+    60,
+    108,
+    96,
+    48,
+    36,
+    84,
+    120,
+    12,
+    156,
+    0,
+    72,
+    24
+   ],
+   "expected_channel": 96,
+   "sync_bit_errors": 0,
+   "polarity_inverted": false,
+   "channel": 96,
+   "hop_check": "match"
+  },
+  {
+   "protocol": "FlySky AFHDS 1 (A7105)",
+   "packet_type": "0x55",
+   "packet_name": "data",
+   "tx_id": "5a6b7c3d",
+   "channels_us": [
+    1500,
+    1480,
+    1100,
+    1520,
+    1000,
+    2000,
+    1500,
+    1500
+   ],
+   "hop_channels": [
+    127,
+    47,
+    107,
+    27,
+    117,
+    37,
+    157,
+    77,
+    97,
+    17,
+    137,
+    57,
+    87,
+    7,
+    147,
+    67
+   ],
+   "packet_hex": "553d7c6b5adc05c8054c04f005e803d007dc05dc05",
+   "crc_ok": true,
+   "convention": {
+    "crc_poly": "0x1021",
+    "crc_init": "0x0000"
+   },
+   "channel": 77,
+   "hop_check": "match",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 0,
+   "polarity_inverted": false
+  },
+  {
+   "protocol": "FlySky AFHDS 1-like (A7105; header, channels and hop table verified, CRC convention not)",
+   "packet_type": "0x55",
+   "packet_name": "data",
+   "tx_id": "fb6f7c3d",
+   "channels_us": [
+    2012,
+    1480,
+    1102,
+    1520,
+    1004,
+    2008,
+    1500,
+    1500
+   ],
+   "hop_channels": [
+    127,
+    47,
+    107,
+    27,
+    117,
+    37,
+    157,
+    77,
+    97,
+    17,
+    137,
+    57,
+    87,
+    7,
+    147,
+    67
+   ],
+   "packet_hex": "553d7c6ffbdc07c8054e04f005ec03d807dc05dc05",
+   "crc_ok": null,
+   "channel": 77,
+   "hop_check": "match",
+   "id_code": "0x5475C52A",
+   "id_bit_errors": 3,
+   "polarity_inverted": false
+  },
+  {
+   "protocol": "Hubsan (A7105)",
+   "id_code": "0x3C2D1E0F",
+   "id_kind": "session",
+   "packet_type": "0x20",
+   "packet_name": "data",
+   "checksum_ok": true,
+   "polarity_inverted": false,
+   "packet_hex": "200080007f008000800264db042679fd",
+   "models": [
+    "H107 / H107L / H107C / H107D"
+   ],
+   "sticks": {
+    "throttle": 128,
+    "rudder": 128,
+    "elevator": 127,
+    "aileron": 128
+   },
+   "channel": 80,
+   "channel_check": "match"
+  },
+  {
+   "protocol": "V2x2 (WLtoys V202 / V222 / V262) (nRF24)",
+   "address": "6688686868",
+   "payload_len": 16,
+   "payload_hex": "800080804040401234560000000000dc",
+   "esb_control_field": false,
+   "crc_ok": true,
+   "checksum_ok": true,
+   "polarity_inverted": false,
+   "tx_id": "123456"
+  },
+  {
+   "protocol": "ExpressLRS GFSK (LR1121)",
+   "sync_word": "0xCA3B",
+   "uid4": 59,
+   "uid5": 202,
+   "whitening": "pn9_msb",
+   "ota": "OTA4",
+   "ota_version": 4,
+   "binding": false,
+   "sync": {
+    "fhss_index": 5,
+    "nonce": 17,
+    "rate_enum": 9,
+    "switch_enc_mode": 0,
+    "tlm_ratio_code": 3,
+    "gemini_mode": 0,
+    "ota_protocol": 0,
+    "uid4": 59,
+    "uid5": 202
+   },
+   "polarity_inverted": false,
+   "crc_ok": true
+  }
+ ],
+ "fields": {
+  "radiolink": {
+   "radiolink": {
+    "packets": 1,
+    "sub_protocols": [
+     "air"
+    ],
+    "tx_ids": [
+     "fc110d20"
+    ],
+    "packet_kinds": [
+     "data"
+    ],
+    "hop_checks": [
+     "match"
+    ],
+    "hop_channels": [
+     132,
+     144,
+     180,
+     168,
+     60,
+     108,
+     96,
+     48,
+     36,
+     84,
+     120,
+     12,
+     156,
+     0,
+     72,
+     24
+    ],
+    "telemetry_requested": true
+   },
+   "model": {
+    "family": "RadioLink",
+    "model": null,
+    "candidates": [
+     "T8FB",
+     "T8S"
+    ],
+    "basis": "inferred",
+    "evidence": [
+     "RadioLink air protocol (sync word / header)"
+    ],
+    "unresolved_reason": "the transmitters of one RadioLink sub-protocol share the air protocol"
+   }
+  },
+  "afhds1": {
+   "afhds1": {
+    "packets": 2,
+    "crc_ok": 1,
+    "tx_ids": [
+     "5a6b7c3d"
+    ],
+    "hop_checks": [
+     "match"
+    ],
+    "hop_channels": [
+     127,
+     47,
+     107,
+     27,
+     117,
+     37,
+     157,
+     77,
+     97,
+     17,
+     137,
+     57,
+     87,
+     7,
+     147,
+     67
+    ],
+    "binding": false,
+    "convention": {
+     "crc_poly": "0x1021",
+     "crc_init": "0x0000"
+    }
+   },
+   "model": {
+    "family": "FlySky AFHDS 1",
+    "model": null,
+    "candidates": [
+     "FS-CT6B",
+     "FS-T6",
+     "Turnigy 9X FlySky module",
+     "multiprotocol module"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "A7105 ID code, 21-byte AFHDS 1 packet, hop table from the TX ID"
+    ],
+    "unresolved_reason": "every AFHDS 1 transmitter uses the same air protocol"
+   }
+  },
+  "hubsan": {
+   "hubsan": {
+    "packets": 1,
+    "id_codes": [
+     "0x3C2D1E0F"
+    ],
+    "packet_kinds": [
+     "data"
+    ],
+    "channel_checks": [
+     "match"
+    ]
+   },
+   "model": {
+    "family": "Hubsan",
+    "model": "H107 / H107L / H107C / H107D",
+    "candidates": [
+     "H107 / H107L / H107C / H107D"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "model constant bytes in 1 packet(s)"
+    ]
+   }
+  },
+  "toy_drone": {
+   "toy_drone": {
+    "packets": 1,
+    "protocols": [
+     "V2x2 (WLtoys V202 / V222 / V262) (nRF24)"
+    ],
+    "addresses": [
+     "6688686868"
+    ],
+    "tx_ids": [
+     "123456"
+    ],
+    "checksum_ok": 1
+   },
+   "model": {
+    "family": "Toy drone (nRF24 / XN297)",
+    "model": "V2x2 (WLtoys V202 / V222 / V262)",
+    "candidates": [
+     "V2x2 (WLtoys V202 / V222 / V262)"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "V2x2 (WLtoys V202 / V222 / V262) (nRF24)"
+    ]
+   }
+  },
+  "elrs_gfsk": {
+   "elrs_gfsk": {
+    "sync_packets": 1,
+    "uid4": 59,
+    "uid5": 202,
+    "sync_word": "0xCA3B",
+    "ota": "OTA4",
+    "ota_version": 4,
+    "whitening": [
+     "pn9_msb"
+    ],
+    "binding": false
+   },
+   "model": {
+    "family": "ExpressLRS",
+    "model": "LR1121-based module",
+    "candidates": [
+     "LR1121-based module"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "300 kb/s GFSK SYNC packet verified (sync word 0xCA3B = UID5 / UID4)",
+     "the GFSK modes exist only on LR1121 hardware"
+    ]
+   }
+  }
+ },
+ "radiolink_hops": [
+  [
+   "fc110d20",
+   [
+    132,
+    144,
+    180,
+    168,
+    60,
+    108,
+    96,
+    48,
+    36,
+    84,
+    120,
+    12,
+    156,
+    0,
+    72,
+    24
+   ],
+   192
+  ],
+  [
+   "3a99223a",
+   [
+    18,
+    186,
+    102,
+    114,
+    30,
+    66,
+    6,
+    78,
+    54,
+    174,
+    138,
+    162,
+    42,
+    126,
+    150,
+    90
+   ],
+   198
+  ],
+  [
+   "01020304",
+   [
+    87,
+    147,
+    39,
+    51,
+    123,
+    63,
+    183,
+    111,
+    75,
+    159,
+    27,
+    171,
+    135,
+    3,
+    15,
+    99
+   ],
+   195
+  ]
+ ],
+ "afhds1_hops": [
+  [
+   120,
+   [
+    73,
+    153,
+    63,
+    143,
+    53,
+    133,
+    33,
+    113,
+    3,
+    83,
+    43,
+    123,
+    23,
+    103,
+    13,
+    93
+   ]
+  ],
+  [
+   43,
+   [
+    98,
+    18,
+    128,
+    48,
+    108,
+    28,
+    88,
+    8,
+    118,
+    38,
+    158,
+    78,
+    138,
+    58,
+    148,
+    68
+   ]
+  ],
+  [
+   85,
+   [
+    145,
+    65,
+    125,
+    45,
+    135,
+    55,
+    105,
+    25,
+    95,
+    15,
+    155,
+    75,
+    85,
+    5,
+    115,
+    35
+   ]
+  ],
+  [
+   0,
+   [
+    10,
+    90,
+    20,
+    100,
+    30,
+    110,
+    40,
+    120,
+    50,
+    130,
+    60,
+    140,
+    70,
+    150,
+    80,
+    160
+   ]
+  ],
+  [
+   159,
+   [
+    91,
+    11,
+    121,
+    41,
+    101,
+    21,
+    111,
+    31,
+    131,
+    51,
+    151,
+    71,
+    81,
+    1,
+    141,
+    61
+   ]
+  ]
+ ]
+}

@@ -1,0 +1,415 @@
+/*
+ This project is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+Multiprotocol is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Multiprotocol.  If not, see <http://www.gnu.org/licenses/>.
+ */
+// Compatible with FEI XIONG P38 plane.
+
+#if defined(FX_NRF24L01_INO)
+
+#include "iface_xn297.h"
+
+#define FX_BIND_COUNT				300		//3sec
+#define FX_SWITCH					20
+#define FX_NUM_CHANNELS				4
+
+#define FX816_PACKET_PERIOD			10000
+#define FX816_BIND_CHANNEL			40
+#define FX816_PAYLOAD_SIZE			6
+#define FX816_CH_OFFSET				3
+
+#define FX620_PACKET_PERIOD 		3250
+#define FX620_BIND_PACKET_PERIOD	4500
+#define FX620_BIND_CHANNEL			18
+#define FX620_PAYLOAD_SIZE			7
+#define FX620_CH_OFFSET				1
+
+#define FX9630_PACKET_PERIOD		8124	//8156 on QIDI-560
+#define FX9630_BIND_CHANNEL			51
+#define FX9630_PAYLOAD_SIZE			8
+#define FX9630_NUM_CHANNELS			3
+#define FX9630_WRITE_TIME			500
+
+#define FX_QF012_PACKET_PERIOD		12194
+#define FX_QF012_RX_PAYLOAD_SIZE	3
+
+#define FX_BM26_BIND_CHANNEL		40      
+#define FX_BM26_PACKET_PERIOD		14066
+
+#define FX_A570_PACKET_PERIOD		10270
+
+//#define FORCE_FX620_ID
+//#define FORCE_FX9630_ID
+//#define FORCE_QIDI_ID
+//#define FORCE_FX_A570_ID
+
+enum 
+{
+	FX_DATA=0,
+	FX_RX,
+};
+
+static void __attribute__((unused)) FX_send_packet()
+{
+	static uint8_t trim_ch = 0;
+
+	//Hopp
+	if(IS_BIND_DONE)
+	{
+		XN297_Hopping(hopping_frequency_no++);
+		if(sub_protocol >= FX9630)
+		{ // FX9630 & FX_Q560 & FX_QF012 & FX_A570
+			if (hopping_frequency_no >= FX9630_NUM_CHANNELS)
+			{
+				hopping_frequency_no = 0;
+				if(sub_protocol == FX9630)
+				{
+					trim_ch++;
+					trim_ch &= 3;
+				}
+				else // FX_Q560 & FX_QF012 & FX_A570
+					trim_ch = 0;
+			}
+		}
+		else // FX816 & FX620
+		{
+			hopping_frequency_no &= 0x03;
+		}
+	}
+
+	memset(packet,0x00,packet_length);
+
+	//Channels
+	uint8_t val;
+	if (sub_protocol == FX816 || sub_protocol == FX620)
+	{
+		uint8_t offset=sub_protocol == FX816 ? FX816_CH_OFFSET:FX620_CH_OFFSET;
+		val=convert_channel_8b(AILERON);
+		if(val>127+FX_SWITCH)
+			packet[offset] = sub_protocol == FX816 ? 1:0xFF;
+		else if(val<127-FX_SWITCH)
+			packet[offset] = sub_protocol == FX816 ? 2:0x00;
+		else
+			packet[offset] = sub_protocol == FX816 ? 0:0x7F;
+		packet[offset+1] = convert_channel_16b_limit(THROTTLE,0,100);	//FX816:0x00..0x63, FX620:0x00..0x5E but that should work
+	}
+	else if (sub_protocol == FX_A570)
+	{
+		packet[0] = convert_channel_16b_limit(THROTTLE,0x1C,0xE4);
+		packet[1] = convert_channel_16b_limit(AILERON,0xE4,0x1C);
+		packet[2] = convert_channel_16b_limit(ELEVATOR,0xE4,0x1C);
+		packet[3] = convert_channel_16b_limit(RUDDER,0x1C,0xE4);
+				// Trims - Ruddder L:01 R:02, Aileron L:03 R:04, Elevator Fwd:05 Back:06
+		packet[4]  =  (Channel_data[CH10] < CHANNEL_MIN_COMMAND ? 0x01 : GET_FLAG(CH10_SW, 0x02))  // Rudder trim
+					| (Channel_data[CH11] < CHANNEL_MIN_COMMAND ? 0x03 : GET_FLAG(CH11_SW, 0x04))  // Aileron trim
+					| (Channel_data[CH12] < CHANNEL_MIN_COMMAND ? 0x06 : GET_FLAG(CH12_SW, 0x05)); // Elevator trim
+		packet[5]  =  GET_FLAG(CH5_SW, 0x40)  // motors stop
+				// A570 flight modes = 0>vertical flight(3 axis mode):00, 1>flat flight(6G):02, 2>vertical flight(2 axis mode):04
+					| (Channel_data[CH6] < CHANNEL_MIN_COMMAND ? 0x00 : (Channel_data[CH6] > CHANNEL_MAX_COMMAND ? 0x04 : 0x02))
+					| GET_FLAG(CH7_SW, 0x01)  // 0:low rate, 1:high rate
+					| GET_FLAG(CH8_SW, 0x08)  // LED color change
+					| GET_FLAG(CH9_SW, 0x10); // LED off
+	}
+	else
+	{ // FX9630 & FX_Q560 & FX_QF012 & FX_BM26
+		packet[0] = convert_channel_8b(THROTTLE);
+		packet[1] = convert_channel_8b(AILERON);
+		packet[2] = 0xFF - convert_channel_8b(ELEVATOR);
+		packet[3] = convert_channel_8b(RUDDER);
+		if ( sub_protocol == FX_BM26 )  // BM26 Ail, Elev, Rud range between 0x00-0x3F-0x7F
+    	{
+			packet[1] >>= 1;
+			packet[2] >>= 1;
+			packet[3] >>= 1;
+    	}
+		val = trim_ch==0 ? 0x20 : (convert_channel_8b(trim_ch + CH6) >> 2);	// no trim on Throttle
+		packet[4] = val;			// Trim for channel x 0C..20..34
+		packet[5] = (trim_ch << 4)	// channel x << 4
+					| GET_FLAG(CH5_SW, (sub_protocol == FX_QF012 ? 0x08 : 0x01))  // DR toggle swich: 0 small throw, 1 large throw / Q560 acrobatic / QF012 Special effects
+					// FX9630  =>0:6G small throw, 1:6G large throw, 2:3D
+					// QIDI-550=>0:3D, 1:6G, 2:Torque
+					// QF012=>0:beginner(6G), 1:mid(3D), 2:expert(Gyro off) 
+					| (Channel_data[CH6] < CHANNEL_MIN_COMMAND ? 0x00 : (Channel_data[CH6] > CHANNEL_MAX_COMMAND ? 0x04 : 0x02));
+		if(sub_protocol == FX_Q560)
+			packet[5] |= GET_FLAG(CH7_SW, 0x18);		// Q560 LED flag 0x10 conflicting with trim_ch... Corrected on new boards using 0x08 instead
+		else if (sub_protocol == FX_QF012) 
+      			packet[5] |=  GET_FLAG(CH7_SW, 0x40)	// QF012 invert flight
+                		  |   GET_FLAG(CH8_SW, 0x80);	// QF012 Restore fine tunning midpoint
+		else if ( sub_protocol == FX_BM26 ) 
+		{
+			packet[5] &= 0xC0;
+			packet[5] += 0x40;
+			// BM26 P51=>0:beginner(6G), 1:mid(3D), 2:expert(Gyro off) 
+			packet[5] |= (Channel_data[CH6] < CHANNEL_MIN_COMMAND ? 0x08 : (Channel_data[CH6] > CHANNEL_MAX_COMMAND ? 0x0C : 0x0A));
+			packet[6] = GET_FLAG( CH5_SW, 0x20)		// 6G Roll
+        			  | GET_FLAG(!CH7_SW, 0x08)		// Light control switch, default on
+            		  | GET_FLAG(!CH8_SW, 0x10)		// Turn signal switch, default on
+        			  | GET_FLAG( CH9_SW, 0x01);	// Gyro Calibration
+    	}  
+	}
+
+	//Bind and specifics
+	if(sub_protocol == FX816)
+	{
+		if(IS_BIND_IN_PROGRESS)
+			packet[0] = 0x55;
+		else
+			packet[0] = 0xAA;
+		packet[1] = rx_tx_addr[0];
+		packet[2] = rx_tx_addr[1];
+	}
+	else if(sub_protocol == FX620)
+	{
+		if(IS_BIND_IN_PROGRESS)
+		{
+			memcpy(packet,rx_tx_addr,3);
+			packet[3] = hopping_frequency[0];
+			if(bind_counter > (FX_BIND_COUNT >> 1))
+				packet[5] = 0x78;
+		}
+		else
+		{
+			packet[0] = 0x1F;	// Is it based on ID??
+			packet[5] = 0xAB;	// Is it based on ID??
+		}
+	}
+	else // FX9630 & FX_Q560 & FX_QF012 & FX_BM26 & FX_A570 
+	{
+		if(IS_BIND_IN_PROGRESS)
+		{
+			memcpy(packet,rx_tx_addr, 4);
+			packet[4] = hopping_frequency[1];
+			packet[5] = hopping_frequency[2];
+			packet[7] = 0x55;
+		}
+	}
+
+	//Check
+	uint8_t last_packet_idx = packet_length-1;
+	if (sub_protocol >= FX9630 && IS_BIND_IN_PROGRESS)
+		last_packet_idx--;
+	val=0;
+	for(uint8_t i=0;i<last_packet_idx;i++)
+		val+=packet[i];
+	if (sub_protocol >= FX9630)
+		val = val ^ 0xFF;
+	packet[last_packet_idx]=val;
+
+	if ( IS_BIND_IN_PROGRESS && sub_protocol == FX_BM26 ) packet[7] = packet[6];
+	
+	//Debug
+	#if 0
+		for(uint8_t i=0;i<packet_length;i++)
+			debug("%02X ",packet[i]);
+		debugln("");
+	#endif
+	
+	// Send
+	XN297_SetPower();
+	XN297_SetTxRxMode(TX_EN);
+	XN297_WritePayload(packet, packet_length);
+}
+
+static void __attribute__((unused)) FX_RF_init()
+{
+	XN297_Configure(XN297_CRCEN, XN297_SCRAMBLED, XN297_1M);
+   	packet_length = FX9630_PAYLOAD_SIZE;	// default
+	if(sub_protocol == FX816)
+	{
+		XN297_SetTXAddr((uint8_t *)"\xcc\xcc\xcc\xcc\xcc", 5);
+		XN297_RFChannel(FX816_BIND_CHANNEL);
+		packet_period = FX816_PACKET_PERIOD;
+		packet_length = FX816_PAYLOAD_SIZE;
+	}
+	else if(sub_protocol == FX620)
+	{
+		XN297_SetTXAddr((uint8_t *)"\xaa\xbb\xcc", 3);
+		XN297_RFChannel(FX620_BIND_CHANNEL);
+		packet_period = FX620_BIND_PACKET_PERIOD;
+		packet_length = FX620_PAYLOAD_SIZE;
+	}
+	else if (sub_protocol == FX_BM26)
+	{
+		XN297_SetTXAddr((uint8_t *)"\x12\x34\x10\x10", 4); 
+    	XN297_RFChannel(FX_BM26_BIND_CHANNEL); 
+    	packet_period = FX_BM26_PACKET_PERIOD;
+	}
+	else if(sub_protocol == FX_A570)
+	{
+		XN297_SetTXAddr((uint8_t *)"\x56\x78\x92\x13", 4);
+		XN297_RFChannel(FX9630_BIND_CHANNEL);
+		packet_period = FX_A570_PACKET_PERIOD;
+	}
+	else // FX9630 & FX_Q560 & FX_QF012
+	{
+		XN297_SetTXAddr((uint8_t *)"\x56\x78\x90\x12", 4);
+		XN297_RFChannel(FX9630_BIND_CHANNEL);
+		packet_period = sub_protocol == FX_QF012 ? FX_QF012_PACKET_PERIOD : FX9630_PACKET_PERIOD;
+	}
+}
+
+static void __attribute__((unused)) FX_initialize_txid()
+{
+	if(sub_protocol == FX816)
+	{
+		//Only 8 IDs: the RX led does not indicate frame loss.
+		//I didn't open the plane to find out if I could connect there so this is the best I came up with with few trial and errors...
+		rx_tx_addr[0]=0x35+(rx_tx_addr[3]&0x07);							//Original dump=0x35
+		rx_tx_addr[1]=0x09;													//Original dump=0x09
+		memcpy(hopping_frequency,"\x09\x1B\x30\x42",FX_NUM_CHANNELS);		//Original dump=9=0x09,27=0x1B,48=0x30,66=0x42
+		for(uint8_t i=0;i<FX_NUM_CHANNELS;i++)
+			hopping_frequency[i]+=rx_tx_addr[3]&0x07;
+	}
+	else if(sub_protocol == FX620)
+	{
+		rx_tx_addr[0] = rx_tx_addr[3];
+		hopping_frequency[0] = 0x18 + rx_tx_addr[3]&0x07;	// just to try something
+		#ifdef FORCE_FX620_ID
+			memcpy(rx_tx_addr,(uint8_t*)"\x34\xA9\x32",3);
+			hopping_frequency[0] = 0x18;	//on dump: 24 34 44 54
+		#endif
+		for(uint8_t i=1;i<FX_NUM_CHANNELS;i++)
+			hopping_frequency[i] = i*10 + hopping_frequency[0];
+	}
+	else // FX9630 & FX_Q560 & FX_QF012 & FX_BM26 & FX_A570
+	{
+		//??? Need to find out how the first RF channel is calculated ???
+		hopping_frequency[0] = sub_protocol == FX_BM26? 0x0C : 0x13;
+		if (sub_protocol == FX_A570) hopping_frequency[0] = 0x0E;
+		//Other 2 RF channels are sent during the bind phase so they can be whatever
+		hopping_frequency[1] = RX_num & 0x0F + 0x1A;
+		hopping_frequency[2] = rx_tx_addr[3] & 0x0F + 0x38;
+		#ifdef FORCE_FX9630_ID
+			memcpy(rx_tx_addr,(uint8_t*)"\xCE\x31\x9B\x73", 4);
+			memcpy(hopping_frequency,"\x13\x1A\x38", FX9630_NUM_CHANNELS);		//Original dump=>19=0x13,26=0x1A,56=0x38
+		#endif
+		#ifdef FORCE_QIDI_ID
+			memcpy(rx_tx_addr,(uint8_t*)"\x23\xDC\x76\xA2", 4);
+			memcpy(hopping_frequency,"\x08\x25\x33", FX9630_NUM_CHANNELS);		//Original dump=>08=0x08,37=0x25,51=0x33
+
+			//QIDI-560 #1
+			//memcpy(rx_tx_addr,(uint8_t*)"\x38\xC7\x6D\x8D", 4);
+			//memcpy(hopping_frequency,"\x0D\x20\x3A", FX9630_NUM_CHANNELS);
+		#endif
+		// BM26 rx_tx_addr: "\x17\x03\x00\x00", hopping_frequency: 0x0C,0x30,0x43(12,48,67)
+		#ifdef FORCE_FX_A570_ID
+			memcpy(rx_tx_addr,(uint8_t*)"\xA9\x56\xFC\x1C", 4);
+			memcpy(hopping_frequency,"\x0E\x1F\x39", FX9630_NUM_CHANNELS);		//Original dump=>14=0x0E,31=0x1F,57=0x39
+		#endif
+	} 
+}
+
+uint16_t FX_callback()
+{
+	#ifdef FX_HUB_TELEMETRY
+		bool rx=false;
+		static uint8_t telem_count = 0;
+		switch(phase)
+		{
+			case FX_DATA:
+				rx = XN297_IsRX();
+				XN297_SetTxRxMode(TXRX_OFF);
+	#endif
+				#ifdef MULTI_SYNC
+					telemetry_set_input_sync(packet_period);
+				#endif
+				if(bind_counter)
+					if(--bind_counter==0)
+					{
+						BIND_DONE;
+						if(sub_protocol == FX620)
+						{
+							XN297_SetTXAddr(rx_tx_addr, 3);
+							packet_period = FX620_PACKET_PERIOD;
+						}
+						else if(sub_protocol >= FX9630)
+						{ // FX9630 & FX_Q560 & FX_QF012
+							XN297_SetTXAddr(rx_tx_addr, 4);
+	#ifdef FX_HUB_TELEMETRY
+							XN297_SetRXAddr(rx_tx_addr, FX_QF012_RX_PAYLOAD_SIZE);
+	#endif
+						}
+					}
+				FX_send_packet();
+	#ifdef FX_HUB_TELEMETRY
+				if (sub_protocol == FX816 || sub_protocol == FX620 || sub_protocol == FX_A570)
+					break;
+				if(rx)
+				{
+					debug("RX");
+					if(XN297_ReadPayload(packet_in, FX_QF012_RX_PAYLOAD_SIZE))
+					{//Good CRC
+						telemetry_link = 1;
+						telemetry_lost = 0;
+						telem_count = 0;
+						if ( sub_protocol == FX_BM26 )
+							v_lipo1 = packet_in[0] <  packet_in[2] ? 60:81;	// packets: AA 00 55 -> 55 00 AA = low voltage 3.7V
+						else
+							v_lipo1 = packet_in[1] ? 60:81;					// packets: A5 00 11 -> A5 01 11 = low voltage 3.7V
+						#if 0
+							for(uint8_t i=0; i < FX_QF012_RX_PAYLOAD_SIZE; i++)
+								debug(" %02X", packet_in[i]);
+						#endif
+					}
+					debugln();
+				}
+				if(telem_count > 4*63)				// Around 3.5 sec with no telemetry
+					telemetry_lost = 1;
+				else
+				{
+					telem_count++;
+					if(!telemetry_lost && (telem_count & 0x3F) == 0)
+					{// Should have received a telem packet but... Send telem to the radio to keep it alive
+						telemetry_link = 1;
+						#if 0
+							debugln("Miss");
+						#endif
+					}
+				}
+				phase++;
+				return FX9630_WRITE_TIME;
+			default: //FX_RX
+				/* { // Wait for packet to be sent before switching to receive mode
+					uint16_t start=(uint16_t)micros(), count=0;
+					while ((uint16_t)((uint16_t)micros()-(uint16_t)start) < 500)
+					{
+						if(XN297_IsPacketSent())
+							break;
+						count++;
+					}
+					debug("%d",count);
+				} */
+				//Switch to RX
+				XN297_SetTxRxMode(TXRX_OFF);
+				XN297_SetTxRxMode(RX_EN);
+				phase = FX_DATA;
+				return packet_period - FX9630_WRITE_TIME;
+		}
+	#endif
+	return packet_period;
+}
+
+void FX_init()
+{
+	BIND_IN_PROGRESS;	// autobind protocol
+	FX_initialize_txid();
+	FX_RF_init();
+	hopping_frequency_no = 0;
+	bind_counter=FX_BIND_COUNT;
+	#ifdef FX_HUB_TELEMETRY
+		RX_RSSI = 100;		// Dummy value
+		telemetry_lost = 1;
+		phase = FX_DATA;
+	#endif
+}
+
+#endif

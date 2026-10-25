@@ -1,0 +1,1421 @@
+{
+ "dji": [
+  [
+   0,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   1,
+   "Inspire 1",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   2,
+   "Phantom 3 series",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   3,
+   "Phantom 3 series",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   4,
+   "Phantom 3 Standard",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   5,
+   "Matrice 100",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   6,
+   "ACEONE",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   7,
+   "WooKong-M",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   8,
+   "NAZA",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   9,
+   "A2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   10,
+   "A3",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   11,
+   "Phantom 4",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   12,
+   "MG-1",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   13,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   14,
+   "Matrice 600",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   15,
+   "Phantom 3 4K",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   16,
+   "Mavic Pro",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   17,
+   "Inspire 2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   18,
+   "Phantom 4 Pro",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   19,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   20,
+   "N2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   21,
+   "Spark",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   22,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   23,
+   "Matrice 600 Pro",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   24,
+   "Mavic Air",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   25,
+   "Matrice 200",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   26,
+   "Phantom 4 series",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   27,
+   "Phantom 4 Advanced",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   28,
+   "Matrice 210",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   29,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   30,
+   "Matrice 210 RTK",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   31,
+   "A3 AG",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   32,
+   "MG-2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   33,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   34,
+   "MG-1A",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   35,
+   "Phantom 4 RTK",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   36,
+   "Phantom 4 Pro V2.0",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   37,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   38,
+   "MG-1P",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   39,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   40,
+   "MG-1P RTK",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   41,
+   "Mavic 2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   42,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   43,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   44,
+   "Matrice 200 V2 series",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   45,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   46,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   47,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   48,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   49,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   50,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   51,
+   "Mavic 2 Enterprise",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   52,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   53,
+   "Mavic Mini",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   54,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   55,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   56,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   57,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   58,
+   "Mavic Air 2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   59,
+   "Phantom 4 Multispectral",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   60,
+   "Matrice 300 RTK",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   61,
+   "DJI FPV",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   62,
+   null,
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   63,
+   "Mini 2",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   64,
+   "Agras T10",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   65,
+   "Agras T30",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   66,
+   "Air 2S",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   67,
+   "Matrice 30",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   68,
+   "Mavic 3",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   69,
+   "Mavic 2 Enterprise Advanced",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   70,
+   "Mini SE",
+   "public decoder tables (RUB-SysSec / Kismet), real decodes"
+  ],
+  [
+   71,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   72,
+   "Agras T40",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   73,
+   "Mini 3 Pro",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   74,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   75,
+   "Avata",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   76,
+   "Inspire 3",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   77,
+   "Mavic 3 Enterprise",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   78,
+   "FlyCart 30",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   79,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   80,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   81,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   82,
+   "Agras T25",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   83,
+   "Agras T50",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   84,
+   "Mavic 3 Pro",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   85,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   86,
+   "Mavic 3 Classic",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   87,
+   "Mini 3",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   88,
+   "Mini 2 SE",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   89,
+   "Matrice 350 RTK",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   90,
+   "Air 3",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   91,
+   "Matrice 3D / 3TD",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   92,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   93,
+   "Mini 4 Pro",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   94,
+   "Avata 2",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   95,
+   "Agras T60",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   96,
+   "Agras T25P",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   97,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   98,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   99,
+   "Matrice 4T / 4E",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   100,
+   "Matrice 4D / 4TD",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   101,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   102,
+   "Flip",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   103,
+   "Matrice 400",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   104,
+   "Neo",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   105,
+   "Air 3S",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   106,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   107,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   108,
+   "Mavic 4 Pro",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   109,
+   "Agras T100",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   110,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   111,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   112,
+   "Mini 5 Pro",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   113,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   114,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   115,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   116,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   117,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   118,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   119,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   120,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   121,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   122,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   123,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   124,
+   "Neo 2",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   125,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   126,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   127,
+   "Avata 360",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   128,
+   "Agras T100S / T70S",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   129,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   130,
+   "Matrice 5TD",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   131,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   132,
+   "Agras T55",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   133,
+   "Lito X1",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   134,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   135,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   136,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   137,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   138,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   139,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   140,
+   "Lito 1",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   141,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   142,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   143,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   144,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   145,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   146,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   147,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   148,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   149,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   150,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   151,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   152,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   153,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   154,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   155,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   156,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   157,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   158,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   159,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   160,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   161,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   162,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   163,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   164,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   165,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   166,
+   "Agras T200",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   167,
+   "FlyCart 200",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   168,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   169,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   170,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   171,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   172,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   173,
+   "Mini 4K",
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   174,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   175,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   176,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   177,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   178,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   179,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ],
+  [
+   180,
+   null,
+   "DJI AeroScope type map (not yet confirmed by a real decode)"
+  ]
+ ],
+ "serial_models": [
+  [
+   "1581F45T0000000000AB",
+   {
+    "models": [
+     "Mavic 3"
+    ],
+    "verified": true,
+    "doc": "RID000000009",
+    "prefix": "1581F45T"
+   }
+  ],
+  [
+   "1596A1234567890",
+   null
+  ],
+  [
+   "1581F45T",
+   {
+    "models": [
+     "Mavic 3"
+    ],
+    "verified": true,
+    "doc": "RID000000009",
+    "prefix": "1581F45T"
+   }
+  ],
+  [
+   "1581FO5T0000000000AB",
+   null
+  ],
+  [
+   "9999312A",
+   null
+  ],
+  [
+   "1748C123456789ABC",
+   null
+  ],
+  [
+   "1973512345",
+   null
+  ],
+  [
+   "",
+   null
+  ],
+  [
+   "15815",
+   null
+  ],
+  [
+   "1581F6Z9A00000000001",
+   {
+    "models": [
+     "Mini 4 Pro"
+    ],
+    "verified": true,
+    "doc": "RID000000713",
+    "prefix": "1581F6Z9"
+   }
+  ],
+  [
+   "1581F446A00000000001",
+   {
+    "models": [
+     "Agras T10",
+     "Agras T30"
+    ],
+    "verified": true,
+    "doc": "RID000001163 / 038",
+    "prefix": "1581F446"
+   }
+  ],
+  [
+   "1869AF11P1234",
+   {
+    "models": [
+     "Ruko F11PRO"
+    ],
+    "verified": false,
+    "doc": "RID000000288",
+    "prefix": "1869AF11P"
+   }
+  ],
+  [
+   "1748FEV3HMQ12345",
+   {
+    "models": [
+     "Autel MDX-1"
+    ],
+    "verified": true,
+    "doc": "RID000002344",
+    "prefix": "1748FEV3HMQ"
+   }
+  ],
+  [
+   "1748CLTC00001",
+   {
+    "models": [
+     "Autel EVO Lite",
+     "Autel EVO Lite+"
+    ],
+    "verified": true,
+    "doc": "RID000000032",
+    "prefix": "1748CLTC"
+   }
+  ]
+ ],
+ "serials": [
+  [
+   "1581F45T0000000000AB",
+   {
+    "code": "1581",
+    "maker": "DJI",
+    "kind": "aircraft"
+   }
+  ],
+  [
+   "1596A1234567890",
+   {
+    "code": "1596",
+    "maker": "Dronetag",
+    "kind": "module"
+   }
+  ],
+  [
+   "1581F45T",
+   null
+  ],
+  [
+   "1581FO5T0000000000AB",
+   null
+  ],
+  [
+   "9999312A",
+   null
+  ],
+  [
+   "1748C123456789ABC",
+   {
+    "code": "1748",
+    "maker": "Autel Robotics",
+    "kind": "aircraft"
+   }
+  ],
+  [
+   "1973512345",
+   {
+    "code": "1973",
+    "maker": "FrSky",
+    "kind": "module"
+   }
+  ],
+  [
+   "",
+   null
+  ],
+  [
+   "15815",
+   null
+  ],
+  [
+   "1581F6Z9A00000000001",
+   {
+    "code": "1581",
+    "maker": "DJI",
+    "kind": "aircraft"
+   }
+  ],
+  [
+   "1581F446A00000000001",
+   {
+    "code": "1581",
+    "maker": "DJI",
+    "kind": "aircraft"
+   }
+  ],
+  [
+   "1869AF11P1234",
+   null
+  ],
+  [
+   "1748FEV3HMQ12345",
+   null
+  ],
+  [
+   "1748CLTC00001",
+   null
+  ]
+ ],
+ "blocks": [
+  [
+   [
+    "Walksnail Avatar HD",
+    [
+     "Mini 1S",
+     "Nano V3",
+     "Mini 1S"
+    ],
+    [
+     "tx_antennas 1"
+    ],
+    "inferred",
+    null
+   ],
+   {
+    "family": "Walksnail Avatar HD",
+    "model": null,
+    "candidates": [
+     "Mini 1S",
+     "Nano V3"
+    ],
+    "basis": "inferred",
+    "evidence": [
+     "tx_antennas 1"
+    ],
+    "unresolved_reason": "several models share these on-air features"
+   }
+  ],
+  [
+   [
+    "Walksnail Avatar HD",
+    [
+     "Moonlight"
+    ],
+    [],
+    "inferred",
+    null
+   ],
+   {
+    "family": "Walksnail Avatar HD",
+    "model": "Moonlight-like",
+    "candidates": [
+     "Moonlight"
+    ],
+    "basis": "inferred",
+    "evidence": []
+   }
+  ],
+  [
+   [
+    "DJI",
+    [
+     "Mini 2"
+    ],
+    [
+     "x"
+    ],
+    "decoded",
+    null
+   ],
+   {
+    "family": "DJI",
+    "model": "Mini 2",
+    "candidates": [
+     "Mini 2"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "x"
+    ]
+   }
+  ],
+  [
+   [
+    "DJI",
+    [
+     "Avata-like"
+    ],
+    [],
+    "inferred",
+    null
+   ],
+   {
+    "family": "DJI",
+    "model": "Avata-like",
+    "candidates": [
+     "Avata-like"
+    ],
+    "basis": "inferred",
+    "evidence": []
+   }
+  ],
+  [
+   [
+    "X",
+    [],
+    [],
+    "inferred",
+    null
+   ],
+   {
+    "family": "X",
+    "model": null,
+    "candidates": [],
+    "basis": "inferred",
+    "evidence": [],
+    "unresolved_reason": "no model candidates"
+   }
+  ],
+  [
+   [
+    "X",
+    [],
+    [],
+    "decoded",
+    "why"
+   ],
+   {
+    "family": "X",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [],
+    "unresolved_reason": "why"
+   }
+  ]
+ ],
+ "rids": [
+  [
+   {
+    "uas_id": "1581F45T0000000000AB",
+    "ua_type": "helicopter or multirotor",
+    "manufacturer": {
+     "code": "1581",
+     "maker": "DJI",
+     "kind": "aircraft"
+    }
+   },
+   {
+    "family": "DJI",
+    "model": "Mavic 3",
+    "candidates": [
+     "Mavic 3"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID serial 1581F45T0000000000AB: CTA-2063-A manufacturer code 1581 = DJI",
+     "serial prefix 1581F45T -> Mavic 3 (FAA DOC RID000000009)",
+     "Remote ID UA type: helicopter or multirotor"
+    ]
+   }
+  ],
+  [
+   {
+    "uas_id": "1596A1234567890",
+    "ua_type": "helicopter or multirotor",
+    "manufacturer": {
+     "code": "1596",
+     "maker": "Dronetag",
+     "kind": "module"
+    }
+   },
+   {
+    "family": "unknown airframe (Remote ID module)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID serial 1596A1234567890: add-on broadcast module by Dronetag (code 1596)",
+     "Remote ID UA type: helicopter or multirotor"
+    ],
+    "unresolved_reason": "an add-on module names the module maker, not the airframe"
+   }
+  ],
+  [
+   {
+    "uas_id": "1581F45T",
+    "ua_type": "helicopter or multirotor"
+   },
+   {
+    "family": "unknown (Remote ID)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID ID 1581F45T: no known manufacturer code",
+     "Remote ID UA type: helicopter or multirotor"
+    ],
+    "unresolved_reason": "no manufacturer code in the Remote ID"
+   }
+  ],
+  [
+   {
+    "uas_id": "1581FO5T0000000000AB",
+    "ua_type": "helicopter or multirotor"
+   },
+   {
+    "family": "unknown (Remote ID)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID ID 1581FO5T0000000000AB: no known manufacturer code",
+     "Remote ID UA type: helicopter or multirotor"
+    ],
+    "unresolved_reason": "no manufacturer code in the Remote ID"
+   }
+  ],
+  [
+   {
+    "uas_id": "9999312A",
+    "ua_type": "helicopter or multirotor"
+   },
+   {
+    "family": "unknown (Remote ID)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID ID 9999312A: no known manufacturer code",
+     "Remote ID UA type: helicopter or multirotor"
+    ],
+    "unresolved_reason": "no manufacturer code in the Remote ID"
+   }
+  ],
+  [
+   {
+    "uas_id": "1748C123456789ABC",
+    "ua_type": "helicopter or multirotor",
+    "manufacturer": {
+     "code": "1748",
+     "maker": "Autel Robotics",
+     "kind": "aircraft"
+    }
+   },
+   {
+    "family": "Autel Robotics",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID serial 1748C123456789ABC: CTA-2063-A manufacturer code 1748 = Autel Robotics",
+     "Remote ID UA type: helicopter or multirotor"
+    ],
+    "unresolved_reason": "no FAA DOC serial prefix for this serial"
+   }
+  ],
+  [
+   {
+    "ua_type": 15
+   },
+   {
+    "family": "unknown (Remote ID)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID UA type: 15"
+    ],
+    "unresolved_reason": "no manufacturer code in the Remote ID"
+   }
+  ],
+  [
+   {},
+   {
+    "family": "unknown (Remote ID)",
+    "model": null,
+    "candidates": [],
+    "basis": "decoded",
+    "evidence": [],
+    "unresolved_reason": "no manufacturer code in the Remote ID"
+   }
+  ],
+  [
+   {
+    "uas_id": "1581F6Z9A00000000001",
+    "manufacturer": {
+     "code": "1581",
+     "maker": "DJI",
+     "kind": "aircraft"
+    }
+   },
+   {
+    "family": "DJI",
+    "model": "Mini 4 Pro",
+    "candidates": [
+     "Mini 4 Pro"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID serial 1581F6Z9A00000000001: CTA-2063-A manufacturer code 1581 = DJI",
+     "serial prefix 1581F6Z9 -> Mini 4 Pro (FAA DOC RID000000713)"
+    ]
+   }
+  ],
+  [
+   {
+    "uas_id": "1581F446A00000000001",
+    "manufacturer": {
+     "code": "1581",
+     "maker": "DJI",
+     "kind": "aircraft"
+    }
+   },
+   {
+    "family": "DJI",
+    "model": null,
+    "candidates": [
+     "Agras T10",
+     "Agras T30"
+    ],
+    "basis": "decoded",
+    "evidence": [
+     "Remote ID serial 1581F446A00000000001: CTA-2063-A manufacturer code 1581 = DJI",
+     "serial prefix 1581F446 -> Agras T10 / Agras T30 (FAA DOC RID000001163 / 038)"
+    ],
+    "unresolved_reason": "the DOC prefix is shared by several models"
+   }
+  ]
+ ]
+}

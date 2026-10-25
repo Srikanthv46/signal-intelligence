@@ -1,0 +1,130 @@
+{
+ "fs": 250000.0,
+ "fc": 446100000.0,
+ "candidates": [
+  {
+   "f_hz": 446043843.1473732,
+   "peak_db": 32.29119873046875,
+   "width_hz": 3804.5195185884354,
+   "noise_density": 2.5512599609375e-07
+  }
+ ],
+ "measure": [
+  {
+   "f_hz": 446043749.2286448,
+   "keyed_s": 0.6,
+   "duration_s": 0.8,
+   "envelope_cv": 0.050746988505125046,
+   "deviation_hz": 2193.681901305241,
+   "voice_rms_hz": 463.9211819989608,
+   "voice_kurtosis": 9.064032705300985,
+   "voice_activity": 0.4666666666666667,
+   "subaudible": {
+    "type": "CTCSS",
+    "ctcss_hz": 88.5,
+    "ctcss_measured_hz": 88.5,
+    "ctcss_snr_db": 51.4,
+    "ctcss_standard": true,
+    "ctcss_deviation_hz": 503.0
+   },
+   "snr_db": 22.94277572631836,
+   "peak_db": 32.29119873046875
+  }
+ ],
+ "detect_s": 0.018973350524902344,
+ "emissions": [
+  {
+   "family": "voice_fm",
+   "label": "nbfm_voice_pmr446_ch4",
+   "start_us": 100000.0,
+   "end_us": 700000.0000000001,
+   "f_lo_mhz": 446.0381555467435,
+   "f_hi_mhz": 446.04934291054605,
+   "center_mhz": 446.0437492286448,
+   "snr_db": 22.9,
+   "confidence": 0.97,
+   "decoded": {
+    "type": "CTCSS",
+    "ctcss_hz": 88.5,
+    "ctcss_measured_hz": 88.5,
+    "ctcss_snr_db": 51.4,
+    "ctcss_standard": true,
+    "ctcss_deviation_hz": 503.0
+   },
+   "features": {
+    "center_mhz": 446.043749,
+    "deviation_hz": 2194,
+    "channel_bw_khz": 12.5,
+    "keyed_s": 0.6,
+    "keyed_fraction": 0.75,
+    "envelope_cv": 0.051,
+    "voice_activity": 0.467,
+    "voice_rms_hz": 464,
+    "voice_kurtosis": 9.06,
+    "snr_db": 22.9,
+    "evidence": [
+     "constant-envelope narrowband FM carrier",
+     "peak deviation 2194 Hz",
+     "keyed 0.60 s",
+     "CTCSS 88.5 Hz (+51.4 dB)",
+     "speech-band activity 47% of 20 ms frames",
+     "PMR446 channel 4 (-1 Hz)"
+    ],
+    "service": "PMR446",
+    "channel": 4,
+    "nominal_mhz": 446.04375,
+    "offset_hz": -1,
+    "offset_ppm": -0.0,
+    "receiver_ppm_applied": 0.0,
+    "type": "CTCSS",
+    "ctcss_hz": 88.5,
+    "ctcss_measured_hz": 88.5,
+    "ctcss_snr_db": 51.4,
+    "ctcss_standard": true,
+    "ctcss_deviation_hz": 503.0,
+    "segments_s": [
+     [
+      0.1,
+      0.7
+     ]
+    ]
+   }
+  }
+ ],
+ "fields": {
+  "center_mhz": 446.043749,
+  "deviation_hz": 2194,
+  "channel_bw_khz": 12.5
+ },
+ "audio": {
+  "fs": 16000.0,
+  "meta": {
+   "squelch_open": 0.7499739583333334,
+   "snr_db": 25.0,
+   "center_mhz": 446.043749
+  },
+  "n": 12800
+ },
+ "stream": [
+  {
+   "squelch_open": 0.4998958333333333,
+   "snr_db": 12.9,
+   "center_mhz": 446.043749
+  },
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 25.0,
+   "center_mhz": 446.043749
+  },
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 25.0,
+   "center_mhz": 446.043749
+  },
+  {
+   "squelch_open": 0.4998958333333333,
+   "snr_db": 12.7,
+   "center_mhz": 446.043749
+  }
+ ]
+}

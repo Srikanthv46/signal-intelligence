@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://armory.in/schemas/spectrum-intel/response-1.json",
+  "title": "spectrum-intel analysis response",
+  "description": "What spectrum-intel returns for one IQ block (Python and C++ implementations alike). Units are SI and named in the key (_hz, _s, _db, _dbfs); times are seconds from the first sample, plus UTC (ISO 8601) when the block's start time is known. Additive changes bump the minor version; renames or removals bump the major version.",
+  "type": "object",
+  "required": ["schema_version", "kind", "status", "engine", "input", "quality", "coverage", "summary", "signals",
+               "weak_detections", "emitters", "devices", "findings", "warnings", "errors", "timing_ms"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$"},
+    "kind": {"const": "spectrum_intel.analysis"},
+    "request_id": {"type": ["string", "null"]},
+    "status": {
+      "enum": ["ok", "insufficient_input", "error"],
+      "description": "ok: the block was analysed (receiver errors, if any, are in errors[]); insufficient_input: the block is too short or malformed to analyse (see errors[]); error: the analysis failed."
+    },
+    "engine": {
+      "type": "object",
+      "required": ["name", "implementation", "version", "receivers_enabled"],
+      "properties": {
+        "name": {"const": "spectrum_intel"},
+        "implementation": {"enum": ["python", "cpp"]},
+        "version": {"type": "string"},
+        "receivers_enabled": {"type": "array", "items": {"type": "string"}},
+        "receivers_unavailable": {"type": "object", "additionalProperties": {"type": "string"}},
+        "threads": {"type": "integer", "minimum": 1}
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["center_frequency_hz", "sample_rate_hz", "bandwidth_hz", "n_samples", "duration_s",
+                   "start_time_utc", "analysed_band_hz"],
+      "properties": {
+        "source_id": {"type": ["string", "null"]},
+        "center_frequency_hz": {"type": "number"},
+        "center_frequency_used_hz": {"type": "number", "description": "differs from center_frequency_hz only when quality.frequency_label_check corrected it"},
+        "sample_rate_hz": {"type": "number", "exclusiveMinimum": 0},
+        "bandwidth_hz": {"type": ["number", "null"], "description": "analog (front-end) bandwidth; null = assume the sample rate"},
+        "n_samples": {"type": "integer", "minimum": 0},
+        "duration_s": {"type": "number", "minimum": 0},
+        "start_time_utc": {"type": ["string", "null"]},
+        "gain_db": {"type": ["number", "null"]},
+        "receiver_ppm": {"type": ["number", "null"], "description": "the SDR's frequency error given by the caller (null: estimated per block where possible)"},
+        "analysed_band_hz": {"$ref": "#/$defs/band"}
+      }
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "adc_clipping": {"type": "boolean"},
+        "clipped_fraction": {"type": "number"},
+        "peak_abs": {"type": "number"},
+        "full_scale": {"type": "number"},
+        "rms_dbfs": {"type": "number"},
+        "noise_floor_dbfs_per_bin_median": {"type": ["number", "null"]},
+        "frequency_label_check": {"type": ["object", "null"]}
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "description": "one entry per enabled receiver: whether this block could carry what it looks for",
+      "items": {
+        "type": "object",
+        "required": ["receiver", "status", "in_band", "sample_rate_ok", "duration_ok"],
+        "properties": {
+          "receiver": {"type": "string"},
+          "status": {"enum": ["ran", "error"]},
+          "in_band": {"type": "boolean"},
+          "sample_rate_ok": {"type": "boolean"},
+          "duration_ok": {"type": "boolean", "description": "duration >= min_duration_s"},
+          "full_duration": {"type": "boolean", "description": "duration >= recommended_duration_s"},
+          "min_sample_rate_hz": {"type": "number"},
+          "min_duration_s": {"type": "number"},
+          "recommended_duration_s": {"type": "number"},
+          "time_s": {"type": ["number", "null"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["n_signals", "n_weak_detections", "by_status", "by_family", "technologies"],
+      "properties": {
+        "n_signals": {"type": "integer"},
+        "n_weak_detections": {"type": "integer"},
+        "n_artifacts": {"type": "integer"},
+        "n_unknown": {"type": "integer"},
+        "by_status": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "by_family": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "technologies": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "signals": {"type": "array", "items": {"$ref": "#/$defs/signal"}},
+    "weak_detections": {
+      "type": "array",
+      "description": "energy-only detections below 6 dB with no decode: listed, not reported as signals",
+      "items": {
+        "type": "object",
+        "required": ["frequency", "time", "snr_db"],
+        "properties": {
+          "frequency": {"$ref": "#/$defs/frequency"},
+          "time": {"$ref": "#/$defs/time"},
+          "snr_db": {"type": ["number", "null"]},
+          "rule_label": {"type": "string"},
+          "flags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "emitters": {"type": "array", "description": "physical radios associated across signals (drone links)"},
+    "devices": {"type": "array", "description": "802.11 device inventory"},
+    "findings": {"type": "array", "description": "ranked security / situational findings"},
+    "extensions": {"type": "object", "description": "other report-level output of receivers (e.g. device_summary, device_groups), keyed by name"},
+    "warnings": {"type": "array", "items": {"$ref": "#/$defs/message"}},
+    "errors": {"type": "array", "items": {"$ref": "#/$defs/message"}},
+    "timing_ms": {
+      "type": "object",
+      "required": ["total"],
+      "properties": {
+        "total": {"type": "number"},
+        "stages": {"type": "object", "additionalProperties": {"type": "number"}},
+        "receivers": {"type": "object", "additionalProperties": {"type": "number"}}
+      }
+    }
+  },
+  "$defs": {
+    "band": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "message": {
+      "type": "object",
+      "required": ["code", "message"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+        "message": {"type": "string"},
+        "receiver": {"type": ["string", "null"]}
+      }
+    },
+    "frequency": {
+      "type": "object",
+      "required": ["center_hz", "low_hz", "high_hz", "bandwidth_hz"],
+      "properties": {
+        "center_hz": {"type": "number"},
+        "low_hz": {"type": "number"},
+        "high_hz": {"type": "number"},
+        "bandwidth_hz": {"type": "number"},
+        "offset_hz": {"type": "number", "description": "center_hz minus the block's centre frequency"}
+      }
+    },
+    "time": {
+      "type": "object",
+      "required": ["start_s", "end_s", "duration_s"],
+      "properties": {
+        "start_s": {"type": "number"},
+        "end_s": {"type": "number"},
+        "duration_s": {"type": "number"},
+        "start_utc": {"type": ["string", "null"]},
+        "end_utc": {"type": ["string", "null"]}
+      }
+    },
+    "signal": {
+      "type": "object",
+      "required": ["id", "category", "technology", "family", "label", "confidence", "inferred", "frequency", "time",
+                   "snr_db", "modulation", "decode", "identifiers", "flags"],
+      "properties": {
+        "id": {"type": "integer", "minimum": 0},
+        "category": {"enum": ["emission", "artifact"]},
+        "technology": {"type": "string", "description": "stable code from schema/technologies.json"},
+        "family": {"type": "string"},
+        "label": {"type": "string", "description": "human-readable; '-like' = inferred, not decoded; 'unknown' below 0.5 confidence"},
+        "description": {"type": "string", "description": "since 1.4.0: plain-language description of what the signal is and what the device does (schema/descriptions.json)"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "inferred": {"type": "boolean"},
+        "frequency": {"$ref": "#/$defs/frequency"},
+        "time": {
+          "allOf": [{"$ref": "#/$defs/time"}],
+          "properties": {
+            "n_bursts": {"type": "integer"},
+            "duty_cycle": {"type": ["number", "null"]},
+            "burst_period_s": {"type": ["number", "null"]},
+            "continuous": {"type": "boolean"},
+            "bursts": {"type": "array"}
+          }
+        },
+        "snr_db": {"type": ["number", "null"]},
+        "modulation": {"type": "string"},
+        "decode": {
+          "type": "object",
+          "required": ["status", "reason", "method", "fields"],
+          "properties": {
+            "status": {"enum": ["success", "partial", "not_possible"]},
+            "reason": {"type": "string"},
+            "method": {"type": ["string", "null"]},
+            "fields": {"type": "object"},
+            "steps": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "identifiers": {"type": "object", "description": "the decoded identity of the transmitter, when known (pci, bsic, icao, mac, ssid, serial, ...)"},
+        "validation": {
+          "type": "object",
+          "description": "since 1.3.0: how the capability behind this signal was validated (schema/capabilities.json). 'proven' = tested against a real transmitter / capture; 'research' = built from published specifications, synthetic validation only",
+          "required": ["level"],
+          "properties": {
+            "level": {"enum": ["proven", "research"]},
+            "proof": {"type": "string"},
+            "sources": {"type": "string"},
+            "research_fields": {"type": "array", "items": {"type": "string"}},
+            "research_sources": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "evidence": {"type": "string"},
+        "band_allocation": {"type": "string"},
+        "flags": {"type": "array", "items": {"type": "string"}},
+        "detection": {"type": "object"},
+        "features": {"type": "object"}
+      }
+    }
+  }
+}

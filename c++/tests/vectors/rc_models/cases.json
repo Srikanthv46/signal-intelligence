@@ -1,0 +1,385 @@
+[
+ {
+  "em": [
+   {
+    "label": "frsky_d16",
+    "center_mhz": 2440,
+    "decoded": {
+     "variant": "D16 v2",
+     "crc_ok": true
+    },
+    "features": {}
+   },
+   {
+    "label": "frsky_d16",
+    "center_mhz": 2441,
+    "decoded": {
+     "variant": "D16",
+     "crc_ok": false
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "FrSky D16 v2",
+   "model": null,
+   "candidates": [
+    "FrSky radio / internal module",
+    "multiprotocol module"
+   ],
+   "basis": "decoded",
+   "evidence": [
+    "FrSky D16 v2: ACCST v2 firmware generation"
+   ],
+   "unresolved_reason": "no published on-air fingerprint separates FrSky radios and multiprotocol modules"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "frsky_d8",
+    "center_mhz": 2440,
+    "decoded": {
+     "variant": "D8",
+     "crc_ok": false
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "FrSky D8",
+   "model": null,
+   "candidates": [
+    "FrSky radio / internal module",
+    "multiprotocol module"
+   ],
+   "basis": "decoded",
+   "evidence": [
+    "FrSky D8"
+   ],
+   "unresolved_reason": "no published on-air fingerprint separates FrSky radios and multiprotocol modules"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "afhds2a_id",
+    "center_mhz": 2440,
+    "decoded": {
+     "crc_ok": null
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "FlySky AFHDS 2A",
+   "model": null,
+   "candidates": [
+    "FS-i6",
+    "FS-i6X",
+    "other AFHDS 2A TX / multiprotocol module"
+   ],
+   "basis": "decoded",
+   "evidence": [
+    "A7105 ID code"
+   ],
+   "unresolved_reason": "every AFHDS 2A transmitter uses the same air protocol"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "afhds2a",
+    "center_mhz": 2440,
+    "decoded": {
+     "crc_ok": true
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "FlySky AFHDS 2A",
+   "model": null,
+   "candidates": [
+    "FS-i6",
+    "FS-i6X",
+    "other AFHDS 2A TX / multiprotocol module"
+   ],
+   "basis": "decoded",
+   "evidence": [
+    "A7105 ID code, CRC-verified packets"
+   ],
+   "unresolved_reason": "every AFHDS 2A transmitter uses the same air protocol"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "crossfire_sync",
+    "center_mhz": 868.3,
+    "decoded": {
+     "grid": {
+      "band": "868",
+      "channel": 3,
+      "link": "uplink"
+     }
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "TBS Crossfire",
+   "model": null,
+   "candidates": [
+    "Micro TX V2",
+    "Nano TX",
+    "full-size TX",
+    "Tango 2 / Mambo internal"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "Crossfire 150 Hz sync word",
+    "band plan 868 (region build, not the model)"
+   ],
+   "unresolved_reason": "the same protocol on every Crossfire TX; only power differs"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "crossfire_sync",
+    "center_mhz": 868.3,
+    "decoded": {
+     "sync": "0x3E6B3E"
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "TBS Crossfire",
+   "model": null,
+   "candidates": [
+    "Micro TX V2",
+    "Nano TX",
+    "full-size TX",
+    "Tango 2 / Mambo internal"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "Crossfire 150 Hz sync word"
+   ],
+   "unresolved_reason": "the same protocol on every Crossfire TX; only power differs"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "sik_telemetry",
+    "center_mhz": 915,
+    "decoded": {
+     "air_rate_bps": 64000
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "SiK telemetry",
+   "model": null,
+   "candidates": [
+    "100 mW SiK board (3DR / Holybro / mRo / HM-TRP)",
+    "RFD900"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "air rate 64 kb/s (standard SiK set)"
+   ],
+   "unresolved_reason": "every SiK radio with this air rate looks the same on air"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "sik_telemetry",
+    "center_mhz": 915,
+    "decoded": {
+     "air_rate_bps": 125000
+    },
+    "features": {}
+   }
+  ],
+  "out": {
+   "family": "SiK telemetry (RFD 3.x)",
+   "model": null,
+   "candidates": [
+    "RFD900x",
+    "RFD900ux",
+    "RFD868x"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "air rate 125 kb/s is only in the RFD 3.x firmware set"
+   ],
+   "unresolved_reason": "RFD900x / ux / 868x differ only in the band edges"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_lora_sf5_bw500k",
+    "center_mhz": 915.5,
+    "decoded": null,
+    "features": {
+     "modulation": "lora",
+     "sf": 5,
+     "bw_hz": 500000.0,
+     "elrs_channel": [
+      "FCC915",
+      7
+     ]
+    }
+   }
+  ],
+  "out": {
+   "family": "ExpressLRS",
+   "model": "LR1121-based module-like",
+   "candidates": [
+    "LR1121-based module"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "LoRa SF5 500 kHz sub-GHz",
+    "domain FCC915 (regulatory build)",
+    "sub-GHz SF5 (200 Hz Full / 250 Hz) exists only on LR1121"
+   ]
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_lora_sf7_bw500k",
+    "center_mhz": 866.0,
+    "decoded": null,
+    "features": {
+     "modulation": "lora",
+     "sf": 7,
+     "bw_hz": 500000.0,
+     "elrs_channel": [
+      "IN866",
+      1
+     ]
+    }
+   }
+  ],
+  "out": {
+   "family": "ExpressLRS",
+   "model": null,
+   "candidates": [
+    "SX127x-based module",
+    "LR1121-based module"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "LoRa SF7 500 kHz sub-GHz",
+    "domain IN866 (regulatory build)"
+   ],
+   "unresolved_reason": "this LoRa mode exists on both radio chips"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_like_lora_sf6_bw812.5k",
+    "center_mhz": 2440.4,
+    "decoded": null,
+    "features": {
+     "modulation": "lora",
+     "sf": 6,
+     "bw_hz": 812500.0
+    }
+   }
+  ],
+  "out": {
+   "family": "ExpressLRS",
+   "model": null,
+   "candidates": [
+    "SX1280-based module",
+    "LR1121-based module"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "LoRa SF6 812.5 kHz 2.4 GHz"
+   ],
+   "unresolved_reason": "this LoRa mode exists on both radio chips"
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_flrc_like",
+    "center_mhz": 2440,
+    "decoded": null,
+    "features": {
+     "modulation": "gfsk"
+    }
+   }
+  ],
+  "out": {
+   "family": "ExpressLRS-like (FLRC)",
+   "model": "SX1280-based module-like",
+   "candidates": [
+    "SX1280-based module"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "650 kb/s FLRC-like rate"
+   ]
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_gfsk_like",
+    "center_mhz": 2440,
+    "decoded": null,
+    "features": {
+     "modulation": "gfsk"
+    }
+   }
+  ],
+  "out": {
+   "family": "ExpressLRS-like (GFSK)",
+   "model": "LR1121-based module-like",
+   "candidates": [
+    "LR1121-based module"
+   ],
+   "basis": "inferred",
+   "evidence": [
+    "300 kb/s GFSK-like rate at 2.4 GHz (K1000 / DK modes: LR1121 only)"
+   ]
+  }
+ },
+ {
+  "em": [
+   {
+    "label": "elrs_gfsk_like",
+    "center_mhz": 915,
+    "decoded": null,
+    "features": {
+     "modulation": "gfsk"
+    }
+   }
+  ],
+  "out": null
+ },
+ {
+  "em": [
+   {
+    "label": "nb_burst",
+    "center_mhz": 2440,
+    "decoded": null,
+    "features": {}
+   }
+  ],
+  "out": null
+ }
+]

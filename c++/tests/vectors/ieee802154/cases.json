@@ -1,0 +1,213 @@
+{
+ "lengths": [
+  11216,
+  6608,
+  4816,
+  5608
+ ],
+ "out": [
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 37,
+   "crc_ok": true,
+   "mpdu_hex": "61c8423412ffffc3b2a14000a213000e6f0a36a6e9689c2d717d803c77d1188f47ee0b2324",
+   "frame_type": "data",
+   "seq": 66,
+   "security": false,
+   "ack_request": true,
+   "dst_pan": "1234",
+   "dst_addr": "ffff",
+   "src_addr": "0013a20040a1b2c3",
+   "payload_bytes": 20,
+   "vendor": "Digi International (XBee)"
+  },
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 19,
+   "crc_ok": true,
+   "mpdu_hex": "008007cdab0100000000000000000000009ba6",
+   "frame_type": "beacon",
+   "seq": 7,
+   "security": false,
+   "ack_request": false,
+   "src_pan": "abcd",
+   "src_addr": "0001",
+   "payload_bytes": 10
+  },
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 12,
+   "crc_ok": true,
+   "mpdu_hex": "438809341200000100042edd",
+   "frame_type": "mac command",
+   "seq": 9,
+   "security": false,
+   "ack_request": false,
+   "dst_pan": "1234",
+   "dst_addr": "0000",
+   "src_addr": "0001",
+   "payload_bytes": 1
+  },
+  null
+ ],
+ "channels": [
+  [
+   2405000000.0,
+   11
+  ],
+  [
+   2480000000.0,
+   26
+  ],
+  [
+   2440200000.0,
+   null
+  ],
+  [
+   2441000000.0,
+   null
+  ],
+  [
+   2400000000.0,
+   null
+  ]
+ ],
+ "crc": [
+  [
+   "61c8423412ffffc3b2a14000a213000e6f0a36a6e9689c2d717d803c77d1188f47ee0b2324",
+   0
+  ],
+  [
+   "008007cdab0100000000000000000000009ba6",
+   0
+  ],
+  [
+   "438809341200000100042edd",
+   0
+  ]
+ ],
+ "mac": [
+  [
+   "61c8423412ffffc3b2a14000a213000e6f0a36a6e9689c2d717d803c77d1188f47ee0b",
+   {
+    "frame_type": "data",
+    "seq": 66,
+    "security": false,
+    "ack_request": true,
+    "dst_pan": "1234",
+    "dst_addr": "ffff",
+    "src_addr": "0013a20040a1b2c3",
+    "payload_bytes": 20,
+    "vendor": "Digi International (XBee)"
+   }
+  ],
+  [
+   "008007cdab010000000000000000000000",
+   {
+    "frame_type": "beacon",
+    "seq": 7,
+    "security": false,
+    "ack_request": false,
+    "src_pan": "abcd",
+    "src_addr": "0001",
+    "payload_bytes": 10
+   }
+  ],
+  [
+   "43880934120000010004",
+   {
+    "frame_type": "mac command",
+    "seq": 9,
+    "security": false,
+    "ack_request": false,
+    "dst_pan": "1234",
+    "dst_addr": "0000",
+    "src_addr": "0001",
+    "payload_bytes": 1
+   }
+  ]
+ ],
+ "fs": 7680000.0,
+ "fc": 2440000000.0,
+ "labels": [
+  "ieee802154",
+  "ieee802154",
+  "ieee802154_like"
+ ],
+ "decoded": [
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 37,
+   "crc_ok": true,
+   "mpdu_hex": "61c8423412ffffc3b2a14000a213000e6f0a36a6e9689c2d717d803c77d1188f47ee0b2324",
+   "frame_type": "data",
+   "seq": 66,
+   "security": false,
+   "ack_request": true,
+   "dst_pan": "1234",
+   "dst_addr": "ffff",
+   "src_addr": "0013a20040a1b2c3",
+   "payload_bytes": 20,
+   "vendor": "Digi International (XBee)",
+   "channel": 18
+  },
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 19,
+   "crc_ok": true,
+   "mpdu_hex": "008007cdab0100000000000000000000009ba6",
+   "frame_type": "beacon",
+   "seq": 7,
+   "security": false,
+   "ack_request": false,
+   "src_pan": "abcd",
+   "src_addr": "0001",
+   "payload_bytes": 10,
+   "channel": 18
+  },
+  {
+   "protocol": "IEEE 802.15.4 (O-QPSK 2.4 GHz)",
+   "length": 37,
+   "crc_ok": false,
+   "mpdu_hex": "61c8423412ffffc3b2a14000a213000e6f0a36a6e9689c2d717d803c77d1188f47ee0b2371",
+   "channel": 18
+  }
+ ],
+ "field": {
+  "frames": 3,
+  "crc_ok": 2,
+  "channels": [
+   18
+  ],
+  "frame_types": [
+   "beacon",
+   "data"
+  ],
+  "pan_ids": [
+   "1234",
+   "abcd"
+  ],
+  "addresses": [
+   "0001",
+   "0013a20040a1b2c3",
+   "ffff"
+  ],
+  "vendors": [
+   "Digi International (XBee)"
+  ]
+ },
+ "model": {
+  "family": "Digi XBee (802.15.4 / Zigbee)",
+  "model": null,
+  "candidates": [
+   "XBee 802.15.4",
+   "XBee Zigbee 3.0",
+   "XBee DigiMesh 2.4"
+  ],
+  "basis": "decoded",
+  "evidence": [
+   "64-bit address with the Digi OUI 00 13 A2 (Digi International (XBee))"
+  ],
+  "unresolved_reason": "the XBee 2.4 GHz variants share the PHY; the firmware is not visible in the MAC header"
+ }
+}

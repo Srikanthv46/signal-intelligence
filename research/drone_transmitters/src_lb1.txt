@@ -1,0 +1,1759 @@
+                                                                  Report No.: SET2014-01529
+
+
+
+
+                 RF TEST REPORT
+         Report No.: SET2014-01529
+
+     Product Name: DJI LIGHTBRIDGE
+
+             FCC ID: SS3-201402241
+
+         Model No. : DJI Lightbridge (ground)
+
+          Applicant: SZ DJI TECHNOLOGY CO.,LTD.
+
+           Address: Room 613、614, 6/F, HKUST SZ IER Bldg, No.9 Yuexing 1st Rd
+                    Hi-Tech Park(South), Nanshan District, Shenzhen, Guangdong,
+                    China
+          Issued by: CCIC-SET
+
+      Lab Location: Electronic Testing Building, Shahe Road, Xili, Nanshan District,
+                    Shenzhen, 518055, P. R. China
+
+                        Tel: 86 755 26627338       Fax: 86 755 26627238
+
+
+
+
+    This test report consists of 43 pages in total. It may be duplicated completely for legal
+use with the approval of the applicant. It should not be reproduced except in full, without the
+written approval of our laboratory. The client should not use it to claim product endorsement
+by CCIC-SET. The test results in the report only apply to the tested sample. The test report
+shall be invalid without all the signatures of testing engineers, reviewer and approver. Any
+objections must be raised to CCIC-SET within 20 days since the date when the report is
+received. It will not be taken into consideration beyond this limit.
+
+
+
+
+                                                                                Page 1 of 46
+                                                                           Report No.: SET2014-01529
+
+                                                   Test Report
+
+Product Name .......................:        DJI LIGHTBRIDGE
+
+Brand Name ..........................:       DJI
+
+Trade Name ...........................:      DJI
+
+Applicant ...............................:   SZ DJI TECHNOLOGY CO.,LTD.
+                                             Room 613、614, 6/F, HKUST SZ IER Bldg, No.9 Yuexing
+Applicant Address ................:
+                                             1st Rd Hi-Tech Park(South), Nanshan District, Shenzhen,
+                                             Guangdong, China
+Manufacturer.........................:       SZ DJI TECHNOLOGY CO.,LTD.
+                                             Room 613、614, 6/F, HKUST SZ IER Bldg, No.9 Yuexing
+Manufacturer Address .........:
+                                             1st Rd Hi-Tech Park(South), Nanshan District, Shenzhen,
+                                             Guangdong, China
+Test Standards......................:        47 CFR Part 15 Subpart C：Radio Frequency Devices
+                                             ANSI C63.10:2009：American National Standard for
+                                             Testing Unlicensed Wireless Devices
+                                             DA 00-705: Filing and Measurement Guidelines
+                                             for Frequency Hopping Spread Spectrum Systems
+Test Result ............................:    PASS
+
+Tested by .............................:
+
+                                                                            2014.03.01
+
+                                              Lu Lei，Test Engineer
+
+Reviewed by .........................:
+
+                                                                            2014.03.01
+
+                                             Shuangwen Zhang, Senior Egineer
+
+Approved by .........................:
+
+                                                                            2014.03.01
+
+                                              Wu Li’an，Manager
+
+
+
+
+                                                                                         Page 2 of 46
+                                                                                                        Report No.: SET2014-01529
+
+                                                 TABLE OF CONTENTS
+RF TEST REPORT .......................................................................................................................... 1
+
+1. GENERAL INFORMATION .................................................................................................... 4
+
+1.1.    EUT Description ....................................................................................................................... 4
+1.2.    Support Equipment ................................................................................................................... 5
+1.3.    Test Standards and Results ........................................................................................................ 5
+1.4.    Facilities and Accreditations ..................................................................................................... 5
+
+2. 47 CFR PART 15C REQUIREMENTS .................................................................................... 7
+
+2.1.    Antenna requirement ................................................................................................................. 7
+2.2.    Number of Hopping Frequency ................................................................................................ 8
+2.3.    Peak Output Power.................................................................................................................. 10
+2.4.    20dB Bandwidth ..................................................................................................................... 13
+2.5.    Carried Frequency Separation ................................................................................................. 16
+2.6.    Time of Occupancy (Dwell time) ........................................................................................... 18
+2.7.    Conducted Spurious Emissions............................................................................................... 21
+2.8.    Band Edge ............................................................................................................................... 24
+2.9.    Conducted Emission ............................................................................................................... 31
+2.10. Radiated Emission................................................................................................................... 36
+2.11. RF exposure evaluation ........................................................................................................... 45
+
+
+                                                           Change History
+       Issue                      Date                                                  Reason for change
+        1.0                    Mar 01, 2014                                               First edition
+
+
+
+
+                                                                                                                               Page 3 of 46
+                                                                         Report No.: SET2014-01529
+
+1.          General Information
+
+1.1.        EUT Description
+ EUT Type ............................. :DJI LIGHTBRIDGE
+ Serial No. .............................. :
+                                         (n.a, marked #1 by test site)
+ Hardware Version ................. :    IG800 GSP V1
+ Software Version .................. :   IG800_GS_LPC1765_V01.00.01.41_U27_20140211
+ Modulation Type .................. :    GFSK
+ Frequency Range .................. :    The frequency range used is 2405.376MHz – 2477.056MHz
+                                         (36 channel,at interval of 2.048MHz)
+                                         The frequency block is 2400MHz to 2483.5MHz
+ Antenna Type........................ : SMA Antenna
+ Antenna Gain ........................ : 4.68 dBi
+
+Note 1: The EUT is a LIGHTBRIDGE, it contains operating at 2.4GHz ISM band; the frequencies
+        allocated is F(MHz)=2405.376+2.048*(n-1) (1<=n<=36). The lowest, middle, highest
+        channel numbers of the DJI LIGHTBRIDGE used and tested in this report are separately 1
+        (2405.376MHz), 19 (2442.240MHz) and 36(2477.056MHz).
+Note 2: For a more detailed description, please refer to Specification or User’s Manual supplied by
+        the applicant and/or manufacturer.
+Note 3: The EUT had two different adapter, both of them had been test in this report
+Note 4: When the ground unit is receiving signals, both the antennas stop transmitting signals and
+        start receiving signals. When the ground unit is transmitting signals, the antennas stop
+        receiving signals and one of the antennas starts transmitting signals.
+
+
+
+
+                                                                                        Page 4 of 46
+                                                                         Report No.: SET2014-01529
+1.2.     Support Equipment
+  No.        Equipment           Brand Name        Model Name        Manufacturer       Serial No.
+   1        Mobile Phone         SAMSUNG            SM-N900          SAMSUNG            H5914A03
+   2        Digital camera         SONY             NEX-5N             SONY             H3949C55
+
+1.3.     Test Standards and Results
+The objective of the report is to perform testing according to 47 CFR Part 15 Subpart C (Bluetooth,
+2.4GHz ISM band radiators) for the EUT FCC ID Certification:
+
+           No.                  Identity                         Document Title
+                             47 CFR Part 15
+            1                                               Radio Frequency Devices
+                             Subpart C 2012
+                                                      American National Standard for Testing
+            2            ANSI C63.10 2009
+                                                          Unlicensed Wireless Devices
+
+Test detailed items/section required by FCC rules and results are as below:
+
+                No.    Section in CFR 47                 Description           Result
+                1     15.203                  Antenna Requirement              PASS
+                2     15.247(a)               Number of Hopping Frequency      PASS
+                3     15.247(b)               Peak Output Power                PASS
+                4     15.247(a)               20dB Bandwidth                   PASS
+                5     15.247(a)               Carrier Frequency Separation     PASS
+                6     15.247(a)               Time of Occupancy (Dwell time)   PASS
+                7     15.247(d)               Conducted Spurious Emission      PASS
+                8     15.247(d)               Band Edge                        PASS
+                9     15.207                  Conducted Emission               PASS
+                10    15.209                  Radiated Emission                PASS
+                      15.247(c)
+
+Note 1: The tests were performed according to the method of measurements prescribed in
+DA-00-705.
+
+Note 2: The test of Radiated Emission was performed according to the method of measurements
+prescribed in ANSI C63.10 2009.
+
+1.4.     Facilities and Accreditations
+
+1.4.1.   Facilities
+
+CNAS-Lab Code: L1659
+CCIC Southern Electronic Product Testing (Shenzhen) Co., Ltd. CCIC is a third party testing
+organization accredited by China National Accreditation Service for Conformity Assessment (CNAS)
+according to ISO/IEC 17025. The accreditation certificate number is L1659. A 12.8*6.8*6.4 (m)
+fully anechoic chamber was used for the radiated spurious emissions test.
+FCC-Registration No.: 406086
+
+
+                                                                                        Page 5 of 46
+                                                                       Report No.: SET2014-01529
+CCIC Southern Electronic Product Testing (Shenzhen) Co., Ltd. EMC Laboratory has been registered
+and fully described in a report filed with the FCC (Federal Communications Commission). The
+acceptance letter from the FCC is maintained in our files. Registration 406086, Renewal date Nov. 19,
+2011, valid time is until Nov. 18, 2014.
+
+IC-Registration No.: 11185A
+
+CCIC Southern Electronic Product Testing (Shenzhen) Co., Ltd. EMC Laboratory has been registered
+by Certification and Engineering Bureau of Industry Canada for the performance of radiated
+measurements with Registration No. 11185A on July. 15, 2013, valid time is until July. 15, 2016.
+
+1.4.2.    Test Environment Conditions
+
+During the measurement, the environmental conditions were within the listed ranges:
+
+
+         Temperature (°C):                    15 - 35
+         Relative Humidity (%):               30 -60
+         Atmospheric Pressure (kPa):          86KPa-106KPa
+
+
+
+
+                                                                                      Page 6 of 46
+                                                                         Report No.: SET2014-01529
+
+2.       47 CFR Part 15C Requirements
+
+2.1. Antenna requirement
+
+2.1.1. Applicable Standard
+
+According to FCC 15.203, an intentional radiator shall be designed to ensure that no antenna other
+than that furnished by the responsible party shall be used with the device. The use of a permanently
+attached antenna or of an antenna that uses a unique coupling to the intentional radiator shall be
+considered sufficient to comply with the provisions of this section.
+And according to FCC 47 CFR Section 15.247(c), if transmitting antennas of directional gain greater
+than 6dBi are used, the power shall be reduced by the amount in dB that the directional gain of the
+antenna exceeds 6dBi.
+
+2.1.2.   Antenna Information
+
+Antenna Category: External antenna
+EUT has two external antennas via standard connector, which can be removed.
+Antenna General Information:
+      No.            EUT Model                Ant. Cat.        Ant. Type        Gain(dBi)
+       1        DJI LIGHTBRIDGE               External           SMA              4.68
+
+
+2.1.3. Result: comply
+
+The EUT has a permanently and irreplaceable attached antenna. Please refer to the EUT internal
+photos.
+
+Note：Ensure to use the special antennas and install them by a professional trained. Any other types of
+
+antennas are forbidden.
+
+
+
+
+                                                                                        Page 7 of 46
+                                                                      Report No.: SET2014-01529
+2.2.      Number of Hopping Frequency
+
+2.2.1.    Requirement
+
+According to FCC §15.247(a)(1)(iii), frequency hopping systems operating in the 2400MHz to
+2483.5MHz bands shall use at least 15 hopping frequencies.
+
+2.2.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the Spectrum
+Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During the
+measurement, the DJI LIGHTBRIDGE of the EUT is activated.
+
+B. Equipments List:
+
+       Description             Manufacturer   Model           Serial No.       Cal.Due Date
+        Spectrum Analyzer          R&S           FSP40         1164.4391.40     2014.06.10
+
+2.2.3.    Test Procedure
+
+The EUT must have its hopping function enabled. Use the following spectrum analyzer settings:
+
+Span = the frequency band of operation
+
+RBW ≥ 1% of the span
+
+VBW ≥ RBW
+
+Sweep = auto
+
+Detector function = peak
+
+Trace = max hold
+
+Allow the trace to stabilize
+
+2.2.4.    Test Result
+
+The DJI LIGHTBRIDGE operates at hopping-on test mode; the frequencies number employed is
+counted to verify the Module’s using the number of hopping frequency.
+
+
+                                                                                     Page 8 of 46
+                                                            Report No.: SET2014-01529
+A. Test Verdict:
+
+       Frequency Block   Measured Channel
+                                             Min. Limit   Refer to Plot   Verdict
+           (MHz)            Numbers
+         2400 - 2483.5         36                15          Plot A       PASS
+
+
+B. Test Plots:
+
+
+
+
+                                        Plot A
+
+
+
+
+                                                                          Page 9 of 46
+                                                                          Report No.: SET2014-01529
+2.3.      Peak Output Power
+
+2.3.1.    Requirement
+
+According to FCC §15.247(b)(1), for frequency hopping systems that operates in the 2400MHz to
+2483.5MHz band employing at least 75 hopping channels, the maximum peak output power of the
+intentional radiator shall not exceed 1Watt. For all other frequency hopping systems in the 2400MHz
+to 2483.5MHz band, it is 0.125Watts.
+
+2.3.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the Spectrum
+Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During the
+measurement, the DJI LIGHTBRIDGE of the EUT is activated and controlled .
+
+B. Equipments List:
+
+       Description           Manufacturer    Model              Serial No.        Cal.Due Date
+        Spectrum Analyzer        R&S            FSP40            1164.4391.40      2014.06.10
+
+2.3.3.    Test Result
+
+The DJI LIGHTBRIDGE operates at hopping-off test mode. The lowest, middle and highest channels
+are selected to perform testing to verify the conducted RF output peak power of the Module. The
+lowest, middle and highest channel were tested by Spectrum Analyzer.
+
+2.3.3.1. GFSK Mode
+
+A. Test Verdict:
+
+                                 Measured Output
+                                                              Limit           Refer to
+ Channel     Frequency (MHz)       Peak Power                                                Verdict
+                                                                               Plot
+                                 dBm        W          dBm            W
+     1           2405.376        13.26    0.02118                             Plot A1         PASS
+    19           2442.240        13.67    0.02328        30           1       Plot A2         PASS
+    36           2477.056        13.88    0.02443                             Plot A3         PASS
+
+
+
+                                                                                         Page 10 of 46
+                           Report No.: SET2014-01529
+
+
+B. Test Plots:
+
+
+
+
+                 Plot A1
+
+
+
+
+                 Plot A2
+
+
+
+
+                                       Page 11 of 46
+          Report No.: SET2014-01529
+
+
+
+
+Plot A3
+
+
+
+
+                      Page 12 of 46
+                                                                     Report No.: SET2014-01529
+2.4.      20dB Bandwidth
+
+2.4.1.    Definition
+
+According to FCC §15.247(a)(1), the 20dB bandwidth is known as the 99% emission bandwidth, or
+20dB bandwidth (10*log1% = 20dB) taking the total RF output power.
+
+2.4.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the Spectrum
+Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During the
+measurement, the DJI LIGHTBRIDGE of the EUT is activated .
+
+B. Equipments List:
+
+       Description           Manufacturer       Model        Serial No.       Cal.Due Date
+        Spectrum Analyzer        R&S               FSP40      1164.4391.40     2014.06.10
+
+2.4.1.    Test Procedure
+Use the following spectrum analyzer settings:
+
+Span = approximately 2 to 3 times the 20 dB bandwidth, centered on a hopping channel
+
+RBW ≥ 1% of the 20 dB bandwidth
+
+VBW ≥ RBW
+
+Sweep = auto
+
+Detector function = peak
+
+Trace = max hold
+
+2.4.2.    Test Result
+
+The DJI LIGHTBRIDGE operates at hopping-off test mode. The lowest, middle and highest channels
+are selected to perform testing to record the 20dB bandwidth of the Module.
+
+
+
+
+                                                                                   Page 13 of 46
+                                                                 Report No.: SET2014-01529
+A. Test Verdict:
+
+The maximum 20dB bandwidth measured is 2.050MHz according to the table below.
+
+     Channel        Frequency (MHz)      20dB Bandwidth (MHz)            Refer to Plot
+        1               2405.376                 1.960                      Plot A
+       19               2442.240                 1.940                      Plot B
+       36               2477.056                 2.050                      Plot C
+
+B. Test Plots:
+
+
+
+
+                               (Plot A: Channel 1 = 2405.376)
+
+
+
+
+                               (Plot B: Channel 19= 2442.240)
+
+
+                                                                                Page 14 of 46
+                                 Report No.: SET2014-01529
+
+
+
+
+(Plot C: Channel 36= 2477.056)
+
+
+
+
+                                             Page 15 of 46
+                                                                       Report No.: SET2014-01529
+2.5.      Carried Frequency Separation
+
+2.5.1.    Definition
+
+According to FCC §15.247(a)(1), frequency hopping systems shall have hopping channel carrier
+frequencies separated by a minimum of 25kHz or two-thirds of the 20dB bandwidth of the hopping
+channel, whichever is greater.
+
+2.5.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+    The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the
+    Spectrum Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During
+    the measurement, the DJI LIGHTBRIDGE of the EUT is activated .
+
+B. Equipments List:
+
+       Description           Manufacturer     Model            Serial No.       Cal.Due Date
+        Spectrum Analyzer        R&S             FSP40          1164.4391.40     2014.06.10
+
+2.5.3.    Test Procedure
+The EUT must have its hopping function enabled. Use the following spectrum analyzer settings:
+
+Span = wide enough to capture the peaks of two adjacent channels
+
+Resolution (or IF) Bandwidth (RBW) ≥ 1% of the span
+
+Video (or Average) Bandwidth (VBW) ≥ RBW
+
+Sweep = auto
+
+Detector function = peak
+
+Trace = max hold
+
+Allow the trace to stabilize. Use the marker-delta function to determine the separation between the
+peaks of the adjacent channels.
+
+
+
+
+                                                                                     Page 16 of 46
+                                                                      Report No.: SET2014-01529
+2.5.4.   Test Result
+
+The DJI LIGHTBRIDGE operates at hopping-on test mode.
+
+For any adjacent channels (e.g. the channel 19 and 20 as showed in the Plot A), the Module does
+have hopping channel carrier frequencies separated by a minimum of 25kHz or two-thirds of the 20dB
+bandwidth of the hopping channel (2.050MHz, refer to section 2.4.1), whichever is greater. So, the
+verdict is PASSING
+
+
+
+
+                                             Plot A
+
+
+
+
+                                                                                   Page 17 of 46
+                                                                       Report No.: SET2014-01529
+2.6.      Time of Occupancy (Dwell time)
+
+2.6.1.    Requirement
+
+According to FCC §15.247(a) (1) (iii), frequency hopping systems in the 2400 - 2483.5MHz band
+shall use at least 15 non-overlapping channels. The average time of occupancy on any channel shall
+not be greater than 0.4 seconds within a period of 0.4 seconds multiplied by the number of hopping
+channels employed. Frequency hopping systems may avoid or suppress transmissions on a particular
+hopping frequency provided that a minimum of 15 channels are used.
+
+2.6.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+    The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the
+    Spectrum Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During
+    the measurement, the DJI LIGHTBRIDGE of the EUT is activated .
+
+B. Equipments List:
+
+       Description           Manufacturer     Model            Serial No.       Cal.Due Date
+        Spectrum Analyzer        R&S             FSP40          1164.4391.40     2014.06.10
+
+2.6.3.    Test Procedure
+The EUT must have its hopping function enabled. Use the following spectrum analyzer settings:
+
+Span = zero span, centered on a hopping channel
+
+RBW = 1 MHz
+
+VBW ≥ RBW
+
+Sweep = as necessary to capture the entire dwell time per hopping channel
+
+Detector function = peak
+
+Trace = max hold
+
+2.6.4.    Test Result
+The average time of occupancy on any channel within the Period can be calculated with formulas :
+
+
+                                                                                     Page 18 of 46
+                                                                         Report No.: SET2014-01529
+   {Total of Dwell} = {Pulse Time} * (1000 / 12) / {Number of Hopping Frequency} * {Period}
+           {Period} = 0.4s * {Number of Hopping Frequency}
+
+The lowest, middle and highest channels are selected to perform testing to record the dwell time of
+each occupation measured in this channel, which is called Pulse Time here.
+
+A. Test Verdict:
+
+              Frequency             Pulse Time              Total of Dwell
+ Channel                                                                     Limit (ms)    Verdict
+                (MHz)           ms       Refer to Plot           (ms)
+     1        2405.376         1.88         Plot A             62.6667                      PASS
+    19        2442.240         1.88         Plot B             62.6667          400         PASS
+    36        2477.056         1.92         Plot C             64.0000                      PASS
+
+B. Test Plots:
+
+Note: the following plots record the Pulse Time of the Module carrier.
+
+
+
+
+                                   (Plot A: Channel 1= 2405.376)
+
+
+
+
+                                                                                      Page 19 of 46
+                                 Report No.: SET2014-01529
+
+
+
+
+(Plot B: Channel 19= 2442.240)
+
+
+
+
+(Plot C: Channel 36= 2477.056)
+
+
+
+
+                                             Page 20 of 46
+                                                                         Report No.: SET2014-01529
+2.7.     Conducted Spurious Emissions
+
+2.7.1.   Requirement
+
+According to FCC §15.247(d), in any 100kHz bandwidth outside the frequency band in which the
+spread spectrum or digitally modulated intentional radiator is operating, the radio frequency power
+that is produced by the intentional radiator shall be at least 20dB below that in the 100kHz bandwidth
+within the band that contains the highest level of the desired power, based on either an RF conducted
+or a radiated measurement.
+
+2.7.2.   Test Description
+
+A. Test Setup:
+
+
+
+
+    The DJI LIGHTBRIDGE of the EUT, which is powered by the Battery, is connected to the
+    Spectrum Analyzer (SA), the path loss as the factor is calibrated to correct the reading. During
+    the measurement, the DJI LIGHTBRIDGE of the EUT is activated.
+B. Equipments List:
+            Description           Manufacturer       Model         Serial No.     Cal.Due Date
+         Spectrum Analyzer           R&S             FSP40        1164.4391.40     2014.06.10
+
+2.7.3.   Test Procedure
+Use the following spectrum analyzer settings:
+
+Span = wide enough to capture the peak level of the in-band emission and all spurious emissions (e.g.,
+harmonics) from the lowest frequency generated in the EUT up through the 10th harmonic. Typically,
+several plots are required to cover this entire span.
+
+RBW = 100 kHz
+
+VBW ≥ RBW
+
+Sweep = auto
+
+Detector function = peak
+
+Trace = max hold
+
+Allow the trace to stabilize.
+
+
+
+
+                                                                                       Page 21 of 46
+                                                                      Report No.: SET2014-01529
+2.7.4.   Test Result
+
+The DJI LIGHTBRIDGE operates at hopping-off test mode. The measurement frequency range is
+from 30MHz to the 10th harmonic of the fundamental frequency. The lowest, middle and highest
+channels are tested to verify the spurious emissions.
+
+A. Test Verdict:
+
+                          Measured Max.                            Limit (dBm)
+         Frequency
+ Channel                   Out of Band       Refer to Plot    Carrier      Calculated   Verdict
+           (MHz)
+                          EmissiondBm)                        Level      -20dBc Limit
+     1      2405.376         -43.18            Plot A.1        5.74         -14.26      PASS
+    19      2442.240         -33.45            Plot B.1        7.37         -12.63      PASS
+    36      2477.056         -33.16            Plot C.1        8.64         -11.36      PASS
+
+B. Test Plots:
+
+Note: the power of the Module transmitting frequency should be ignored.
+
+
+
+
+                       (Plot A.1:   Channel 1= 2405.376, 30MHz to 25GHz)
+
+
+
+
+                                                                                  Page 22 of 46
+                                            Report No.: SET2014-01529
+
+
+
+
+(Plot B.1:   Channel 19= 2442.240, 30MHz to 25GHz)
+
+
+
+
+(Plot C.1:   Channel 36= 2477.056, 30MHz to 25GHz)
+
+
+
+
+                                                        Page 23 of 46
+                                                                           Report No.: SET2014-01529
+2.8.      Band Edge
+
+2.8.1.    Requirement
+
+According to FCC section 15.247(d), in any 100kHz bandwidth outside the frequency band in which
+the spread spectrum or digitally modulated intentional radiator is operating, the radio frequency
+power that is produced by the intentional radiator shall be at least 20dB below that in the 100kHz
+bandwidth within the band that contains the highest level of the desired power, based on either an RF
+conducted or a radiated measurement.
+
+2.8.2.    Test Description
+
+A. Test Setup:
+
+
+
+
+             Communication
+               Antenna
+                                                            Test Antenna
+
+
+                                   EUT
+
+                 < 80cm >                  Turn Table
+
+
+                        Service                         Receiver      Preamplifier
+                        Supplier
+
+The DJI LIGHTBRIDGE of the EUT is powered by the Battery. The Module is located in a 3m
+Semi-Anechoic Chamber; the antenna factors, cable loss and so on of the site as factors are calculated
+to correct the reading. During the measurement, the DJI LIGHTBRIDGE is activated and controlled
+by the Bluetooth Service Supplier (SS) via a Common Antenna.For the Test Antenna:
+
+Horn Test Antenna is 3m away from the EUT. Test Antenna height is varied from 1m to 4m above the
+ground to determine the maximum value of the field strength.
+
+B. Equipments List:
+
+         Description               Manufacturer      Model       Serial No.          Cal.Due Date
+          Receiver                    R&S            FSP40      1164.4391.40          2014.06.10
+   Full-Anechoic Chamber            Albatross   12.8m*6.8m*6.4m  A0412372             2014.06.10
+   Double ridge horn antenna          R&S            HF906         100150             2014.06.10
+       Ultra-wideband antenna         R&S            HL562       A0304224             2014.06.10
+                                                     MITEQ
+   Ampilier 1G~18GHz                  R&S                         25-S-42             2014.06.10
+                                                AFS42-00101800
+
+                                                                                       Page 24 of 46
+                                                                          Report No.: SET2014-01529
+2.8.3.   Test Procedure
+Span = wide enough to capture the peak level of the emission operating on the channel closest to the
+bandedge, as well as any modulation products which fall outside of the authorized band of operation
+
+RBW ≥ 1% of the span
+
+VBW ≥ RBW
+
+Sweep = auto
+
+Detector function = peak /AV
+
+Trace = max hold
+
+Allow the trace to stabilize.
+
+2.8.4.   Test Result
+The DJI LIGHTBRIDGE operates at hopping-off test mode. The lowest and highest channels are
+tested to verify the band edge emissions.
+
+The measurement results are obtained as below:
+E [dBμV/m] =UR + AT + AFactor [dB]; AT =LCable loss [dB]-Gpreamp [dB]
+AT: Total correction Factor except Antenna
+UR: Receiver Reading
+Gpreamp: Preamplifier Gain
+AFactor: Antenna Factor at 3m
+
+Note: Restricted Frequency Bands were performed when antenna was at vertical and horizontal
+polarity, and only the worse test condition (vertical) was recorded in this test report.
+
+Test Verdict:
+
+(Un-hopping)
+                                   Receiver                       Max.
+         Frequency Detector        Reading      AT      AFactor  Emission   Limit
+ Channel                                                                           Verdict
+           (MHz)                     UR        (dB)    (dB@3m)      E     (dBµV/m)
+                   PK/ AV          (dBuV)                       (dBµV/m)
+
+     1       2399.931       PK       72.47     -31.7      28.3          69.07      74          Pass
+
+     1       2399.704       AV       49.87     -31.7      28.3          46.47      54          Pass
+
+    36       2483.740       PK       71.77    -29.45      29.2          71.52      74          Pass
+
+    36       2483.860       AV       52.05    -29.45      29.2          51.80      54          Pass
+
+
+
+
+                                                                                        Page 25 of 46
+                                                   Report No.: SET2014-01529
+
+
+Test Plots:
+
+
+
+
+                (Plot A1:    Channel = 1 PEAK)
+
+
+
+
+              (Plot A2:     Channel = 1 AVERAGE)
+
+
+
+
+                                                               Page 26 of 46
+                                      Report No.: SET2014-01529
+
+
+
+
+  (Plot B1:    Channel = 36 PEAK)
+
+
+
+
+(Plot B2:     Channel = 36 AVERAGE)
+
+
+
+
+                                                  Page 27 of 46
+                                                                    Report No.: SET2014-01529
+Test Verdict:
+
+(hopping)
+
+                            Receiver                              Max.
+         Frequency Detector Reading            AT       AFactor  Emission   Limit
+ Channel                                                                           Verdict
+           (MHz)              UR              (dB)     (dB@3m)      E     (dBµV/m)
+                   PK/ AV (dBuV)                                (dBµV/m)
+
+    1           2399.931   PK      71.92      -31.7      28.3     68.52      74          Pass
+
+    1           2399.024   AV      51.46      -31.7      28.3     48.06      54          Pass
+
+    36          2483.920   PK      70.58      -29.45     29.2     70.33      74          Pass
+
+    36          2484.880   AV      48.54      -29.45     29.2     48.29      54          Pass
+
+
+
+Test Plots:
+
+
+
+
+                                (Plot A1-1:   Channel = 1 PEAK)
+
+
+
+
+                                                                                  Page 28 of 46
+                                     Report No.: SET2014-01529
+
+
+
+
+(Plot A2-1:   Channel = 1 AVERAGE)
+
+
+
+
+   (Plot B1-1: Channel = 36 PEAK)
+
+
+
+
+                                                 Page 29 of 46
+                                      Report No.: SET2014-01529
+
+
+
+
+(Plot B2-1:   Channel = 36 AVERAGE)
+
+
+
+
+                                                  Page 30 of 46
+                                                                        Report No.: SET2014-01529
+2.9.     Conducted Emission
+2.9.1．Requirement
+According to FCC section 15.207 and RSS- Gen section 7.2.4, for an intentional radiator that is
+designed to be connected to the public utility (AC) power line, the radio frequency voltage that is
+conducted back onto the AC power line on any frequency within the band 150kHz to 30MHz shall
+not exceed the limits in the following table, as measured using a 50µH/50Ω line impedance
+stabilization network (LISN).
+
+                                                   Conducted Limit (dBµV)
+ Frequency range (MHz)
+                                       Quai-peak                                Average
+        0.15 - 0.50                     66 to 56                                56 to 46
+          0.50 - 5                         56                                      46
+         0.50 - 30                         60                                      50
+NOTE:
+(a) The lower limit shall apply at the band edges.
+(b) The limit decreases linearly with the logarithm of the frequency in the range 0.15 - 0.50MHz.
+2.9.2．Test Description
+A. Test Setup:
+
+
+
+       < 40cm >                  < 80cm >
+                                                                          Communication
+                                                                            Antenna
+
+                      EUT   (Bluetooth Module)
+
+
+
+                                                                Pulse Limiter
+       < 80cm >                                      LISN
+                                                                             Receiver
+
+
+                                                                                Service
+                                                                                Supplier
+
+The Table-top EUT was placed upon a non-metallic table 0.8m above the horizontal metal reference
+ground plane. EUT was connected to LISN and LISN was connected to reference Ground Plane.
+EUT was 80cm from LISN. The set-up and test methods were according to ANSI C63.4:2009
+The DJI LIGHTBRIDGE of the EUT is powered by the Battery charged with USB port of PC, PC is
+powered by 120V, 60Hz AC mains supply. The factors of the site are calibrated to correct the reading.
+During the measurement, the DJI LIGHTBRIDGE is activated and controlled by the Bluetooth
+Service Supplier (SS) via a Common Antenna, and is set to operate under hopping-on test mode
+transmitting 339 bytes DH5 packages at maximum power.
+Equipments List:
+
+
+
+                                                                                       Page 31 of 46
+                                                                                             Report No.: SET2014-01529
+    Description                       Manufacturer                         Model             Serial No.   Cal.Due Date
+   Test Receiver                   ROHDE&SCHWARZ                          ESCS30             A0304260      2014.06.10
+       LISN                        ROHDE&SCHWARZ                          ESH2-Z5            A0304221      2014.06.10
+  Service Supplier                 ROHDE&SCHWARZ                          CMU200             A0304252      2014.06.10
+Pulse Limiter (20dB)                  Schwarzbeck                       VTSD 9561-D          A0304291         (n.a.)
+
+2.9.3． Test Result
+
+A.          Test setup:
+
+     The EUT configuration of the emission tests is EUT .
+
+B. Test Plots:
+
+Adapter 1:A13-040N3A
+
+      Marker:                       199.5 kHz                         58.49 dBµV
+
+        Level [dBµV]
+      120
+
+
+      100
+
+
+       80
+
+
+       60
+
+
+       40
+
+
+       20
+
+
+            0
+
+
+      -20
+                150k    300k       500k             1M           2M      3M        5M   7M   10M          30M
+                                                   Frequency [Hz]
+                LIM FCCPart15B QP               Voltage QP Limit
+                LIM FCCPart15B AV               Voltage AV Limit
+                MES 14-01219 L MaxPk
+                MES 14-01219 L Avg
+                                                                                                                  
+
+                                    Conducted Disturbance at Mains Terminals
+                                                             L Test Data
+                                QP                                                            AV
+                                          Measurement                                                Measurement
+     Frequency             Limits                                     Frequency          Limits
+                                             Value                                                      Value
+       (MHz)              (dBV)                                        (MHz)           (dBV)
+                                            (dBV)                                                     (dBV)
+       0.9950               63.7             54.54                      0.995            53.7           41.51
+       0.2615               61.4                  44.16                0.2615            51.4             34.87
+       6.7370               60.0                  37.21                 6.737            50.0             26.54
+                                                           L Test Curve
+
+
+                                                                                                          Page 32 of 46
+                                                                                      Report No.: SET2014-01529
+                                               (Plot A: L Phase)
+
+   Marker:                      199.5 kHz                      55.66 dBµV
+
+    Level [dBµV]
+  120
+
+
+  100
+
+
+    80
+
+
+    60
+
+
+    40
+
+
+    20
+
+
+        0
+
+
+  -20
+            150k    300k      500k           1M           2M      3M        5M   7M     10M         30M
+                                            Frequency [Hz]
+            LIM FCCPart15B QP           Voltage QP Limit
+            LIM FCCPart15B AV           Voltage AV Limit
+            MES 14-01219 N MaxPk
+            MES 14-01219 N Avg
+
+
+
+                                               (Plot B: N Phase)
+                            Conducted Disturbance at Mains Terminals
+                                                    N Test Data
+                           QP                                                          AV
+                                      Measurement                                              Measurement
+Frequency             Limits                                   Frequency           Limits
+                                         Value                                                    Value
+  (MHz)              (dBV)                                      (MHz)            (dBV)
+                                        (dBV)                                                   (dBV)
+ 0.1989               63.70              51.98                   0.1989               53.70       41.25
+ 0.2612               61.40                 42.26                0.2612               51.40        33.15
+ 4.8832               56.00                 37.30                4.8832               46.00        28.65
+
+
+                                                 N Test Curve
+
+
+
+
+                                                                                                  Page 33 of 46
+                                                                                         Report No.: SET2014-01529
+
+
+Adapter 2:GTM91120-3014.5-2.5-T2
+
+
+
+      Marker:                    22.892 MHz                      31.23 dBµV
+
+        Level [dBµV]
+      120
+
+
+      100
+
+
+       80
+
+
+       60
+
+
+       40
+
+
+       20
+
+
+            0
+
+
+      -20
+                150k    300k      500k            1M           2M      3M     5M    7M    10M          30M
+                                                 Frequency [Hz]
+                LIM FCCPart15B QP             Voltage QP Limit
+                LIM FCCPart15B AV             Voltage AV Limit
+                MES 14-01219 L2 MaxPk
+                MES 14-01219L2 Avg
+
+
+
+
+                                  Conducted Disturbance at Mains Terminals
+                                                        L Test Data
+                               QP                                                        AV
+                                         Measurement                                            Measurement
+   Frequency             Limits                                  Frequency          Limits
+                                            Value                                                  Value
+     (MHz)              (dBV)                                     (MHz)           (dBV)
+                                           (dBV)                                                 (dBV)
+      0.177              64.60              52.37                   0.177           54.60          37.59
+      3.056              56.00                43.12                 3.056           46.00           27.16
+     22.892              60.00                45.26                 22.892          50.00           31.23
+                                                        L Test Curve
+                                                      (Plot C: L Phase)
+
+
+
+
+                                                                                                     Page 34 of 46
+                                                                                     Report No.: SET2014-01529
+
+   Marker:                  22.505 MHz                      46.96 dBµV
+
+    Level [dBµV]
+  120
+
+
+  100
+
+
+    80
+
+
+    60
+
+
+    40
+
+
+    20
+
+
+        0
+
+
+  -20
+            150k    300k      500k           1M           2M     3M        5M   7M     10M         30M
+                                            Frequency [Hz]
+            LIM FCCPart15B QP            Voltage QP Limit
+            LIM FCCPart15B AV            Voltage AV Limit
+            MES 14-01219 N2 MaxPk
+            MES 14-01219 N2 Avg
+
+
+
+                            Conducted Disturbance at Mains Terminals
+                                                   N Test Data
+                           QP                                                         AV
+                                     Measurement                                              Measurement
+Frequency             Limits                                   Frequency          Limits
+                                        Value                                                    Value
+  (MHz)              (dBV)                                      (MHz)           (dBV)
+                                       (dBV)                                                   (dBV)
+ 0.1815               64.40             52.99                   0.1815               54.40       40.82
+  2.678               56.00                43.11                 2.678               46.00        28.15
+ 22.505               60.00                46.96                22.505               50.00        32.30
+
+
+                                                  N Test Curve
+                                                (Plot D: N Phase)
+
+
+
+
+                                                                                                 Page 35 of 46
+                                                                           Report No.: SET2014-01529
+2.10.    Radiated Emission
+
+2.10.1. Requirement
+
+According to FCC section 15.247(c) and RSS-A8.5, radiated emission outside the frequency band
+attenuation below the general limits specified in FCC section 15.209(a) is not required. In addition,
+radiated emissions which fall in the restricted bands, as defined in FCC section 15.205(a), must also
+comply with the radiated emission limits specified in FCC section 15.209(a).
+
+According to FCC section 15.209 (a), except as provided elsewhere in this subpart, the emissions
+from an intentional radiator shall not exceed the field strength levels specified in the following table:
+
+ Frequency (MHz)                    Field Strength (µV/m)              Measurement Distance (m)
+ 0.009 - 0.490                      2400/F(kHz)                        300
+ 0.490 - 1.705                      24000/F(kHz)                       30
+ 1.705 - 30.0                       30                                 30
+ 30 - 88                            100                                3
+ 88 - 216                           150                                3
+ 216 - 960                          200                                3
+ Above 960                          500                                3
+
+Note:
+
+    1.   For Above 1000MHz, the emission limit in this paragraph is based on measurement
+         instrumentation employing an average detector, measurement using instrumentation with a
+         peak detector function, corresponding to 20dB above the maximum permitted average limit.
+
+    2.   For above 1000MHz, limit field strength of harmonics: 54dBuV/m@3m (AV) and
+         74dBuV/m@3m (PK)
+
+In addition, radiated emissions which fall in the restricted bands, as defined in Section 15.205(a), also
+should comply with the radiated emission limits specified in Section 15.209(a)(above table)
+
+2.10.2. Test Description
+
+A. Test Setup:
+
+    1) For radiated emissions from 9kHz to 30MHz
+
+
+
+
+                                                                                         Page 36 of 46
+                                              Report No.: SET2014-01529
+
+
+
+
+2) For radiated emissions from 30MHz to1GHz
+
+
+
+
+                                                          Page 37 of 46
+                                                                         Report No.: SET2014-01529
+    3) For radiated emissions above 1GHz
+
+
+
+
+The test site semi-anechoic chamber has met the requirement of NSA tolerance 4dB according to the
+standards: ANSI C63.4 (2009). The EUT was set-up on insulator 80cm above the Ground Plane. The
+set-up and test methods were according to ANSI C63.4.
+
+The DJI LIGHTBRIDGE of the EUT is powered by the Battery. The Module is located in a 3m
+Semi-Anechoic Chamber; the antenna factors, cable loss and so on of the site as factors are calculated
+to correct the reading. During the measurement, the DJI LIGHTBRIDGE is activated and controlled
+by the Bluetooth Service Supplier (SS) via a Common Antenna, and is set to operate under
+hopping-on test mode transmitting 339 bytes DH5 packages at maximum power.
+
+For the Test Antenna:
+
+(a) In the frequency range of 9kHz to 30MHz, magnetic field is measured with Loop Test Antenna.
+The Test Antenna is positioned with its plane vertical at 1m distance from the EUT. The center of the
+Loop Test Antenna is 1m above the ground. During the measurement the Loop Test Antenna rotates
+about its vertical axis for maximum response at each azimuth about the EUT.
+(b) In the frequency range above 30MHz, Bi-Log Test Antenna (30MHz to 2GHz) and Horn Test
+Antenna (above 2GHz) are used. Test Antenna is 3m away from the EUT. Test Antenna height is
+varied from 1m to 4m above the ground to determine the maximum value of the field strength. The
+emission levels at both horizontal and vertical polarizations should be tested.
+
+B． Equipments List:
+
+        Description          Manufacturer          Model             Serial No.     Cal.Due Date
+     System Simulator           R&S               CMU200               100448        2014.06.10
+          Receiver              R&S               E7405A            US44210471       2014.06.10
+  Full-Anechoic Chamber       Albatross       12.8m*6.8m*6.4m        A0412372        2014.01.04
+   Test Antenna - Bi-Log     Schwarzbeck         VULB 9163            9163-274       2014.06.10
+    Test Antenna - Horn      Schwarzbeck        BBHA 9120D           9120C-963       2014.06.10
+
+                                                                                       Page 38 of 46
+                                                                            Report No.: SET2014-01529
+        Description           Manufacturer          Model               Serial No.         Cal.Due Date
+    Test Antenna - Horn          R&S               HL050S7                71688             2014.06.10
+    Test Antenna -Loop        Schwarzbeck          HFH2-Z2               100047             2014.06.10
+                                                    MITEQ
+    Ampilier 1G~18GHz              R&S                                   25-S-42            2014.06.10
+                                                AFS42-00101800
+   amplifier 20M~3GHz              R&S            PAP-0203H               22018             2014.06.10
+
+2.10.3. Test Procedure
+Use the following spectrum analyzer settings:
+
+Span = wide enough to fully capture the emission being measured
+
+RBW = 1 MHz for f ≥ 1 GHz, 100 kHz for f < 1 GHz
+
+VBW ≥ RBW
+
+Sweep = auto
+
+Detector function = peak
+
+Trace = max hold
+
+2.10.4. Test Result
+    According to ANSI C63.4 selection 4.2.2, because of peak detection will yield amplitudes equal
+to or greater than amplitudes measured with the quasi-peak (or average) detector, the measurement
+data from a spectrum analyzer peak detector will represent the worst-case results, if the peak
+measured value complies with the quasi-peak limit, it is unnecessary to perform an quasi-peak
+measurement.
+
+The measurement results are obtained as below:
+    E [dBμV/m] =UR + AT + AFactor [dB]; AT =LCable loss [dB]-Gpreamp [dB]
+    AT: Total correction Factor except Antenna
+    UR: Receiver Reading
+    Gpreamp: Preamplifier Gain
+    AFactor: Antenna Factor at 3m
+
+During the test, the total correction Factor AT and AFactor were built in test software.
+
+Note: All radiated emission tests were performed in X, Y, Z axis direction. And only the worst axis
+test condition was recorded in this test report.
+
+
+
+
+                                                                                            Page 39 of 46
+                                                                          Report No.: SET2014-01529
+For 9KHz to 30MHz
+The test has been performed, and the Radiated Emission level is too low to the limit.
+
+For 30MHz to 1000 MHz
+
+Adapter 1:A13-040N3A
+
+
+
+
+                              (Plot A: 30MHz to 1GHz, Antenna Horizontal)
+
+                                            Antenna
+      Frequency   QuasiPeak     Bandwidth              Limit     Margin
+                                            height                          Antenna     Verdict
+        (MHz)     (dBμV/m)        (kHz)               (dBμV/m)    (dB)
+                                             (cm)
+
+
+       179.67       31.89          120        100       43.5     11.61     Horizontal    Pass
+
+       236.05       31.92          120        100       46.0     14.08     Horizontal    Pass
+
+       276.87       34.44          120        100       46.0     11.56     Horizontal    Pass
+
+
+
+
+                                                                                        Page 40 of 46
+                                                                                              Report No.: SET2014-01529
+
+
+
+
+                                    (Plot B: 30MHz to 1GHz, Antenna Vertical)
+
+                                                    Antenna
+     Frequency        QuasiPeak     Bandwidth                           Limit      Margin
+                                                     height                                     Antenna      Verdict
+       (MHz)          (dBμV/m)        (kHz)                       (dBμV/m)             (dB)
+                                                      (cm)
+
+
+      57.214              36.87        120             100              40.0           3.13      Vertical     Pass
+
+      136.630             38.90        120             100              43.5           4.60      Vertical     Pass
+
+
+
+
+Adapter 2:GTM91120-3014.5-2.5-T2
+
+            Marker:                 134.96994 MHz                        38.89 dBµV/m
+
+            Level [dBµV/m]
+           80
+
+           70
+
+           60
+
+           50
+
+           40
+
+           30
+
+           20
+
+           10
+
+                0
+                    30M       50M     70M      100M              200M           300M          500M    700M   1G
+                                                  Frequency [Hz]
+                    MES 14-01219 H1
+                    LIM FCCPart15B 3m         Field Strength QP Limit
+
+
+
+
+                                                                                                             Page 41 of 46
+                                                                                                 Report No.: SET2014-01529
+
+
+                                                      Antenna
+      Frequency         QuasiPeak     Bandwidth                          Limit          Margin
+                                                       height                                           Antenna       Verdict
+        (MHz)           (dBμV/m)        (kHz)                        (dBμV/m)            (dB)
+                                                        (cm)
+
+
+       134.96994          38.89          120             100             43.5            4.61       Horizontal         Pass
+
+       289.4598           35.92          120             100             46.0           10.08       Horizontal         Pass
+
+
+
+
+           Marker:                  164.128257 MHz                        35.88 dBµV/m
+
+            Level [dBµV/m]
+           80
+
+           70
+
+           60
+
+           50
+
+           40
+
+           30
+
+           20
+
+           10
+
+             0
+                  30M       50M      70M        100M              200M           300M            500M      700M     1G
+                                                   Frequency [Hz]
+                  MES 14-01219 V2
+                  LIM FCCPart15B 3m            Field Strength QP Limit
+
+
+
+
+                                                      Antenna
+      Frequency         QuasiPeak     Bandwidth                          Limit          Margin
+                                                       height                                           Antenna       Verdict
+        (MHz)           (dBμV/m)        (kHz)                        (dBμV/m)            (dB)
+                                                        (cm)
+
+
+        30.0000           34.89          120             100             43.5            8.61           Vertical       Pass
+
+       164.1283           35.88          120             100             43.5            7.62           Vertical       Pass
+
+
+
+
+For 1GHz to 25GHz(worst case)
+
+ ANTENNA POLARITY & TEST DISTANCE: HORIZONTAL AT 3 M（1CH_2405.376MHz）
+      Frequency         Emssion        Limit      Margin       Antenna          Table      Raw      Antenna Cable               Pre-
+No.
+       (MHz)             Level      (dBuV/m)        (dB)        Height          Angle     Value         Factor     Factor amplifier
+ 1               (dBuV/m)
+      *2405.376 103.35 PK                /            /           (m)H
+                                                                1.00        (Degree)
+                                                                              360    (dBuV)
+                                                                                     106.75             (dB/m)
+                                                                                                         28.3      (dB)
+                                                                                                                   4.90      (dB)
+                                                                                                                            -36.6
+ 1    *2405.376 92.83 AV                 /            /         1.00 H        360     96.23              28.3      4.90     -36.6
+ 2     4810.752 49.17 PK                74         24.83        1.00 H        359     45.97              32.7      7.00 (dB)e-ampl
+                                                                                                                            -36.5
+ 2     4810.752 40.59 AV                54         13.41        1.00 H        359     37.39              32.7      7.00     -36.5
+ 3     7216.128 51.88 PK                74         22.12        1.00 H        152     42.48              35.8      8.90 ifier-35.3
+                                                                                                                               Factor
+ 3     7216.128 44.16 AV                54          9.84        1.00 H        152     34.76              35.8      8.90     -35.3
+
+
+                                                                                                                     Page 42 of 46
+                                                                             Report No.: SET2014-01529
+4     9612.504    49.99   PK      74      24.01    1.00 H      140    37.39      37.2    10.20     -34.8
+4     9612.504    45.45   AV      54       8.55    1.00 H      140    32.85      37.2    10.20     -34.8
+
+
+    ANTENNA POLARITY & TEST DISTANCE: VERTICAL AT 3 M（1CH_2405.376MHz）
+      Frequency    Emssion      Limit     Margin   Antenna    Table    Raw     Antenna Cable        Pre-
+No.
+       (MHz)        Level      (dBuV/m)    (dB)    Height     Angle   Value     Factor   Factor amplifier
+1                (dBuV/m)
+      *2405.376 101.78 PK          /         /       (m)V
+                                                   1.00      (Degree)
+                                                               124    (dBuV)
+                                                                      105.18    (dB/m)
+                                                                                 28.3    (dB)
+                                                                                          4.90      (dB)
+                                                                                                   -36.6
+1     *2405.376 90.47 AV           /         /     1.00 V      124     93.87     28.3     4.90     -36.6
+2      4810.752 49.87 PK          74      24.13    1.00 V      339     46.67     32.7     7.00 (dB)e-ampl
+                                                                                                   -36.5
+2      4810.752 44.35 AV          54       9.65    1.00 V      339     41.15     32.7     7.00     -36.5
+3      7216.128 49.99 PK          74      24.01    1.00 V      340     40.59     35.8     8.90 ifier-35.3
+                                                                                                      Factor
+3      7216.128 42.08 AV          54      11.92    1.00 V      340     32.68     35.8     8.90     -35.3
+4      9612.504 52.21 PK          74      21.79    1.00 V       20     39.61     37.2    10.20     -34.8
+4      9612.504 44.88 AV          54       9.12    1.00 V       20     32.28     37.2    10.20     -34.8
+
+
+ANTENNA POLARITY & TEST DISTANCE: HORIZONTAL AT 3 M（19CH_2442.240MHz）
+      Frequency    Emssion      Limit     Margin   Antenna    Table    Raw     Antenna Cable        Pre-
+No.
+       (MHz)        Level      (dBuV/m)    (dB)    Height     Angle   Value     Factor   Factor amplifier
+1                (dBuV/m)
+      *2442.240 104.53 PK          /        /        (m)H
+                                                   1.00      (Degree)
+                                                               153    (dBuV)
+                                                                      107.73    (dB/m)
+                                                                                 28.3    (dB)
+                                                                                          5.10      (dB)
+                                                                                                   -36.6
+1     *2442.240 92.10 AV           /        /      1.00 H      153      95.3     28.3     5.10     -36.6
+2      4884.480 46.26 PK          74      27.74    1.00 H      202     42.86     32.3     7.60 (dB)e-ampl
+                                                                                                   -36.5
+2      4884.480 35.21 AV          54      18.79    1.00 H      202     31.81     32.3     7.60     -36.5
+3      7326.720 50.31 PK          74      23.69    1.00 H      355     40.91     36.1     8.60 ifier-35.3
+                                                                                                      Factor
+3      7326.720 42.71 AV          54      11.29    1.00 H      355     33.31     36.1     8.60     -35.3
+4      9768.960 50.17 PK          74      23.83    1.00 H       28     37.57     37.2    10.20     -34.8
+4      9768.960 42.14 AV          54      11.86    1.00 H       28     29.54     37.2    10.20     -34.8
+
+
+
+
+ ANTENNA POLARITY & TEST DISTANCE: VERTICAL AT 3 M（19CH_2442.240MHz）
+      Frequency    Emssion      Limit     Margin   Antenna    Table    Raw     Antenna Cable        Pre-
+No.
+       (MHz)        Level      (dBuV/m)    (dB)    Height     Angle   Value     Factor   Factor amplifier
+1                (dBuV/m)
+      *2442.240 103.37 PK          /         /       (m)V
+                                                   1.00      (Degree)
+                                                               121    (dBuV)
+                                                                      106.57    (dB/m)
+                                                                                 28.3    (dB)
+                                                                                          5.1      (dB)
+                                                                                                  -36.6
+1     *2442.240 92.12 AV           /         /     1.00 V      121     95.32     28.3     5.1     -36.6
+2      4884.480 47.92 PK          74      26.08    1.00 V       97     44.52     32.3     7.6 (dB)e-ampl
+                                                                                                  -36.5
+2      4884.480 37.39 AV          54      16.61    1.00 V       97     33.99     32.3     7.6     -36.5
+3      7326.720 56.80 PK          74       17.2    1.00 V      288      47.4     36.1     8.6 ifier-35.3
+                                                                                                     Factor
+3      7326.720 43.00 AV          54        11     1.00 V      288      33.6     36.1     8.6     -35.3
+4      9768.960 50.05 PK          74      23.95    1.00 V       89     37.45     37.2    10.2     -34.8
+4      9768.960 35.04 AV          54      18.96    1.00 V       89     22.44     37.2    10.2     -34.8
+
+
+ANTENNA POLARITY & TEST DISTANCE: HORIZONTAL AT 3 M（36CH_2477.056MHz）
+      Frequency    Emssion      Limit     Margin   Antenna    Table    Raw     Antenna Cable        Pre-
+No.
+       (MHz)        Level      (dBuV/m)    (dB)    Height     Angle   Value     Factor   Factor amplifier
+1                (dBuV/m)
+      *2477.056 103.87 PK          /        /        (m)H
+                                                   1.00      (Degree)
+                                                               154    (dBuV)
+                                                                      107.17    (dB/m)
+                                                                                 28.6    (dB)
+                                                                                         4.70      (dB)
+                                                                                                  -36.6
+1     *2477.056 89.87 AV           /        /      1.00 H      154     93.17     28.6    4.70     -36.6
+2      4954.112 49.81 PK          74      24.19    1.00 H      100     46.01      33     7.00 (dB)e-ampl
+                                                                                                  -36.2
+2      4954.112 35.04 AV          54      18.96    1.00 H      100     31.24      33     7.00     -36.2
+3      7431.168 51.08 PK          74      22.92    1.00 H      190     41.68     36.2    8.50 ifier-35.3
+                                                                                                     Factor
+
+
+
+                                                                                           Page 43 of 46
+                                                                              Report No.: SET2014-01529
+ 3    7431.168     41.94   AV      54      12.06    1.00 H      190    32.54      36.2     8.50     -35.3
+ 4    9908.224     49.91   PK      74      24.09    1.00 H      113    37.31      37.2    10.20     -34.8
+ 4    9908.224     36.92   AV      54      17.08    1.00 H      113    24.32      37.2    10.20     -34.8
+
+
+ ANTENNA POLARITY & TEST DISTANCE: VERTICAL AT 3 M（36CH_2477.056MHz）
+      Frequency      Emssion     Limit     Margin   Antenna    Table    Raw     Antenna Cable        Pre-
+No.
+       (MHz)          Level     (dBuV/m)    (dB)    Height     Angle   Value     Factor   Factor amplifier
+ 1    *2477.056     (dBuV/m)
+                   98.89  PK        /         /       (m)V
+                                                    1.00      (Degree)
+                                                                247    (dBuV)
+                                                                       102.19    (dB/m)
+                                                                                  28.6    (dB)
+                                                                                           4.70      (dB)
+                                                                                                    -36.6
+ 1    *2477.056    87.14 AV         /         /     1.00 V      247     90.44     28.6     4.70     -36.6
+ 2     4954.112    51.96 PK        74      22.04    1.00 V       90     48.16      33      7.00 (dB)e-ampl
+                                                                                                    -36.2
+ 2     4954.112    46.78 AV        54       7.22    1.00 V       90     42.98      33      7.00     -36.2
+ 3     7431.168    53.07 PK        74      20.93    1.00 V       29     43.67     36.2     8.50 ifier-35.3
+                                                                                                       Factor
+ 3     7431.168    41.91 AV        54      12.09    1.00 V       29     32.51     36.2     8.50     -35.3
+ 4     9908.224     50.8 PK        74       23.2    1.00 V      222      38.2     37.2    10.20     -34.8
+ 4     9908.224    40.34 AV        54      13.66    1.00 V      222     27.74     37.2    10.20     -34.8
+
+REMARKS:          1. Emission level (dBuV/m) =Raw Value (dBuV) +Antenna Factor (dB/m) + Cable
+                  Factor (dB) +Pre-amplifier Factor
+                  2. The other emission levels were very low against the limit.
+                  3. The other emission levels were very low against the limit.
+                  4. Margin value = Limit value- Emission level.
+
+
+
+
+                                                                                            Page 44 of 46
+                                                                           Report No.: SET2014-01529
+
+
+
+2.11.    RF exposure evaluation
+         Equation from page 8 of OET Bulletin 65,Edition 97-01.
+
+
+
+
+  Where：
+  S=power density
+  P=power input to the antenna
+  G=numeric gain of the antenna in the direction of interest relative to an isotropic radiator
+  R=distance to the centre of radiation of the antenna
+
+2.11.1 . Limits For Maximum Permissible Exposure
+
+According to FCC Part 1.1307,system operation under the provisions of this section shall be operated in a
+Manner the ensures that the pulic is not exposed to radio frequency energy level in excess of the
+commission’s guidelines.
+According to FCC Part 1.1310 RF exposure is calculated.
+
+
+                             Limits for Occupational/controlled Exposure
+
+         Frequency            Electric Field Magnetic Field Strength          Power Density(S)
+        Range(MHz)         Strength（E） （V/m）    （H）（A/m）                       （mW/cm2）
+
+          0.3-1.34                614                     1.63                     (100)*
+
+          1.34-30                1842/f                  2.19/f                   (180/f2)*
+
+          30-300                  27.5                   0.073                       0.2
+
+         300-1500                  --                      --                      f/1500
+
+        1500-100,000               --                      --                        1.0
+
+
+2.11.2 . Test Result
+
+
+
+
+                                                                                           Page 45 of 46
+                                                               Report No.: SET2014-01529
+
+
+
+
+  Maximum peak output power at antenna input terminal(dBm):    13.88
+  Maximum peak output power at antenna input terminal(mW):     24.434
+  Source-based time-averaged output power:                      --
+  Prediction distance(cm):                                     20
+  Predication frequency(MHz):                                  2477.056
+  Antenna Gain (typical) (dBi):                                4.68
+  Power density at predication frequency at 20 cm(mW/cm2):     0.01430
+  MPE limit for RF exposure at prediction frequency(mW/cm2):   1.0
+
+
+
+
+2.11.3.   Conclusion
+
+          Since the test result is passed.
+
+
+
+
+                                     ** END OF REPORT **
+
+
+
+
+                                                                           Page 46 of 46
+

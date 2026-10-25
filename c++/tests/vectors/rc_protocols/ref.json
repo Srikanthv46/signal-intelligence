@@ -1,0 +1,220 @@
+[
+ {
+  "args": [
+   70100.0,
+   56000.0,
+   2440.3,
+   9.0
+  ],
+  "out": [
+   {
+    "protocol": "FrSky D16 / ACCST v1 (FCC)",
+    "score": 4,
+    "matched": [
+     "rate 70 kb/s",
+     "deviation 57 kHz",
+     "band",
+     "packet period 9 ms"
+    ],
+    "conflicts": [],
+    "note": "47 ch, 299.927 kHz grid"
+   }
+  ]
+ },
+ {
+  "args": [
+   64200.0,
+   62000.0,
+   433.9,
+   null
+  ],
+  "out": [
+   {
+    "protocol": "SiK telemetry radio 64 kb/s (3DR / Holybro / mRo / RFD900 compatible)",
+    "score": 3,
+    "matched": [
+     "rate 64 kb/s",
+     "deviation 63.75 kHz (h ~ 2)",
+     "band"
+    ],
+    "conflicts": [],
+    "note": "GFSK, PN9 whitening, NETID header; TDM window ~114 ms at 64 kb/s"
+   }
+  ]
+ },
+ {
+  "args": [
+   85000.0,
+   41000.0,
+   868.9,
+   6.67
+  ],
+  "out": [
+   {
+    "protocol": "TBS Crossfire 150 Hz (FSK)",
+    "score": 4,
+    "matched": [
+     "rate 85.1 kb/s",
+     "deviation 42.48 kHz",
+     "band",
+     "packet period 6.666 ms"
+    ],
+    "conflicts": [],
+    "note": "260 kHz grid, downlink +50 channels"
+   }
+  ]
+ },
+ {
+  "args": [
+   250000.0,
+   63000.0,
+   2410,
+   22.5
+  ],
+  "out": [
+   {
+    "protocol": "Hitec AFHSS / Minima (MSK, CC2500)",
+    "score": 4,
+    "matched": [
+     "rate 250 kb/s",
+     "deviation 62.5 kHz",
+     "band",
+     "packet period 22.5 ms"
+    ],
+    "conflicts": [],
+    "note": "sync word = TX ID, 300 kHz grid"
+   },
+   {
+    "protocol": "Graupner HoTT (MSK, CC2500)",
+    "score": 2,
+    "matched": [
+     "rate 250 kb/s",
+     "deviation 62.5 kHz",
+     "band"
+    ],
+    "conflicts": [
+     "packet period 10 ms"
+    ],
+    "note": "MSK + FEC, 338 kHz grid"
+   },
+   {
+    "protocol": "SiK telemetry radio 250 kb/s (3DR / Holybro / mRo / RFD900 compatible)",
+    "score": -1,
+    "matched": [
+     "rate 250 kb/s"
+    ],
+    "conflicts": [
+     "deviation 158.75 kHz (h ~ 2)",
+     "band"
+    ],
+    "note": "GFSK, PN9 whitening, NETID header; TDM window ~114 ms at 64 kb/s"
+   }
+  ]
+ },
+ {
+  "args": [
+   31000.0,
+   32000.0,
+   2450,
+   null
+  ],
+  "out": [
+   {
+    "protocol": "FrSky D8 (ACCST, CC2500)",
+    "score": 3,
+    "matched": [
+     "rate 31 kb/s",
+     "deviation 31.7 kHz",
+     "band"
+    ],
+    "conflicts": [],
+    "note": "47 ch on a 299.927 kHz grid"
+   },
+   {
+    "protocol": "SiK telemetry radio 32 kb/s (3DR / Holybro / mRo / RFD900 compatible)",
+    "score": 1,
+    "matched": [
+     "rate 32 kb/s",
+     "deviation 31.875 kHz (h ~ 2)"
+    ],
+    "conflicts": [
+     "band"
+    ],
+    "note": "GFSK, PN9 whitening, NETID header; TDM window ~114 ms at 64 kb/s"
+   }
+  ]
+ },
+ {
+  "args": [
+   100000.0,
+   50000.0,
+   866.0,
+   null
+  ],
+  "out": [
+   {
+    "protocol": "mLRS 50 Hz FSK",
+    "score": 3,
+    "matched": [
+     "rate 100 kb/s",
+     "deviation 50 kHz",
+     "band"
+    ],
+    "conflicts": [],
+    "note": "91-byte frames, whitening"
+   },
+   {
+    "protocol": "FLARM-compatible (2-FSK, Manchester)",
+    "score": 3,
+    "matched": [
+     "rate 100 kb/s",
+     "deviation 50 kHz",
+     "band"
+    ],
+    "conflicts": [],
+    "note": "India 866.0 MHz; ~6 ms every 0.6-1.4 s; aircraft type 13 = UAV"
+   },
+   {
+    "protocol": "FrSky D16 LBT (EU)",
+    "score": -1,
+    "matched": [
+     "rate 100 kb/s"
+    ],
+    "conflicts": [
+     "deviation 70 kHz",
+     "band"
+    ],
+    "note": "2-FSK, base 2405 MHz"
+   }
+  ]
+ },
+ {
+  "args": [
+   1000000.0,
+   null,
+   2440.0,
+   2.0
+  ],
+  "out": [
+   {
+    "protocol": "nRF24 / XN297 toy RC (Bayang, V2x2, ...)",
+    "score": 2,
+    "matched": [
+     "rate 1000 kb/s",
+     "band"
+    ],
+    "conflicts": [],
+    "note": "Bayang 2 ms, V2x2 4 ms"
+   }
+  ]
+ },
+ {
+  "args": [
+   12000.0,
+   5000.0,
+   433.5,
+   null
+  ],
+  "out": []
+ }
+]

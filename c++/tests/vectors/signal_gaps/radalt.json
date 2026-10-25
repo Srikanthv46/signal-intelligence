@@ -1,0 +1,108 @@
+{
+ "cases": [
+  {
+   "fs": 30720000.0,
+   "fc": 4250000000.0,
+   "emissions": [
+    {
+     "label": "radio_altimeter",
+     "confidence": 0.8,
+     "features": {
+      "n_crossings": 6,
+      "rate_mhz_per_ms": 79.781,
+      "r2_min": 0.9961,
+      "shape": "triangle",
+      "f_top_mhz": 4366.46,
+      "f_bottom_mhz": 4233.5,
+      "sweep_bw_mhz": 133.0,
+      "period_ms": 3.333,
+      "seen_mhz": [
+       4236.14,
+       4263.86
+      ]
+     },
+     "start_us": 2.0833333333333335,
+     "end_us": 9997.916666666668,
+     "f_lo_mhz": 4236.138431526736,
+     "f_hi_mhz": 4263.856733811212
+    }
+   ]
+  },
+  {
+   "fs": 30720000.0,
+   "fc": 4300000000.0,
+   "emissions": [
+    {
+     "label": "radio_altimeter",
+     "confidence": 0.8,
+     "features": {
+      "n_crossings": 9,
+      "rate_mhz_per_ms": 176.735,
+      "r2_min": 0.9908,
+      "shape": "sawtooth up",
+      "period_ms": 1.0,
+      "seen_mhz": [
+       4286.37,
+       4314.45
+      ]
+     },
+     "start_us": 2.0833333333333335,
+     "end_us": 9997.916666666668,
+     "f_lo_mhz": 4286.369879345338,
+     "f_hi_mhz": 4314.454598767377
+    }
+   ]
+  },
+  {
+   "fs": 30720000.0,
+   "fc": 4300000000.0,
+   "emissions": [
+    {
+     "label": "radio_altimeter",
+     "confidence": 0.7,
+     "features": {
+      "n_crossings": 1,
+      "rate_mhz_per_ms": 10.4,
+      "r2_min": 1.0,
+      "shape": "single crossing",
+      "seen_mhz": [
+       4286.2,
+       4313.87
+      ]
+     },
+     "start_us": 2.0833333333333335,
+     "end_us": 9997.916666666668,
+     "f_lo_mhz": 4286.200384334577,
+     "f_hi_mhz": 4313.8691707884955
+    }
+   ]
+  }
+ ],
+ "scene": {
+  "fs": 30720000.0,
+  "fc": 4250000000.0,
+  "signals": [
+   {
+    "label": "Radio altimeter (FMCW)-like (triangle, 79.781 MHz/ms, 133.0 MHz sweep, period 3.333 ms)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "n_crossings": 6,
+     "rate_mhz_per_ms": 79.781,
+     "r2_min": 0.9961,
+     "shape": "triangle",
+     "f_top_mhz": 4366.46,
+     "f_bottom_mhz": 4233.5,
+     "sweep_bw_mhz": 133.0,
+     "period_ms": 3.333,
+     "seen_mhz": [
+      4236.14,
+      4263.86
+     ]
+    },
+    "f0": 4236138431.526736,
+    "f1": 4263856733.8112116
+   }
+  ]
+ }
+}

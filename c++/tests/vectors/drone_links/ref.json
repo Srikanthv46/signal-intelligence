@@ -1,0 +1,759 @@
+{
+ "mpdu": {
+  "udp_hb_gpi": {
+   "hex": "08020000ffffffffffff5ccf7f0102035ccf7f0102031000aaaa030000000800450000510000000040110000c0a80401c0a8040238d638d6003d0000fe09070101000000000002038104038255fe1c07010121e80300006694eb1079ecd42d90d00300e02e0000000000000000282328aa",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 1,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 117,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "5c:cf:7f:01:02:03",
+    "addr3": "5c:cf:7f:01:02:03",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "5c:cf:7f:01:02:03",
+    "da": "ff:ff:ff:ff:ff:ff",
+    "bssid": "5c:cf:7f:01:02:03",
+    "sa": "5c:cf:7f:01:02:03",
+    "direction": "AP -> STA",
+    "body_bytes": 89,
+    "ethertype": "0x0800",
+    "protocol": "IPv4",
+    "ipv4": {
+     "src": "192.168.4.1",
+     "dst": "192.168.4.2",
+     "proto": "UDP",
+     "ttl": 64,
+     "sport": 14550,
+     "dport": 14550,
+     "service": "MAVLink (GCS)",
+     "mavlink": {
+      "frames": 2,
+      "sysid": 1,
+      "messages": [
+       "HEARTBEAT",
+       "GLOBAL_POSITION_INT"
+      ],
+      "vehicle_type": "quadrotor",
+      "autopilot": "ArduPilot",
+      "armed": true,
+      "state": "active",
+      "flight_mode": "STABILIZE",
+      "lat": 28.3874406,
+      "lon": 76.8928889,
+      "alt_msl_m": 250.0,
+      "alt_rel_m": 12.0,
+      "heading_deg": 90.0
+     }
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "Espressif Inc.",
+    "addr3_vendor": "Espressif Inc.",
+    "sa_vendor": "Espressif Inc.",
+    "da_vendor": "broadcast",
+    "bssid_vendor": "Espressif Inc.",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "Espressif Inc.",
+    "drone": {
+     "platform": "MAVLink vehicle (sysid 1, quadrotor)",
+     "source": "MAVLink telemetry over Wi-Fi (CRC-valid)",
+     "confidence": 0.9,
+     "evidence": "2 MAVLink frame(s): HEARTBEAT, GLOBAL_POSITION_INT"
+    },
+    "summary": "data AP -> STA 5c:cf:7f:01:02:03 -> ff:ff:ff:ff:ff:ff BSSID 5c:cf:7f:01:02:03 IPv4 192.168.4.1 -> 192.168.4.2 UDP MAVLink (GCS) [MAVLink vehicle (sysid 1, quadrotor)]"
+   }
+  },
+  "tcp_hb": {
+   "hex": "08020000ffffffffffff5ccf7f0102035ccf7f0102031000aaaa0300000008004500003b0000000040060000c0a80401c0a8040216809c40000000010000000050180400000000000001fe09070101000000000002038104038255",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 1,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 95,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "5c:cf:7f:01:02:03",
+    "addr3": "5c:cf:7f:01:02:03",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "5c:cf:7f:01:02:03",
+    "da": "ff:ff:ff:ff:ff:ff",
+    "bssid": "5c:cf:7f:01:02:03",
+    "sa": "5c:cf:7f:01:02:03",
+    "direction": "AP -> STA",
+    "body_bytes": 67,
+    "ethertype": "0x0800",
+    "protocol": "IPv4",
+    "ipv4": {
+     "src": "192.168.4.1",
+     "dst": "192.168.4.2",
+     "proto": "TCP",
+     "ttl": 64,
+     "sport": 5760,
+     "dport": 40000,
+     "service": "MAVLink (TCP)",
+     "mavlink": {
+      "frames": 1,
+      "sysid": 1,
+      "messages": [
+       "HEARTBEAT"
+      ],
+      "vehicle_type": "quadrotor",
+      "autopilot": "ArduPilot",
+      "armed": true,
+      "state": "active",
+      "flight_mode": "STABILIZE"
+     }
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "Espressif Inc.",
+    "addr3_vendor": "Espressif Inc.",
+    "sa_vendor": "Espressif Inc.",
+    "da_vendor": "broadcast",
+    "bssid_vendor": "Espressif Inc.",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "Espressif Inc.",
+    "drone": {
+     "platform": "MAVLink vehicle (sysid 1, quadrotor)",
+     "source": "MAVLink telemetry over Wi-Fi (CRC-valid)",
+     "confidence": 0.9,
+     "evidence": "1 MAVLink frame(s): HEARTBEAT"
+    },
+    "summary": "data AP -> STA 5c:cf:7f:01:02:03 -> ff:ff:ff:ff:ff:ff BSSID 5c:cf:7f:01:02:03 IPv4 192.168.4.1 -> 192.168.4.2 TCP MAVLink (TCP) [MAVLink vehicle (sysid 1, quadrotor)]"
+   }
+  },
+  "udp_gcs_only": {
+   "hex": "08020000ffffffffffff5ccf7f0102035ccf7f0102031000aaaa0300000008004500002d0000000040110000c0a80401c0a8040238d638d600190000fe0907ff0100000000000608000003732a",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 1,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 81,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "5c:cf:7f:01:02:03",
+    "addr3": "5c:cf:7f:01:02:03",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "5c:cf:7f:01:02:03",
+    "da": "ff:ff:ff:ff:ff:ff",
+    "bssid": "5c:cf:7f:01:02:03",
+    "sa": "5c:cf:7f:01:02:03",
+    "direction": "AP -> STA",
+    "body_bytes": 53,
+    "ethertype": "0x0800",
+    "protocol": "IPv4",
+    "ipv4": {
+     "src": "192.168.4.1",
+     "dst": "192.168.4.2",
+     "proto": "UDP",
+     "ttl": 64,
+     "sport": 14550,
+     "dport": 14550,
+     "service": "MAVLink (GCS)",
+     "mavlink": {
+      "frames": 1,
+      "sysid": 255,
+      "messages": [
+       "HEARTBEAT"
+      ]
+     }
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "Espressif Inc.",
+    "addr3_vendor": "Espressif Inc.",
+    "sa_vendor": "Espressif Inc.",
+    "da_vendor": "broadcast",
+    "bssid_vendor": "Espressif Inc.",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "Espressif Inc.",
+    "summary": "data AP -> STA 5c:cf:7f:01:02:03 -> ff:ff:ff:ff:ff:ff BSSID 5c:cf:7f:01:02:03 IPv4 192.168.4.1 -> 192.168.4.2 UDP MAVLink (GCS)"
+   }
+  },
+  "udp_noise": {
+   "hex": "08020000ffffffffffff5ccf7f0102035ccf7f0102031000aaaa030000000800450000440000000040110000c0a80401c0a8040238d638d600300000000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324252627",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 1,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 104,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "5c:cf:7f:01:02:03",
+    "addr3": "5c:cf:7f:01:02:03",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "5c:cf:7f:01:02:03",
+    "da": "ff:ff:ff:ff:ff:ff",
+    "bssid": "5c:cf:7f:01:02:03",
+    "sa": "5c:cf:7f:01:02:03",
+    "direction": "AP -> STA",
+    "body_bytes": 76,
+    "ethertype": "0x0800",
+    "protocol": "IPv4",
+    "ipv4": {
+     "src": "192.168.4.1",
+     "dst": "192.168.4.2",
+     "proto": "UDP",
+     "ttl": 64,
+     "sport": 14550,
+     "dport": 14550,
+     "service": "MAVLink (GCS)"
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "Espressif Inc.",
+    "addr3_vendor": "Espressif Inc.",
+    "sa_vendor": "Espressif Inc.",
+    "da_vendor": "broadcast",
+    "bssid_vendor": "Espressif Inc.",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "Espressif Inc.",
+    "summary": "data AP -> STA 5c:cf:7f:01:02:03 -> ff:ff:ff:ff:ff:ff BSSID 5c:cf:7f:01:02:03 IPv4 192.168.4.1 -> 192.168.4.2 UDP MAVLink (GCS)"
+   }
+  },
+  "udp_bad_crc": {
+   "hex": "08020000ffffffffffff5ccf7f0102035ccf7f0102031000aaaa0300000008004500002d0000000040110000c0a80401c0a8040238d638d600190000fe09070101000000000002038104038254",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 1,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 81,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "5c:cf:7f:01:02:03",
+    "addr3": "5c:cf:7f:01:02:03",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "5c:cf:7f:01:02:03",
+    "da": "ff:ff:ff:ff:ff:ff",
+    "bssid": "5c:cf:7f:01:02:03",
+    "sa": "5c:cf:7f:01:02:03",
+    "direction": "AP -> STA",
+    "body_bytes": 53,
+    "ethertype": "0x0800",
+    "protocol": "IPv4",
+    "ipv4": {
+     "src": "192.168.4.1",
+     "dst": "192.168.4.2",
+     "proto": "UDP",
+     "ttl": 64,
+     "sport": 14550,
+     "dport": 14550,
+     "service": "MAVLink (GCS)"
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "Espressif Inc.",
+    "addr3_vendor": "Espressif Inc.",
+    "sa_vendor": "Espressif Inc.",
+    "da_vendor": "broadcast",
+    "bssid_vendor": "Espressif Inc.",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "Espressif Inc.",
+    "summary": "data AP -> STA 5c:cf:7f:01:02:03 -> ff:ff:ff:ff:ff:ff BSSID 5c:cf:7f:01:02:03 IPv4 192.168.4.1 -> 192.168.4.2 UDP MAVLink (GCS)"
+   }
+  },
+  "wfb_data": {
+   "hex": "08010000ffffffffffff57427505d61057427505d6101000010000000000004d02000000000000000000000000000000000000000000000000000000000000",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 1,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 67,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "57:42:75:05:d6:10",
+    "addr3": "57:42:75:05:d6:10",
+    "seq": 1,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "57:42:75:05:d6:10",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "sa": "57:42:75:05:d6:10",
+    "da": "57:42:75:05:d6:10",
+    "direction": "STA -> AP",
+    "body_bytes": 39,
+    "wfb_ng": {
+     "link_id": 7669206,
+     "link_id_hex": "0x7505D6",
+     "default_link_domain": true,
+     "radio_port": 16,
+     "stream": "MAVLink",
+     "packet_type": "data",
+     "block_idx": 77,
+     "fragment_idx": 2
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "multicast",
+    "addr3_vendor": "multicast",
+    "sa_vendor": "multicast",
+    "da_vendor": "multicast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "multicast",
+    "drone": {
+     "platform": "wfb-ng digital FPV / telemetry link (OpenIPC / OpenHD)",
+     "source": "wfb-ng 802.11 injection signature",
+     "confidence": 0.9,
+     "evidence": "link_id 0x7505D6 (default link domain), radio port 16 (MAVLink)"
+    },
+    "summary": "data STA -> AP 57:42:75:05:d6:10 -> 57:42:75:05:d6:10 BSSID ff:ff:ff:ff:ff:ff [wfb-ng digital FPV / telemetry link (OpenIPC / OpenHD)]"
+   }
+  },
+  "wfb_session": {
+   "hex": "08010000ffffffffffff5742123456a05742123456a0200002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "out": {
+    "type": "data",
+    "subtype": "data",
+    "protocol_version": 0,
+    "to_ds": 1,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 89,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "57:42:12:34:56:a0",
+    "addr3": "57:42:12:34:56:a0",
+    "seq": 2,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "57:42:12:34:56:a0",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "sa": "57:42:12:34:56:a0",
+    "da": "57:42:12:34:56:a0",
+    "direction": "STA -> AP",
+    "body_bytes": 61,
+    "wfb_ng": {
+     "link_id": 1193046,
+     "link_id_hex": "0x123456",
+     "default_link_domain": false,
+     "radio_port": 160,
+     "stream": "tunnel (reverse: ground -> air)",
+     "packet_type": "session"
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "multicast",
+    "addr3_vendor": "multicast",
+    "sa_vendor": "multicast",
+    "da_vendor": "multicast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "multicast",
+    "drone": {
+     "platform": "wfb-ng digital FPV / telemetry link (OpenIPC / OpenHD)",
+     "source": "wfb-ng 802.11 injection signature",
+     "confidence": 0.9,
+     "evidence": "link_id 0x123456, radio port 160 (tunnel (reverse: ground -> air))"
+    },
+    "summary": "data STA -> AP 57:42:12:34:56:a0 -> 57:42:12:34:56:a0 BSSID ff:ff:ff:ff:ff:ff [wfb-ng digital FPV / telemetry link (OpenIPC / OpenHD)]"
+   }
+  },
+  "espnow_vtx": {
+   "hex": "d00000003af427ba3bca3af427ba3bcaffffffffffff20007f18fe3401020304dd1218fe34040124583c005900040020000000ee",
+   "out": {
+    "type": "mgmt",
+    "subtype": "action",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 56,
+    "duration_us": 0,
+    "addr1": "3a:f4:27:ba:3b:ca",
+    "addr2": "3a:f4:27:ba:3b:ca",
+    "addr3": "ff:ff:ff:ff:ff:ff",
+    "seq": 2,
+    "frag": 0,
+    "ra": "3a:f4:27:ba:3b:ca",
+    "ta": "3a:f4:27:ba:3b:ca",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "action": {
+     "category": 127,
+     "category_name": "vendor",
+     "code": 24
+    },
+    "elrs_backpack": {
+     "bind_uid": "3a:f4:27:ba:3b:ca",
+     "msp": "VTX config (set)",
+     "vtx_band": "R",
+     "vtx_channel": 1
+    },
+    "esp_now": {
+     "random": "01020304",
+     "version": 1,
+     "body_len": 13,
+     "msp": {
+      "direction": "command",
+      "function": "0x0059",
+      "function_name": "VTX config (set)",
+      "payload_hex": "20000000",
+      "crc_ok": true,
+      "vtx_band": "R",
+      "vtx_channel": 1
+     }
+    },
+    "addr1_vendor": "locally-administered (randomized/private)",
+    "addr2_vendor": "locally-administered (randomized/private)",
+    "addr3_vendor": "broadcast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "locally-administered (randomized/private)",
+    "ta_vendor": "locally-administered (randomized/private)",
+    "drone": {
+     "platform": "ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)",
+     "source": "ESP-NOW MSP frame (CRC-valid)",
+     "confidence": 0.85,
+     "evidence": "MSP VTX config (set), VTX R1"
+    },
+    "summary": "action 3a:f4:27:ba:3b:ca -> 3a:f4:27:ba:3b:ca: vendor #24 [ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)]"
+   }
+  },
+  "espnow_freq": {
+   "hex": "d00000003af427ba3bca3af427ba3bcaffffffffffff20007f18fe3401020304dd1218fe34040124583c0059000400a81600005b",
+   "out": {
+    "type": "mgmt",
+    "subtype": "action",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 56,
+    "duration_us": 0,
+    "addr1": "3a:f4:27:ba:3b:ca",
+    "addr2": "3a:f4:27:ba:3b:ca",
+    "addr3": "ff:ff:ff:ff:ff:ff",
+    "seq": 2,
+    "frag": 0,
+    "ra": "3a:f4:27:ba:3b:ca",
+    "ta": "3a:f4:27:ba:3b:ca",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "action": {
+     "category": 127,
+     "category_name": "vendor",
+     "code": 24
+    },
+    "elrs_backpack": {
+     "bind_uid": "3a:f4:27:ba:3b:ca",
+     "msp": "VTX config (set)",
+     "vtx_frequency_mhz": 5800
+    },
+    "esp_now": {
+     "random": "01020304",
+     "version": 1,
+     "body_len": 13,
+     "msp": {
+      "direction": "command",
+      "function": "0x0059",
+      "function_name": "VTX config (set)",
+      "payload_hex": "a8160000",
+      "crc_ok": true,
+      "vtx_frequency_mhz": 5800
+     }
+    },
+    "addr1_vendor": "locally-administered (randomized/private)",
+    "addr2_vendor": "locally-administered (randomized/private)",
+    "addr3_vendor": "broadcast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "locally-administered (randomized/private)",
+    "ta_vendor": "locally-administered (randomized/private)",
+    "drone": {
+     "platform": "ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)",
+     "source": "ESP-NOW MSP frame (CRC-valid)",
+     "confidence": 0.85,
+     "evidence": "MSP VTX config (set)"
+    },
+    "summary": "action 3a:f4:27:ba:3b:ca -> 3a:f4:27:ba:3b:ca: vendor #24 [ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)]"
+   }
+  },
+  "espnow_chidx": {
+   "hex": "d00000003af427ba3bca3af427ba3bcaffffffffffff20007f18fe3401020304dd0f18fe34040124583c00010301000aac",
+   "out": {
+    "type": "mgmt",
+    "subtype": "action",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 53,
+    "duration_us": 0,
+    "addr1": "3a:f4:27:ba:3b:ca",
+    "addr2": "3a:f4:27:ba:3b:ca",
+    "addr3": "ff:ff:ff:ff:ff:ff",
+    "seq": 2,
+    "frag": 0,
+    "ra": "3a:f4:27:ba:3b:ca",
+    "ta": "3a:f4:27:ba:3b:ca",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "action": {
+     "category": 127,
+     "category_name": "vendor",
+     "code": 24
+    },
+    "elrs_backpack": {
+     "bind_uid": "3a:f4:27:ba:3b:ca",
+     "msp": "set channel index",
+     "vtx_band": "B",
+     "vtx_channel": 3
+    },
+    "esp_now": {
+     "random": "01020304",
+     "version": 1,
+     "body_len": 10,
+     "msp": {
+      "direction": "command",
+      "function": "0x0301",
+      "function_name": "set channel index",
+      "payload_hex": "0a",
+      "crc_ok": true,
+      "vtx_band": "B",
+      "vtx_channel": 3
+     }
+    },
+    "addr1_vendor": "locally-administered (randomized/private)",
+    "addr2_vendor": "locally-administered (randomized/private)",
+    "addr3_vendor": "broadcast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "locally-administered (randomized/private)",
+    "ta_vendor": "locally-administered (randomized/private)",
+    "drone": {
+     "platform": "ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)",
+     "source": "ESP-NOW MSP frame (CRC-valid)",
+     "confidence": 0.85,
+     "evidence": "MSP set channel index, VTX B3"
+    },
+    "summary": "action 3a:f4:27:ba:3b:ca -> 3a:f4:27:ba:3b:ca: vendor #24 [ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)]"
+   }
+  },
+  "espnow_bind": {
+   "hex": "d0000000ffffffffffff3af427ba3bcaffffffffffff20007f18fe3401020304dd1418fe34040124583c00090006003af427ba3bca91",
+   "out": {
+    "type": "mgmt",
+    "subtype": "action",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 58,
+    "duration_us": 0,
+    "addr1": "ff:ff:ff:ff:ff:ff",
+    "addr2": "3a:f4:27:ba:3b:ca",
+    "addr3": "ff:ff:ff:ff:ff:ff",
+    "seq": 2,
+    "frag": 0,
+    "ra": "ff:ff:ff:ff:ff:ff",
+    "ta": "3a:f4:27:ba:3b:ca",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "action": {
+     "category": 127,
+     "category_name": "vendor",
+     "code": 24
+    },
+    "elrs_backpack": {
+     "bind_uid": "3a:f4:27:ba:3b:ca",
+     "msp": "ELRS bind"
+    },
+    "esp_now": {
+     "random": "01020304",
+     "version": 1,
+     "body_len": 15,
+     "msp": {
+      "direction": "command",
+      "function": "0x0009",
+      "function_name": "ELRS bind",
+      "payload_hex": "3af427ba3bca",
+      "crc_ok": true
+     }
+    },
+    "addr1_vendor": "broadcast",
+    "addr2_vendor": "locally-administered (randomized/private)",
+    "addr3_vendor": "broadcast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "broadcast",
+    "ta_vendor": "locally-administered (randomized/private)",
+    "drone": {
+     "platform": "ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)",
+     "source": "ESP-NOW MSP frame (CRC-valid)",
+     "confidence": 0.85,
+     "evidence": "MSP ELRS bind"
+    },
+    "summary": "action 3a:f4:27:ba:3b:ca -> ff:ff:ff:ff:ff:ff: vendor #24 [ExpressLRS Backpack (bind UID 3a:f4:27:ba:3b:ca)]"
+   }
+  },
+  "espnow_badcrc": {
+   "hex": "d00000003af427ba3bca3af427ba3bcaffffffffffff20007f18fe3401020304dd1218fe34040124583c005900040020000000ef",
+   "out": {
+    "type": "mgmt",
+    "subtype": "action",
+    "protocol_version": 0,
+    "to_ds": 0,
+    "from_ds": 0,
+    "more_frag": 0,
+    "retry": 0,
+    "pwr_mgmt": 0,
+    "more_data": 0,
+    "protected": 0,
+    "order": 0,
+    "length_bytes": 56,
+    "duration_us": 0,
+    "addr1": "3a:f4:27:ba:3b:ca",
+    "addr2": "3a:f4:27:ba:3b:ca",
+    "addr3": "ff:ff:ff:ff:ff:ff",
+    "seq": 2,
+    "frag": 0,
+    "ra": "3a:f4:27:ba:3b:ca",
+    "ta": "3a:f4:27:ba:3b:ca",
+    "bssid": "ff:ff:ff:ff:ff:ff",
+    "action": {
+     "category": 127,
+     "category_name": "vendor",
+     "code": 24
+    },
+    "esp_now": {
+     "random": "01020304",
+     "version": 1,
+     "body_len": 13,
+     "msp": {
+      "direction": "command",
+      "function": "0x0059",
+      "function_name": "VTX config (set)",
+      "payload_hex": "20000000",
+      "crc_ok": false,
+      "vtx_band": "R",
+      "vtx_channel": 1
+     }
+    },
+    "addr1_vendor": "locally-administered (randomized/private)",
+    "addr2_vendor": "locally-administered (randomized/private)",
+    "addr3_vendor": "broadcast",
+    "bssid_vendor": "broadcast",
+    "ra_vendor": "locally-administered (randomized/private)",
+    "ta_vendor": "locally-administered (randomized/private)",
+    "summary": "action 3a:f4:27:ba:3b:ca -> 3a:f4:27:ba:3b:ca: vendor #24"
+   }
+  }
+ },
+ "lora": {
+  "hb": {
+   "hex": "11fe0907010100000000000203810403825522",
+   "out": {
+    "mavlink_frames": 1,
+    "sysid": 1,
+    "messages": [
+     "HEARTBEAT"
+    ],
+    "vehicle_type": "quadrotor",
+    "autopilot": "ArduPilot",
+    "armed": true,
+    "state": "active",
+    "flight_mode": "STABILIZE"
+   }
+  },
+  "hb_gpi": {
+   "hex": "fe09070101000000000002038104038255fe1c07010121e80300006694eb1079ecd42d90d00300e02e0000000000000000282328aa",
+   "out": {
+    "mavlink_frames": 2,
+    "sysid": 1,
+    "messages": [
+     "HEARTBEAT",
+     "GLOBAL_POSITION_INT"
+    ],
+    "vehicle_type": "quadrotor",
+    "autopilot": "ArduPilot",
+    "armed": true,
+    "state": "active",
+    "flight_mode": "STABILIZE",
+    "lat": 28.3874406,
+    "lon": 76.8928889,
+    "alt_msl_m": 250.0,
+    "alt_rel_m": 12.0,
+    "heading_deg": 90.0
+   }
+  },
+  "split": {
+   "hex": "fe090701010000000000",
+   "out": null
+  },
+  "none": {
+   "hex": "0000000000000000000000000000000000000000000000000000000000000000",
+   "out": null
+  }
+ }
+}

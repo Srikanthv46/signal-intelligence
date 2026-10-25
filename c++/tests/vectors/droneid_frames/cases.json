@@ -1,0 +1,74 @@
+{
+ "fs": 15360000.0,
+ "fc": 2440000000.0,
+ "cases": [
+  {
+   "file": "droneid_9.cf32",
+   "n_symbols": 9,
+   "emissions": [
+    {
+     "start_us": 4000.0,
+     "end_us": 4643.2,
+     "center_mhz": 2441.3001,
+     "features": {
+      "scs_khz": 15,
+      "symbol_us": 71.35,
+      "cp_us": 4.69,
+      "tu_us": 66.67,
+      "bw_mhz": 9.0,
+      "burst_us": 643.2,
+      "n_symbols": 9,
+      "zc_root": [
+       600,
+       147
+      ],
+      "zc_corr": [
+       0.69,
+       0.67
+      ],
+      "cp_score": 0.67,
+      "droneid_frame": "9-symbol (OcuSync 2/3 generation: Mini 2, Air 2 and later)",
+      "symbol0_cp": 0.69,
+      "carrier_mhz": 2441.30015,
+      "cfo_hz": 147.5,
+      "cfo_ppm": 0.06
+     }
+    }
+   ]
+  },
+  {
+   "file": "droneid_8.cf32",
+   "n_symbols": 8,
+   "emissions": [
+    {
+     "start_us": 4000.5,
+     "end_us": 4572.4,
+     "center_mhz": 2438.2,
+     "features": {
+      "scs_khz": 15,
+      "symbol_us": 71.35,
+      "cp_us": 4.69,
+      "tu_us": 66.67,
+      "bw_mhz": 9.0,
+      "burst_us": 571.9,
+      "n_symbols": 8,
+      "zc_root": [
+       600,
+       147
+      ],
+      "zc_corr": [
+       0.79,
+       0.79
+      ],
+      "cp_score": 0.68,
+      "droneid_frame": "8-symbol (first symbol absent: Mavic Pro / Mavic 2 family, and measured on the DJI Mini 4 Pro (O4); payload not decoded)",
+      "symbol0_cp": 0.18,
+      "carrier_mhz": 2438.20005,
+      "cfo_hz": 49.3,
+      "cfo_ppm": 0.02
+     }
+    }
+   ]
+  }
+ ]
+}

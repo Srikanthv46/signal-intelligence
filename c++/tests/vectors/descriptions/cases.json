@@ -1,0 +1,1459 @@
+[
+{
+"label": "2.4 GHz GFSK link (ESB-like, 2 Mb/s)",
+"decoder": "rc_link",
+"flags": [],
+"text": "A 2.4 GHz short-range digital link of the Nordic 'Enhanced ShockBurst' kind, used by wireless mice, keyboards, presenters, game pads and some toy remotes."
+},
+{
+"label": "2.4 GHz GFSK link (ESB-like, 2 Mb/s)",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "A 2.4 GHz short-range digital link of the Nordic 'Enhanced ShockBurst' kind, used by wireless mice, keyboards, presenters, game pads and some toy remotes."
+},
+{
+"label": "5G NR n28 PCI 107 (SSB 782.55 MHz)",
+"decoder": "nr_ssb",
+"flags": [],
+"text": "5G mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, frequency) and the band."
+},
+{
+"label": "5G NR n28 PCI 75 (SSB 782.55 MHz)",
+"decoder": "nr_ssb",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "5G mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, frequency) and the band."
+},
+{
+"label": "5G NR n78 PCI 445 (SSB 3511.20 MHz)",
+"decoder": "nr_ssb",
+"flags": [],
+"text": "5G mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, frequency) and the band."
+},
+{
+"label": "5G NR n78 PCI 82 (SSB 3361.44 MHz)",
+"decoder": "nr_ssb",
+"flags": [],
+"text": "5G mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, frequency) and the band."
+},
+{
+"label": "AIS (3 stations)",
+"decoder": "marine",
+"flags": [],
+"text": "AIS (Automatic Identification System, 162 MHz): ships, coastal base stations and navigation buoys broadcasting their identity and position. The decoded fields give each station's MMSI, flag country, name, position, speed, course and destination."
+},
+{
+"label": "APRS (VU2ABC-9)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "APRS (Automatic Packet Reporting System): amateur radio stations, vehicles, balloons and weather stations sending short data packets on VHF (typically 144-146 MHz) with their position, status or messages. The decoded fields give the callsigns, digipeater path, position and comment."
+},
+{
+"label": "AX.25 packet radio (VU2BCN)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "AX.25 packet radio: amateur or utility data packets sent as 1200 bit/s audio tones over FM. The decoded fields give the callsigns, path and message contents."
+},
+{
+"label": "Analog AM voice (VHF air band, 118.25 MHz)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "Analog AM voice on an aviation channel: pilots and air-traffic controllers talking (VHF air band 118-137 MHz) or military aircraft (UHF 225-400 MHz). The decoded fields give the channel, and the audio can be played; 121.5 and 243.0 MHz are the emergency frequencies."
+},
+{
+"label": "Analog AM voice (aeronautical emergency 121.5 MHz)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "Analog AM voice on an aviation channel: pilots and air-traffic controllers talking (VHF air band 118-137 MHz) or military aircraft (UHF 225-400 MHz). The decoded fields give the channel, and the audio can be played; 121.5 and 243.0 MHz are the emergency frequencies."
+},
+{
+"label": "Analog FM voice (859.3455 MHz)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "Analog FM voice radio: walkie-talkies, land-mobile, marine or amateur radio. The audio can be listened to directly."
+},
+{
+"label": "Analog FM voice (861.3456 MHz)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "Analog FM voice radio: walkie-talkies, land-mobile, marine or amateur radio. The audio can be listened to directly."
+},
+{
+"label": "Analog FM voice (PMR446 ch 8, D053N)",
+"decoder": "voice_fm",
+"flags": [],
+"text": "Walkie-talkie voice on licence-free PMR446 handheld radios, used by the public, events, shops and work crews. The decoded fields give the channel and any privacy code."
+},
+{
+"label": "Analog FM voice (PMR446 ch 8, D053N)",
+"decoder": "voice_fm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Walkie-talkie voice on licence-free PMR446 handheld radios, used by the public, events, shops and work crews. The decoded fields give the channel and any privacy code."
+},
+{
+"label": "Analog FPV video (NTSC)",
+"decoder": "analog_vtx",
+"flags": [],
+"text": "Analog FPV video transmitter: it sends the camera picture from an FPV drone (racing or freestyle quad, sometimes a plane) to the pilot's goggles as analog TV. An FPV drone is switched on nearby, usually within a few kilometres; anyone with an analog receiver can watch the picture."
+},
+{
+"label": "Analog FPV video (NTSC)",
+"decoder": "analog_vtx",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Analog FPV video transmitter: it sends the camera picture from an FPV drone (racing or freestyle quad, sometimes a plane) to the pilot's goggles as analog TV. An FPV drone is switched on nearby, usually within a few kilometres; anyone with an analog receiver can watch the picture."
+},
+{
+"label": "Analog FPV video (PAL)",
+"decoder": "analog_vtx",
+"flags": [],
+"text": "Analog FPV video transmitter: it sends the camera picture from an FPV drone (racing or freestyle quad, sometimes a plane) to the pilot's goggles as analog TV. An FPV drone is switched on nearby, usually within a few kilometres; anyone with an analog receiver can watch the picture."
+},
+{
+"label": "Bluetooth (BLE/BR)-like",
+"decoder": "rc_link",
+"flags": [],
+"text": "Bluetooth traffic (classic or Low Energy) from phones, headsets, speakers, cars and similar devices, hopping quickly across the 2.4 GHz band."
+},
+{
+"label": "Bluetooth (BLE/BR)-like",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Bluetooth traffic (classic or Low Energy) from phones, headsets, speakers, cars and similar devices, hopping quickly across the 2.4 GHz band."
+},
+{
+"label": "Bluetooth LE advertising (ADV_IND)",
+"decoder": "rc_link",
+"flags": [],
+"text": "Bluetooth Low Energy advertising: everyday devices such as phones, watches, earbuds, fitness bands and item trackers announcing themselves. The decoded fields give the device address and, when sent, its name and maker."
+},
+{
+"label": "Bluetooth LE advertising (ADV_IND)",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Bluetooth Low Energy advertising: everyday devices such as phones, watches, earbuds, fitness bands and item trackers announcing themselves. The decoded fields give the device address and, when sent, its name and maker."
+},
+{
+"label": "Bluetooth LE advertising (ADV_NONCONN_IND)",
+"decoder": "rc_link",
+"flags": [],
+"text": "Bluetooth Low Energy advertising: everyday devices such as phones, watches, earbuds, fitness bands and item trackers announcing themselves. The decoded fields give the device address and, when sent, its name and maker."
+},
+{
+"label": "Bluetooth LE advertising (ADV_NONCONN_IND)",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Bluetooth Low Energy advertising: everyday devices such as phones, watches, earbuds, fitness bands and item trackers announcing themselves. The decoded fields give the device address and, when sent, its name and maker."
+},
+{
+"label": "Bluetooth LE tracker (Apple Find My / AirTag)",
+"decoder": "rc_link",
+"flags": [],
+"text": "Bluetooth item tracker (such as an Apple AirTag, Samsung SmartTag, Tile or a Google Find My tag) broadcasting so that its owner's phone network can locate it. One found near you that you do not own may be tracking your movements; the decoded fields give the tracker type and its state, such as separated from its owner and battery level."
+},
+{
+"label": "COFDM video link-like (DVB-T 2K numerology, 8 MHz, GI 1/4)",
+"decoder": "cofdm",
+"flags": [],
+"text": "COFDM (DVB-T-type) video transmitter, used to send live video from broadcast and news cameras, professional and military drones, and surveillance systems."
+},
+{
+"label": "CW carrier (unmodulated tone)-like",
+"decoder": null,
+"flags": [],
+"text": "An unmodulated tone (continuous carrier). It can be leakage from some device, a test transmitter or part of another signal; on its own it cannot be identified."
+},
+{
+"label": "CW carrier (unmodulated tone)-like",
+"decoder": null,
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "An unmodulated tone (continuous carrier). It can be leakage from some device, a test transmitter or part of another signal; on its own it cannot be identified."
+},
+{
+"label": "DJI DroneID",
+"decoder": "dji",
+"flags": [],
+"text": "DJI DroneID: a short broadcast a DJI drone sends about every 0.6 seconds with its serial number, position and height, and the pilot's or home position. A DJI drone is switched on nearby; the decoded fields show the details when they are readable."
+},
+{
+"label": "DJI OcuSync RC uplink",
+"decoder": "dji",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "DJI remote-controller signal (OcuSync / O3 / O4 uplink): the pilot's controller sending commands to a DJI drone. A DJI pilot is nearby, usually closer than the drone."
+},
+{
+"label": "DJI OcuSync video_20MHz",
+"decoder": "dji",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "DJI drone video link (OcuSync / O3 / O4): the drone sending its live camera picture to the pilot's controller. A DJI drone is in the air or switched on nearby, possibly several kilometres away."
+},
+{
+"label": "DJI OcuSync video_o4_10MHz",
+"decoder": "dji",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "DJI drone video link (OcuSync / O3 / O4): the drone sending its live camera picture to the pilot's controller. A DJI drone is in the air or switched on nearby, possibly several kilometres away."
+},
+{
+"label": "DMR base station / repeater, colour code 0, control channel (CSBK) (860.8209 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "DMR digital two-way radio: business or public-safety walkie-talkies and their repeaters. The decoded fields give the colour code and what the channel is doing."
+},
+{
+"label": "DMR base station / repeater, colour code 0, control channel (CSBK) (860.8210 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "DMR digital two-way radio: business or public-safety walkie-talkies and their repeaters. The decoded fields give the colour code and what the channel is doing."
+},
+{
+"label": "DMR base station / repeater, colour code 0, voice call (859.8210 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "DMR digital two-way radio: business or public-safety walkie-talkies and their repeaters. The decoded fields give the colour code and what the channel is doing."
+},
+{
+"label": "DVB-T2 broadcast",
+"decoder": null,
+"flags": [],
+"text": "Digital terrestrial TV broadcast (DVB-T2) from a TV transmitter tower, carrying several TV and radio channels in one signal."
+},
+{
+"label": "Drone Remote ID (Bluetooth LE, ADV_NONCONN_IND)",
+"decoder": "rc_link",
+"flags": [],
+"text": "Drone Remote ID over Bluetooth: an aircraft broadcasting its identity, position and height, and its pilot's position, as drone regulations require. Seeing it means a drone (or a Remote ID module fitted to one) is switched on nearby; the decoded fields hold its ID and the positions."
+},
+{
+"label": "ExpressLRS LoRa sf7 bw812.5k",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "ExpressLRS radio control, the most common open-source control link for FPV racing and long-range drones (2.4 GHz or 868 / 915 MHz). It carries the pilot's stick commands to the drone, so a drone and its pilot are nearby."
+},
+{
+"label": "ExpressLRS flrc like",
+"decoder": "rc_link",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "ExpressLRS radio control, the most common open-source control link for FPV racing and long-range drones (2.4 GHz or 868 / 915 MHz). It carries the pilot's stick commands to the drone, so a drone and its pilot are nearby."
+},
+{
+"label": "FM broadcast (97.6 MHz)",
+"decoder": "broadcast_fm",
+"flags": [],
+"text": "FM radio broadcast station (88-108 MHz), such as All India Radio or a private FM channel. The decoded fields give the frequency, whether it is stereo and, when the station sends RDS, its identifier (PI), programme name, programme type and RadioText."
+},
+{
+"label": "FM broadcast (98.3 MHz, stereo, RDS 'AIR FM')",
+"decoder": "broadcast_fm",
+"flags": [],
+"text": "FM radio broadcast station (88-108 MHz), such as All India Radio or a private FM channel. The decoded fields give the frequency, whether it is stereo and, when the station sends RDS, its identifier (PI), programme name, programme type and RadioText."
+},
+{
+"label": "FrSky D16 v2 (ACCST)",
+"decoder": "rc_link",
+"flags": [],
+"text": "FrSky 2.4 GHz radio control (ACCST D8 / D16) used by hobby FPV drones and RC models. It carries the pilot's stick commands, so a drone or model and its pilot are nearby."
+},
+{
+"label": "GNSS jamming-like (GPS L1)",
+"decoder": "gnss",
+"flags": [],
+"text": "Signs of GNSS jamming: interference in the GPS L1 band that drowns the satellite signals, so receivers nearby lose their position. The decoded fields give the in-band power rise and any narrowband interferers."
+},
+{
+"label": "GNSS spoofing-like (GPS L1 C/A, 5 satellites)",
+"decoder": "gnss",
+"flags": [],
+"text": "Signs of GNSS spoofing: fake satellite navigation signals that can make receivers nearby (phones, vehicles, drones) compute a false position or time. The decoded fields list which spoofing indicators fired (too-strong or too-uniform satellites, duplicate correlation peaks, a power rise)."
+},
+{
+"label": "GNSS: GPS L1 C/A (5 satellites)",
+"decoder": "gnss",
+"flags": [],
+"text": "GPS satellite navigation signals (L1 C/A, 1575.42 MHz), received from the satellites overhead. They sit below the noise and are found by code correlation; the decoded fields list the satellites, their signal strength (C/N0) and Doppler."
+},
+{
+"label": "GSM BCCH ARFCN 1",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 100",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 102",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 104",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 106",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 107",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 108",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 109",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 11",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 12",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 121",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 122",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 123 BSIC 17",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 44",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 46",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 47",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 48",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 50",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 51",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 52",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 54",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 75",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 76",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 78",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 79",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 80",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 83",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 97",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 97 BSIC 13",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "GSM BCCH ARFCN 98",
+"decoder": "gsm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2G GSM mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (ARFCN, BSIC)."
+},
+{
+"label": "HDZero digital FPV video link",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "HDZero digital FPV video transmitter: it sends the camera picture from an FPV drone to the pilot's goggles with very low delay. An FPV drone is switched on nearby, usually within a few kilometres."
+},
+{
+"label": "Herelink (CubePilot) drone video/control link",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Herelink (CubePilot): an all-in-one video, control and telemetry link for professional and agricultural drones running ArduPilot / PX4. A drone and its handheld ground station are nearby."
+},
+{
+"label": "ILS glide slope (330.95 MHz, paired LOC 111.95 MHz)",
+"decoder": "navaids",
+"flags": [],
+"text": "ILS glide slope (329-335 MHz): an airport ground transmitter that guides landing aircraft down the correct descent angle to the runway. The decoded fields give the channel, the paired localizer frequency, and whether the receiver sits above or below the glide path."
+},
+{
+"label": "ILS localizer-like (109.90 MHz, paired GS 333.80 MHz, two-frequency)",
+"decoder": "navaids",
+"flags": [],
+"text": "ILS localizer (108-112 MHz): an airport ground transmitter that guides landing aircraft onto the runway centre-line. The decoded fields give the channel, the paired glide-slope frequency, and which side of the course the receiver is on."
+},
+{
+"label": "IQ image (receiver artifact)",
+"decoder": null,
+"flags": [
+"iq_image"
+],
+"text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+},
+{
+"label": "IQ image (receiver artifact)",
+"decoder": null,
+"flags": [
+"iq_image",
+"adc_clipping_in_capture"
+],
+"text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+},
+{
+"label": "IQ image (receiver artifact)",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"iq_image"
+],
+"text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+},
+{
+"label": "IQ image (receiver artifact)",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"iq_image",
+"adc_clipping_in_capture"
+],
+"text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+},
+{
+"label": "ISM short-range device (433/865 MHz)-like",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"possible_lo_harmonic_image"
+],
+"text": "A short-range device in the licence-free 433 or 865-868 MHz bands, such as a remote control, doorbell, car key, wireless sensor or alarm."
+},
+{
+"label": "Iridium-like TDMA burst",
+"decoder": null,
+"flags": [],
+"text": "Iridium satellite phone or satellite-modem transmission (1.6 GHz), used for voice and data where there is no mobile network."
+},
+{
+"label": "Jammer (swept carrier)",
+"decoder": "jammer",
+"flags": [],
+"text": "A jammer: a transmitter sweeping a carrier across the band to block communications, as drone jammers and illegal Wi-Fi / GPS jammers do. Someone nearby is deliberately interfering."
+},
+{
+"label": "Jammer (swept carrier)",
+"decoder": "jammer",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "A jammer: a transmitter sweeping a carrier across the band to block communications, as drone jammers and illegal Wi-Fi / GPS jammers do. Someone nearby is deliberately interfering."
+},
+{
+"label": "LO-harmonic image",
+"decoder": null,
+"flags": [],
+"text": "Probably not a transmitter at this frequency: a strong signal from a much higher band (usually a mobile-phone tower at 1.8-2.6 GHz) leaking in through the receiver mixer's harmonics. The real transmitter is on the other band."
+},
+{
+"label": "LTE B28 FDD downlink PCI 351 EARFCN 9235 5 MHz",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B28 FDD downlink PCI 415 EARFCN 9560 5 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B3 FDD downlink PCI 101 EARFCN 1415 20 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B3 FDD downlink PCI 110 EARFCN 1565 10 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B3 downlink (PSS N_ID2 1)",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B40 TDD downlink PCI 152 EARFCN 38948",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B40 TDD downlink PCI 440 EARFCN 39150",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B40 TDD downlink PCI 440 EARFCN 39294",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B5 FDD downlink PCI 169 EARFCN 2450 10 MHz",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B5 FDD downlink PCI 287 EARFCN 2525 10 MHz",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B5 downlink (PSS N_ID2 0)",
+"decoder": "lte",
+"flags": [],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B8 FDD downlink PCI 101 EARFCN 3690 10 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B8 FDD downlink PCI 278 EARFCN 3601 10 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B8 FDD downlink PCI 350 EARFCN 3676 5 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE B8 FDD downlink PCI 96 EARFCN 3608 5 MHz",
+"decoder": "lte",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "4G LTE mobile-network cell: a base station on a tower or rooftop serving phones. The decoded fields identify the cell (PCI, EARFCN) and the band."
+},
+{
+"label": "LTE-like TDD B40/n40",
+"decoder": null,
+"flags": [],
+"text": "A 4G LTE-like mobile-network signal: the structure matches LTE but the cell identity was not decoded."
+},
+{
+"label": "LoRa sf5 bw500k",
+"decoder": "rc_link",
+"flags": [],
+"text": "LoRa long-range, low-power radio, used mainly by IoT sensors, smart meters and LoRaWAN networks to send small amounts of data over several kilometres."
+},
+{
+"label": "LoRa sf9 bw125k",
+"decoder": "rc_link",
+"flags": [],
+"text": "LoRa long-range, low-power radio, used mainly by IoT sensors, smart meters and LoRaWAN networks to send small amounts of data over several kilometres."
+},
+{
+"label": "Mode S / ADS-B 1090 MHz",
+"decoder": "adsb",
+"flags": [],
+"text": "Aircraft transponder (Mode S / ADS-B, 1090 MHz): airliners and other aircraft broadcasting their identity, altitude and often position. The decoded fields name the aircraft and where it is."
+},
+{
+"label": "OFDM RC uplink-like (DJI Lightbridge / WiMAX-like numerology, 10.94 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Control signal of a drone remote controller, an older DJI Lightbridge-like system (Phantom 4, Inspire 2, Matrice 600 class): the pilot's controller sending commands to the drone. Identified by signal structure, so likely but not certain."
+},
+{
+"label": "OFDM drone video link-like (DJI Lightbridge / WiMAX-like numerology, 10.94 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Video link of an older DJI drone system (Lightbridge 2: Phantom 4, Inspire 2, Matrice 600 class) carrying the camera picture to the pilot's controller. Such a drone is switched on nearby; identified by signal structure, so likely but not certain."
+},
+{
+"label": "OFDM drone video link-like (DJI O4-like numerology, 30 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Video link of a DJI O4-class drone (Mini 4 Pro, Air 3, Avata 2 and similar) carrying the camera picture to the pilot. A DJI drone is switched on nearby; identified by signal structure, so likely but not certain."
+},
+{
+"label": "OFDM drone video link-like (LTE-like: DJI OcuSync / O3, CubePilot, Autel numerology, 15 kHz SCS) in the 1.6-2.33 GHz government / professional band",
+"decoder": "digital_vtx",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Digital drone video link with an LTE-like structure, as used by DJI (OcuSync / O3), CubePilot Herelink and Autel drones: the drone sending its camera picture to the pilot. A drone is switched on nearby; the make could not be pinned down further."
+},
+{
+"label": "OFDM drone video link-like (Walksnail / WiMAX-like numerology, 10.94 kHz SCS, 2-TX STBC-like)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Video transmitter of an FPV drone (Walksnail Avatar class, or another system on the same Artosyn chipset): it sends the camera picture from the drone to the pilot's goggles. An FPV drone is switched on nearby, usually within a few kilometres."
+},
+{
+"label": "OFDM fixed-wireless link-like (PMP 450-like numerology, 43.75 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Fixed-wireless internet link (point-to-point or point-to-multipoint, e.g. Cambium PMP 450 class) carrying broadband between buildings or towers."
+},
+{
+"label": "OFDM hopping RC uplink-like (DJI O4-like numerology, 30 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "Control signal from a drone pilot's remote controller (a digital OFDM uplink, hopping or fixed). A drone pilot is nearby; the make is given in the label as far as it could be told."
+},
+{
+"label": "PMR land-mobile (analog FM / FSK voice-data)-like",
+"decoder": null,
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Land-mobile two-way radio: the walkie-talkies and dispatch radios of businesses, police, utilities and transport."
+},
+{
+"label": "PMR land-mobile (narrowband)-like",
+"decoder": null,
+"flags": [],
+"text": "Land-mobile two-way radio: the walkie-talkies and dispatch radios of businesses, police, utilities and transport."
+},
+{
+"label": "PMR land-mobile (narrowband)-like",
+"decoder": null,
+"flags": [
+"possible_lo_harmonic_image"
+],
+"text": "Land-mobile two-way radio: the walkie-talkies and dispatch radios of businesses, police, utilities and transport."
+},
+{
+"label": "PMR land-mobile (narrowband)-like",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge"
+],
+"text": "Land-mobile two-way radio: the walkie-talkies and dispatch radios of businesses, police, utilities and transport."
+},
+{
+"label": "Pulsed radar (C-band)-like",
+"decoder": null,
+"flags": [],
+"text": "C-band radar: a radiolocation or weather radar in the 5.25-5.85 GHz band, shared with 5 GHz Wi-Fi (which must avoid it)."
+},
+{
+"label": "Pulsed radar (L-band surveillance)-like",
+"decoder": null,
+"flags": [],
+"text": "L-band surveillance radar: a long-range air-traffic or air-defence radar in 1.2-1.4 GHz that tracks aircraft at long distance."
+},
+{
+"label": "Pulsed radar (S-band ATC)-like",
+"decoder": null,
+"flags": [],
+"text": "Air-traffic-control surveillance radar (S-band), usually at or near an airport, sweeping the sky to track aircraft."
+},
+{
+"label": "Pulsed radar (S-band ATC, solid-state)-like",
+"decoder": null,
+"flags": [],
+"text": "Air-traffic control radar (S-band, solid-state): an airport surveillance radar using long chirped pulses (pulse compression) to track aircraft around the airport."
+},
+{
+"label": "Pulsed radar (marine S-band)-like",
+"decoder": null,
+"flags": [],
+"text": "Marine navigation radar (S-band): the rotating radar of a ship or coastal station, used to see other vessels and the coastline."
+},
+{
+"label": "Pulsed radar (weather, C-band)-like",
+"decoder": null,
+"flags": [],
+"text": "Weather radar (S-band or C-band): a ground radar of the meteorological department scanning the sky for rain, storms and cyclones. The decoded fields give the pulse width and pulse repetition interval."
+},
+{
+"label": "Pulsed radar (weather, S-band)-like",
+"decoder": null,
+"flags": [],
+"text": "Weather radar (S-band or C-band): a ground radar of the meteorological department scanning the sky for rain, storms and cyclones. The decoded fields give the pulse width and pulse repetition interval."
+},
+{
+"label": "Pulsed radar-like",
+"decoder": null,
+"flags": [],
+"text": "A pulsed radar (air-traffic, weather, marine, military or counter-drone): short powerful pulses repeated at a fixed rate to detect objects."
+},
+{
+"label": "Radiosonde-like telemetry",
+"decoder": null,
+"flags": [],
+"text": "Weather-balloon radiosonde (400-406 MHz) sending temperature, humidity, pressure and position as it rises through the atmosphere."
+},
+{
+"label": "Receiver spur (locked to the receiver reference)",
+"decoder": null,
+"flags": [
+"receiver_spur"
+],
+"text": "Not a real transmitter: a tone generated inside the receiver by its own clocks. It can be ignored."
+},
+{
+"label": "Receiver spur (sample-clock harmonic 15 x 61.44 MHz)",
+"decoder": null,
+"flags": [
+"receiver_spur",
+"adc_clipping_in_capture"
+],
+"text": "Not a real transmitter: a tone generated inside the receiver by its own clocks. It can be ignored."
+},
+{
+"label": "SSR Mode A/C replies (squawk 7700 emergency)",
+"decoder": "adsb",
+"flags": [],
+"text": "Aircraft transponder replies to secondary radar (Mode A/C, 1090 MHz): each reply carries either the aircraft's four-digit squawk code or its pressure altitude. Codes 7500, 7600 and 7700 signal a hijack, a radio failure and an emergency."
+},
+{
+"label": "SSR Mode A/C replies-like",
+"decoder": "adsb",
+"flags": [],
+"text": "Aircraft transponder replies to secondary radar (Mode A/C, 1090 MHz): each reply carries either the aircraft's four-digit squawk code or its pressure altitude. Codes 7500, 7600 and 7700 signal a hijack, a radio failure and an emergency."
+},
+{
+"label": "SiK telemetry radio 64 kb/s",
+"decoder": "rc_link",
+"flags": [],
+"text": "Drone telemetry radio (SiK type: 3DR, Holybro, mRo, RFD900) linking a drone's autopilot (ArduPilot or PX4) to the pilot's ground-control laptop or tablet. It carries position, battery and commands, so an autopilot-based drone or its ground station is active nearby."
+},
+{
+"label": "Swept carrier (FMCW-like)",
+"decoder": "jammer",
+"flags": [],
+"text": "A carrier sweeping in frequency (FMCW-like), as radio altimeters and some radars use to measure distance."
+},
+{
+"label": "TBS Crossfire 150 Hz (FSK)",
+"decoder": "rc_link",
+"flags": [],
+"text": "TBS Crossfire long-range radio control (868 / 915 MHz) for FPV drones and RC aircraft. It carries the pilot's stick commands to the drone and telemetry back, so a drone and its pilot are nearby, possibly several kilometres apart."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 2024 colour code 1 (395.1589 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 2024 colour code 1 (395.4089 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 2024 colour code 1 (395.9046 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 4040 colour code 7 (390.0288 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 4040 colour code 7 (390.0290 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 4040 colour code 7 (391.5289 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA downlink MCC 404 MNC 4040 colour code 7 (391.5291 MHz)",
+"decoder": "pmr_digital",
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA-like (25 kHz pi/4-DQPSK)",
+"decoder": null,
+"flags": [],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "TETRA-like (25 kHz pi/4-DQPSK)",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"possible_lo_harmonic_image"
+],
+"text": "TETRA digital radio, the trunked radio system of police, emergency services, railways and utilities. The decoded fields identify the network and its base station."
+},
+{
+"label": "Toy drone (nRF24 / XN297)",
+"decoder": "rc_link",
+"flags": [],
+"text": "Remote control of a toy drone (nRF24 / XN297-class 2.4 GHz chip; brands such as MJX, Syma, JJRC, Eachine). A toy drone and its handheld remote are nearby, usually within about 100 m."
+},
+{
+"label": "UAT 978 MHz ADS-B",
+"decoder": "adsb",
+"flags": [],
+"text": "UAT (978 MHz) ADS-B: aircraft broadcasting their identity and position, used mainly in the United States. The decoded fields give the aircraft address, position and emitter category."
+},
+{
+"label": "VOR beacon (113.10 MHz)",
+"decoder": "navaids",
+"flags": [],
+"text": "VOR navigation beacon (108-118 MHz): a ground station that lets aircraft measure their bearing from it. The decoded fields give the channel and the radial (bearing from the station) at the receiver."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HE) 5g149",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HE) 5g153",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HE) 5g157",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HE/NON_HT) 4880.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HE/VHT) 5g48",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HT/NON_HT) 5g48",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (HT?/NON_HT/VHT/VHT?) 5g157",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 2g1",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 2g10",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 2g12",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 2g6",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 2g6, drone link-like (by behaviour)",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi traffic that includes a drone link: a drone or its controller is using Wi-Fi to send video and receive commands, as camera drones such as DJI Spark / Mavic Air / Tello, Parrot, Holy Stone or Ruko do. The decoded fields name the drone when it identifies itself, or explain why its traffic looks like a drone streaming video to one phone."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 4880.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5755.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5790.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g149",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g149",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g149",
+"decoder": "wifi_ofdm",
+"flags": [
+"iq_image"
+],
+"text": "Not a real transmitter: a mirror copy of a stronger signal on the opposite side of the tuning centre, created by the receiver's own hardware. The real signal is listed separately."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g153",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g157",
+"decoder": "wifi_ofdm",
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (NON_HT) 5g157",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (VHT) 5755.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (VHT) 5790.0MHz",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (VHT) 5g149",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (VHT) 5g153",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM (VHT) 5g157",
+"decoder": "wifi_ofdm",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM-like",
+"decoder": null,
+"flags": [],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM-like",
+"decoder": null,
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM-like",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11 OFDM-like",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"adc_clipping_in_capture"
+],
+"text": "Wi-Fi (802.11a/g/n/ac/ax) from routers, phones, laptops and other devices. The decoded fields list the networks (names, security, standard) and the devices heard, and what they are doing."
+},
+{
+"label": "Wi-Fi 802.11a/g-type link, 5 MHz channel at 2432.03 MHz (Sz Dji Technology Co.,Ltd), drone link-like (DJI-like)",
+"decoder": "wifi_ofdm_scaled",
+"flags": [],
+"text": "DJI drone Wi-Fi link (DJI 'Enhanced Wi-Fi'): a DJI drone such as the Spark, Mavic Air or Mavic Mini talking to its remote controller over Wi-Fi run on a narrow, non-standard channel. Seeing it means one of these DJI drones or its controller is switched on nearby."
+},
+{
+"label": "Wi-Fi 802.11a/g-type link, 5 MHz channel at 2432.03 MHz (Sz Dji Technology Co.,Ltd), drone link-like (DJI-like)",
+"decoder": "wifi_ofdm_scaled",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "DJI drone Wi-Fi link (DJI 'Enhanced Wi-Fi'): a DJI drone such as the Spark, Mavic Air or Mavic Mini talking to its remote controller over Wi-Fi run on a narrow, non-standard channel. Seeing it means one of these DJI drones or its controller is switched on nearby."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch1",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch1",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch10",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch10",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch11",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch2",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch3",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch3",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch4",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch6",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch6",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch6, drone link-like (DJI Tello)",
+"decoder": "wifi_dsss",
+"flags": [],
+"text": "Wi-Fi traffic that includes a drone link: a drone or its controller is using Wi-Fi to send video and receive commands, as camera drones such as DJI Spark / Mavic Air / Tello, Parrot, Holy Stone or Ruko do. The decoded fields name the drone when it identifies itself, or explain why its traffic looks like a drone streaming video to one phone."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch7",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch8",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11b DSSS ch9",
+"decoder": "wifi_dsss",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "2.4 GHz Wi-Fi in its oldest mode (802.11b), used mostly for network beacons and short management frames by routers, phones and other devices. The decoded fields list the networks and devices heard."
+},
+{
+"label": "Wi-Fi 802.11n-type link, 11 MHz channel at 2069.02 MHz, spectrum-inverted (Microhard Systems Inc.)",
+"decoder": "wifi_ofdm_scaled",
+"flags": [],
+"text": "Industrial data radio built on Wi-Fi chips (Microhard), used for long-range telemetry, video and data links, for example on professional drones, robots and remote sites. The decoded fields name the radios heard."
+},
+{
+"label": "Wi-Fi 802.11n-type link, 11 MHz channel at 2069.02 MHz, spectrum-inverted (Microhard Systems Inc.)",
+"decoder": "wifi_ofdm_scaled",
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "Industrial data radio built on Wi-Fi chips (Microhard), used for long-range telemetry, video and data links, for example on professional drones, robots and remote sites. The decoded fields name the radios heard."
+},
+{
+"label": "Wi-Fi 802.11n-type link, 11 MHz channel at 2381.02 MHz (Microhard Systems Inc.)",
+"decoder": "wifi_ofdm_scaled",
+"flags": [],
+"text": "Industrial data radio built on Wi-Fi chips (Microhard), used for long-range telemetry, video and data links, for example on professional drones, robots and remote sites. The decoded fields name the radios heard."
+},
+{
+"label": "Wind profiler radar-like",
+"decoder": null,
+"flags": [],
+"text": "Wind-profiler radar: a fixed upward-looking radar that measures the wind speed and direction at different heights for weather forecasting."
+},
+{
+"label": "something new",
+"decoder": "rc_link",
+"flags": [],
+"text": "A frequency-hopping or narrowband digital link of the kind used for radio control and telemetry (for example of drones and RC models), wireless sensors or industrial remotes; the exact protocol was not identified."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"adc_clipping_in_capture"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"possible_lo_harmonic_image"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"possible_lo_harmonic_image",
+"adc_clipping_in_capture"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"adc_clipping_in_capture"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"possible_lo_harmonic_image"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown",
+"decoder": null,
+"flags": [
+"truncated_at_capture_edge",
+"possible_lo_harmonic_image",
+"adc_clipping_in_capture"
+],
+"text": "A signal the library could not identify with enough confidence. Its frequency, bandwidth and timing are reported so it can be checked by hand."
+},
+{
+"label": "unknown OFDM TDD link (25 kHz SCS)",
+"decoder": "digital_vtx",
+"flags": [],
+"text": "A digital OFDM radio link that matches no known system. It could be a drone video or control link of an unlisted make, or a fixed or industrial data link; the measured numbers in the fields help to identify it."
+}
+]

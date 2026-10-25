@@ -1,0 +1,2095 @@
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+RTC6705 CMOS 5.8GHz Band FM Transmitter
+Product Description
+The RTC6705 is a wide-band FM transmitter intended for the application on 5.8GHz bands FM
+transmission. This chip includes a 5.8GHz band RF modulator, two channels of audio modulator
+and internal power amplifier with +13dBm power output referred to external matching network.
+The 5.8GHz band RF modulator block, which is frequency-synthesizer based with an integrated
+VCO, generates the 5.8GHz band FM signal modulated with video signal and two modulated
+audio subcarriers at 6MHz and 6.5MHz respectively. Both Stereo and Mono application are
+available on the chip.
+Transmission frequency can be set by internal register via SPI programming, or by selecting six
+dedicated pins. Two stages output power of +2dBm or +13dBm can be configured via pins 34
+and 35. Both CE and FCC regulations are easy to pass by using RTC6705 with application
+circuit and single room shielding case.
+
+Features
+
+
+
+
+
+
+
+
+
+3.3V power supply
+Built-in PA with +13dBm output power
+5.8GHz band FM modulator and transmitter
+Simple digital pins setting 24 fixed channels to eliminate external micro-controller
+Two audio subcarrier modulators at 6MHz/6.5MHz
+Single chip CMOS technology with integrated VCO and PLL
+Transmitter frequency programmability by SPI
+40-pin leadless QFN package pass RoHS
+
+Application
+
+
+
+
+
+
+AV Sender
+Baby Monitor
+Wireless Camera
+Wireless Audio
+Wireless Earphone
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+1
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+30
+
+VT
+
+GND
+
+CP
+
+REG1D8
+
+XTAL2
+
+XTAL1
+
+REG1D8_1
+
+V2D5_PLL
+
+VDD3V3
+
+VT_Mod
+
+AVT2
+
+SPI_SE
+
+1
+
+VDDVT
+
+29
+
+BUFVDD
+31
+
+28
+
+PAVDD
+32
+
+27
+
+RFGND
+33
+
+26
+
+PAOUT2
+34
+
+25
+
+PAOUT1
+35
+
+24
+
+NC
+36
+
+23
+
+NC
+37
+
+22
+
+GND
+38
+
+21
+
+VCOVDD
+39
+
+9
+
+40
+
+10
+
+LDO2V5
+
+Block Diagram
+
+2
+
+PA1
+
+NC
+
+PA2
+
+S
+
+3
+
+5GHz_PA
+
+4
+
+5 GHz
+BX
+
+Charge
+Pump
+
+SPILE/CS1
+
+5
+
+N/A Counter
+
+PFD
+6
+
+SPIDATA/CS0
+
+R
+Counter
+
+Audio2_Syn
+
+7
+
+15
+
+NC
+
+AVDD_6
+
+AVT1
+
+ACP1
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+16
+
+17
+
+18
+
+19
+AOUT2
+
+14
+
+NC
+
+13
+
+AVDD_6.5
+
+12
+
+AOUT1
+
+11
+RF_VT2
+
+Audio1_syn
+
+20
+ACP2
+
+VDD33_DIG
+
+SPI/REGIST
+ER_CONT
+
+8
+
+SPICLK/CS2
+
+Confidential Proprietary
+2
+
+RTC6705
+RTC6705-DST-001
+
+PIN NAME
+1 SPI_SE
+2 NC
+3
+S
+
+I/O
+Digital IN
+
+4
+
+Digital IN
+Digital IN
+Digital IN
+Digital IN
+Digital IN
+Digital IN
+Digital IN
+Supply IN
+Supply IN
+Analog IN
+Analog IN
+
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+
+BX
+CS0
+SPIDATA
+CS1
+SPILE
+CS2
+SPICLK
+VDD33_DIG
+V2D5_PLL
+VT_Mod
+RF_VT2
+NC
+AVDD_6
+AVT1
+ACP1
+AOUT1
+AVDD_6.5
+NC
+AOUT2
+ACP2
+AVT2
+VDD3V3
+REG1D8_1
+XTAL1
+XTAL2
+REG1D8
+CP
+GND
+VT
+VDDVT
+BUFVDD
+PAVDD
+RFGND
+PAOUT2
+PAOUT1
+NC
+NC
+GND
+VCOVDD
+
+Digital IN
+
+Supply IN
+Analog IN
+Analog OUT
+Analog OUT
+Supply IN
+Analog OUT
+Analog OUT
+Analog IN
+Supply IN
+Analog OUT
+Analog I/O
+Analog I/O
+Analog OUT
+Analog OUT
+Analog GND
+Analog IN
+Supply IN
+Supply IN
+Supply IN
+Analog GND
+Analog OUT
+Analog OUT
+
+Analog GND
+Supply IN
+
+Data Sheet
+
+SEP 2007
+
+FUNCTION
+Switch mode or SPI selection1
+Not connected
+A/B band selection1
+0 for A band; 1 for B band
+Alternative band selection1
+Easy Channel selection1
+SPI digital control
+Easy Channel selection1
+SPI digital control
+Easy channel selection1
+SPI digital control
+3.3V DC power supply
+3.3V DC power supply for audio modulator PLL
+Modulation input for Video
+Modulation input for audio subcarriers
+Not connected
+3.3V power supply for audio 6MHz VCO
+Vtune for audio 6MHz PLL
+Charge pump for audio 6MHz
+FM modulated audio 6MHz output
+3.3V power supply for audio 6.5Mz VCO
+Not connected
+FM modulated audio 6.5MHz output
+Charge pump for audio 6.5MHz
+Vtune for audio 6.5MHz PLL
+3.3V Analog power supply
+Regulator OUT 1.8V regulator output for audio
+Crystal connection
+Crystal connection
+Regulator OUT 1.8V regulator output for video
+Synthesizer charge pump output
+Analog GND
+Vtune for VCO
+3.3V Analog power supply
+3.3V Analog power supply for PA bias & buffer
+3.3V VDD
+RF GND
+PA output for 13dBm at 5.8GHz band
+PA output for 2dBm at 5.8GHz band
+Not connected
+Not connected
+3.3V Analog power supply for VCO
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+3
+
+RTC6705
+RTC6705-DST-001
+40
+
+LDD2V5
+
+Supply IN
+
+Data Sheet
+
+SEP 2007
+
+Analog power supply for VCO
+
+Note 1. Internal pull-high circuit can be left floating for logical high.
+
+ELECTRICAL SPECIFICATIONS
+(1) Absolute Maximum Ratings
+SYMBOL
+Tstr
+Totr
+Vdd
+Vlog
+VRX
+
+PARAMETER
+
+Ratings
+
+UNIT
+
+Storage Temperature Range
+
+-65 to +150
+
+Operating Temperature Range
+Supply Voltage
+Logic control signal
+RX input
+
+-40 to +85
+-0.5 to +5
+-0.5 to +5
+-2 to +2
+
+°C
+°C
+V
+V
+V
+
+The maximum rating must not be exceeded at any time. Do not operate the device under conditions outside
+the above
+
+(2) DC Electrical Characteristics
+SYMBOL
+
+PARAMETER
+
+CONDITION
+
+MIN.
+
+TYP.
+
+MAX.
+
+UNI
+T
+
+Tj
+VDD
+I_module
+high
+I_module
+low
+Icc
+
+Temperature Range
+Supply Voltage
+Power consumption for reference
+design with 13dBm output power
+
+-
+
+-40
+3.1
+
+85
+3.5
+
+TT 25C, 3.3V
+
+25
+3.3
+100
+
+°C
+V
+mA
+
+Power consumption for reference
+design with 2dBm output power
+
+TT 25C, 3.3V
+
+TBD
+
+mA
+
+Power consumption for chip with
+13dBm output power
+Oscillator operating frequency
+High Level Input Voltage for digital
+interface
+Low Level Input Voltage for digital
+interface
+
+TT 25C, 3.3V
+
+95
+
+mA
+
+8
+
+Fref
+V_IH
+V_IL
+
+V_IO=3V
+
+0.7xV_IO
+
+V_IO+0.3
+
+MHz
+V
+
+-0.3
+
+0.3xV_IO
+
+V
+
+MAX.
+5865
+
+UNIT
+MHz
+
+(3) 5GHz Band Transmitter Specifications (T 25℃, 3.3V)
+SYMBOL
+Fc
+
+PARAMETER
+Frequency Range
+
+Pout_H*
+
+Maximum output power at high
+power mode with reference
+design
+Maximum output power at low
+power mode with reference
+design
+The phase noise at 5725GHz
+
+Pout_L*
+
+PN
+2ndH_H*
+
+The 2nd Harmonic referenced
+with the fundamental signal at
+high power mode
+
+CONDITION
+Temperature Range
+-40℃ to 85℃
+Connect PAOUT1
+and PAOUT2
+Connect
+only
+
+PAOUT1
+
+100KHz offset
+1MHz offset
+With reference filter
+design
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+MIN.
+5725
+
+TYP.
+
+13
+
+dBm
+
+2
+
+dBm
+
+-90
+-115
+-60
+
+dBc/Hz
+dBc
+
+Confidential Proprietary
+4
+
+RTC6705
+RTC6705-DST-001
+3rdH_H*
+
+2ndH_L*
+
+3rdH_L*
+
+The 3rd Harmonic referenced
+with the fundamental signal at
+high power mode
+The 2nd Harmonic referenced
+with the fundamental signal at
+low power mode
+The 3rd Harmonic referenced
+with the fundamental signal at
+low power mode
+
+Data Sheet
+
+SEP 2007
+
+With reference filter
+design
+
+-60
+
+dBc
+
+With reference filter
+design
+
+-60
+
+dBc
+
+With reference filter
+design
+
+-60
+
+dBc
+
+* All with proper match at the PA output, before further ceramic filtering.
+
+Video
+Zin_video
+Vin_video
+
+Video input impedance
+Video peak to peak input voltage
+(as reference design)
+
+75
+1
+
+Ω
+Vpp
+
+-25
+
+dBc
+
+6
+6.5
+1
+
+MHz
+
+12
+
+kHz
+
+56
+
+dB
+
+Audio
+fau
+
+Video carrier to audio carrier
+ratio (as reference design)
+Audio carrier frequency
+
+THD
+
+Total harmonic distortion
+
+VTAA
+
+F_corner
+
+SNR_A
+
+3dB corner frequency of
+pre-emphasis (as reference
+design)
+Audio SNR (as reference design,)
+With pre-emphasis/ de-emphasis,
+
+No video and audio
+signal in
+Left sound
+Right sound
+@1KHz tone input
+with ±25KHz
+frequency deviation
+
+@1KHz tone input
+with 2Vpp audio
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+-30
+
+%
+
+Confidential Proprietary
+5
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+(4) SPI Digital Timing Diagram
+In SPI Mode (SPI_SE = 1), the 3-wire SPI interface is used to configure the frequency as well as
+internal registers. Series data sequence of 3-wire SPI is shown in following Figure. This 25-bit data
+stream consists of 4 address bits, 1 read/write control bit and 20 data bits. Data transfer is LSB
+first.
+During write cycle (R/W = 1), the chip will sample the SPIDATA on the rising edge of SPICLK. Sampled
+data will be temporally stored in internal shift register. One the rising edge of SPILE, data in shift
+register will be latched into specific register according to the address.
+During read cycle (R/W = 0), address and read/write control bit are sampled at rising edge of SPICLK,
+but the data bits are sent at the falling edge of SPICLK.
+LSB
+
+1st data
+
+MSB
+
+2nd data
+Invalid Data
+
+SPIDATA
+
+A0
+
+A1
+
+A2
+
+A3
+
+R/W
+
+D0
+
+D18
+
+D1
+
+D19
+
+SPICLK
+t1
+
+SPILE
+
+t3
+
+t2
+
+t6
+
+t7
+t4
+
+t
+
+t5
+
+Figure 6.1 Series data sequence on SPI interface of RTC6716
+
+P ar a m e t e r
+
+Min.
+
+T yp .
+
+M a x.
+
+Unit
+
+t1
+
+20
+
+-
+
+-
+
+ns
+
+t2
+
+20
+
+-
+
+-
+
+ns
+
+t3
+
+30
+
+-
+
+-
+
+ns
+
+t4
+
+30
+
+-
+
+-
+
+ns
+
+t5
+
+100
+
+-
+
+-
+
+ns
+
+t6
+
+20
+
+-
+
+-
+
+ns
+
+t7
+
+100
+
+-
+
+-
+
+ns
+
+Note:
+1.) On the rising edge of the SPICLK, one bit of data is transferred into the shift register.
+2.) SPILE should be “L” when the data is transferred into the shift register.
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+6
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+Channel Selection Table
+When pin 1 (SPI_SE) is set at low voltage, the chip works as in the easy channel selection mode and the
+pins 5(SPIDATA/CS0), 6(SPILE/CS1), 7(SPICLK/CS2)，3(S) and 4(BX) are used for channel selection.
+Channel frequencies refer to below table.
+SPI_SE
+
+Band
+
+BX
+
+S
+
+0
+0
+0
+1
+
+A
+B
+E
+SPI
+
+0
+0
+1
+X
+
+0
+1
+X
+X
+
+5GHz
+Band
+
+000
+5865M
+5733M
+5705M
+
+CS[2:0]
+010
+011
+100
+101
+5825M 5805M 5785M 5765M
+5771M 5790M 5809M 5828M
+5665M 5645M 5885M 5905M
+three wire SPI control pins
+
+001
+5845M
+5752M
+5685M
+
+110
+5745M
+5847M
+5925M
+
+111
+5725M
+5866M
+5945M
+
+SPI mode
+When pin 1 (SPI_SE) is set at high (3.3V), the chip works as in the SPI mode and the pins
+5(SPIDATA/CS0), 6(SPILE/CS1) and 7(SPICLK/CS2) are used for ‘SPI’ inputs for 3-wire programming
+interface.
+
+Register Definition
+Address 0x00: Synthesizer Register A
+Bits
+
+19
+
+18
+
+16
+
+15
+
+14
+
+13
+
+12
+
+11
+
+10
+
+－
+
+Name
+Default
+
+17
+
+0
+
+0
+
+0
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+2
+
+1
+
+0
+
+SYN_RF_R_REG [14:0]
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+SYN_RF_R_REG [14:0]: R-counter divider ratio control for RF Synthesizer.
+Default: 400xD(= 00190xH)
+Crystal clock (Fosc )=: 8MHz
+Reference clock=crystal clock/R-counter=8MHz/400=20KHz
+
+Address 0x01: Synthesizer Register B
+Bits
+
+19
+
+18
+
+17
+
+16
+
+Name
+5G Default
+
+15
+
+14
+
+13
+
+12
+
+11
+
+10
+
+9
+
+8
+
+7
+
+6
+
+SYN_RF_N_REG [12:0]
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+5
+
+4
+
+3
+
+SYN_RF_A_REG [6:0]
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+Synthesizer counter default setting( 5.8Ghz band:5865MHz)
+For 5.8Ghz band, FRF = 2*(N*64+A)*(Fosc/R)
+Example: default FRF=5865MHz, Fosc=8MHz, R=400
+5865=(2*N*64+A)*8Mhz/400=2*(N*64+A)*20KHz
+N=2291(=8F3xH), A=1(=01xH)
+SYN_RF_N_REG [12:0]: N counter divider ratio control for RF Synthesizer
+SYN_RF_A_REG [6:0]:
+
+A counter divider ratio control for RF Synthesizer.
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+7
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+Bits
+
+19
+
+18
+
+Name
+
+VREFADJ
+[2:0]
+
+Default
+
+1
+
+0
+
+17
+
+0
+
+VREFADJ [2:0]
+A1CT [7:3:]
+A1CT [2:0]
+CP_FT [2:0]
+
+16
+
+15
+
+14
+
+13
+
+12
+
+11
+
+10
+
+9
+
+8
+
+0
+
+0
+
+0
+
+0
+
+6
+
+CP_FT
+[2:0]
+
+A1CT [7:0]
+
+1
+
+7
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+5
+
+4
+
+SC_CTL
+
+Address 0x02: Synthesizer Register C
+3
+
+MOUT
+[1:0]
+
+PRES_FT
+[2:0]
+
+0
+
+0
+
+1
+
+0
+
+2
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+Vref adjusting
+Audio modulator R counter value
+Audio modulator charge pump current control
+Charge pump current control (from 50uA to 6mA, default=100uA)
+NOTE: DIG_CT shall set it to 111 for 6mA Icp.
+CP current test control
+Multi-function output select
+(RF R divider output, RF prescaler output, lock in detect)
+Prescaler tail current control (20 ~ 140uA).
+
+SC_CTL:
+MOUT [1:0]
+PRES_FT [2:0]
+
+Address 0x03: RF VCO and DFC Control Register
+19
+
+17
+
+－
+
+Name
+
+5G Default
+
+18
+
+0
+
+CAL_OK:
+R [9:0]:
+EX_CAP [5:0]:
+
+0
+
+16
+
+15
+
+14
+
+13
+
+12
+
+CAL_OK
+
+Bits
+
+0
+
+0
+
+11
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+R [9:0]
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+3
+
+2
+
+EX_CAP [5:0]
+
+1
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+VCO fine tune
+VCO control
+VCO fine tune
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+8
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+15
+
+Name
+
+MB5G [2:0]
+
+Default
+
+0
+
+1
+
+1
+
+BC_SEL [1:0]:
+MB5G [2:0]:
+VB_SEL5G [4:0]:
+VB4_KM5G [1:0]:
+VB3_KM5G [1:0]:
+VB2_KM5G [1:0]:
+VB1_KM5G [1:0]:
+VB0_KM5G [1:0]:
+
+1
+
+1
+
+14
+
+13
+
+12
+
+10
+
+9
+
+VB0_KM5G
+[1:0]
+
+16
+
+VB1_KM5G
+[1:0]
+
+17
+
+VB2_KM5G
+[1:0]
+
+18
+
+VB3_KM5G
+[1:0]
+
+19
+
+BC_SEL
+[1:0]
+
+Bits
+
+VB4_KM5G
+[1:0]
+
+Address 0x04: VCO Control Register
+11
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+11
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+0
+
+VB_SEL5G [4:0]
+
+0
+
+0
+
+0
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+Bias Center Control
+5G VCO control
+5G VCO adjustment
+5G VCO adjustment
+5G VCO adjustment
+5G VCO adjustment
+5G VCO adjustment
+5G VCO adjustment
+
+15
+
+Name
+
+MB2G [2:0]
+
+Default
+
+1
+
+1
+
+0
+
+TC_BUF2G [1:0]:
+MB2G [2:0]:
+VB_SEL2G [4:0]:
+VB4_KM2G [1:0]:
+VB3_KM2G [1:0]:
+VB2_KM2G [1:0]:
+VB1_KM2G [1:0]:
+VB0_KM2G [1:0]:
+
+0
+
+0
+
+14
+
+13
+
+12
+
+VB_SEL2G [4:0]
+
+0
+
+0
+
+0
+
+0
+
+VB0_KM2G
+[1:0]
+
+16
+
+VB1_KM2G
+[1:0]
+
+17
+
+VB2_KM2G
+[1:0]
+
+18
+
+VB3_KM2G
+[1:0]
+
+19
+
+TC_BUF2G
+[1:0]
+
+Bits
+
+VB4_KM2G
+[1:0]
+
+Address 0x05: VCO Control Register
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+0
+
+VCOBUF current control
+VCO current control
+VCO adjustment
+VCO adjustment
+VCO adjustment
+VCO adjustment
+VCO adjustment
+VCO adjustment
+
+Address 0x06: Audio Modulator Control Register
+Bits
+
+19
+
+Name
+Default
+
+18
+
+17
+
+－
+0
+
+MB_6M [2:0]:
+VCO6M_D [4:0]:
+MB_6M5 [2:0]:
+VCO6M5_D [4:0]:
+
+16
+
+15
+
+14
+
+13
+
+MB_6M [3:0]
+0
+
+0
+
+1
+
+1
+
+12
+
+11
+
+10
+
+9
+
+8
+
+VCO6M_D [4:0]
+1
+
+0
+
+1
+
+1
+
+1
+
+MB_6M5 [3:0]
+1
+
+0
+
+1
+
+1
+
+VCO6M5_D [4:0]
+1
+
+0
+
+1
+
+1
+
+1
+
+1
+
+6M VCO control
+6M VCO control code
+6M5 VCO control
+6M5 VCO control code
+
+Address 0x07: Pre-driver and PA Control Register
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+9
+
+RTC6705
+Bits
+
+19
+
+18
+
+16
+
+15
+
+14
+
+MAI_5G
+[4:0]
+
+Name
+
+Default
+
+17
+
+Data Sheet
+
+0
+
+0
+
+0
+
+13
+
+12
+
+DP_5G
+[2:0]
+0
+
+0
+
+MAI_5G [4:0]:
+DP_5G [2:0]:
+PA5G_BS [2:0]:
+PA5G_PW [1:0]:
+PD_Q5G:
+QI_5G [2:0]:
+PA_BS [2:0]:
+
+1
+
+0
+
+11
+
+10
+
+9
+
+PA5G_BS
+[2:0]
+0
+
+1
+
+1
+
+1
+
+SEP 2007
+8
+
+7
+
+PA5G_PW
+
+[1:0]
+1
+
+1
+
+6
+
+5
+
+PD_Q5G
+
+RTC6705-DST-001
+
+4
+
+3
+
+2
+
+QI_5G
+[2:0]
+
+1
+
+0
+
+PA_BS
+[2:0]
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+1
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+5G Pre-driver output control;
+5G Pre-driver gain/linearity control
+5G PA gain control
+5G PA output power control
+Power down 5G pre-driver control
+5GHz pre-driver control
+PA gain control
+
+Address 0x08 ~ 0x0E: Reserved
+Address 0x0F: State Register
+Bits
+
+19
+
+18
+
+17
+
+16
+
+15
+
+14
+
+13
+
+12
+
+10
+
+9
+
+8
+
+7
+
+STATE
+[2:0]
+
+－
+
+Name
+Default
+
+11
+
+0
+
+STATE [2:0]:
+STATE [2:0]
+000
+001
+010
+011
+100~111
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+Current State of the chip.
+State Name
+RESET
+Reset state.
+PWRON_CAL Power on state.
+STBY
+Standby state.
+VCO_CAL
+VCO state.
+Reserved
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+Description
+
+Confidential Proprietary
+10
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+SEP 2007
+
+PACKAGE
+QFN 6X6 40 pins
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+Confidential Proprietary
+11
+
+RTC6705
+RTC6705-DST-001
+
+Data Sheet
+
+www.richwave.com.tw
+Specifications subject to change without notice
+V0.2
+
+SEP 2007
+
+Confidential Proprietary
+12
+
+

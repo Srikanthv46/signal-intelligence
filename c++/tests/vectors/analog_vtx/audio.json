@@ -1,0 +1,11 @@
+{
+ "fs": 20480000.0,
+ "fa": 6500000.0,
+ "out": {
+  "audio_subcarrier_hz": 6500153.0,
+  "audio_dev_rms_khz": 22.67,
+  "audio_peak_hz": 440.0,
+  "audio_peak_db": 58.6,
+  "audio_flatness": 0.0
+ }
+}

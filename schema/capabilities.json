@@ -1,0 +1,664 @@
+{
+ "description": "Validation level of every capability: 'proven' = tested against a real transmitter / capture (proof names it); 'research' = built from published specifications and checked on synthetic signals only (sources name the research file). Every report signal carries validation = {level, ...} from this file: the technology's level, and any decoded fields of research-level field capabilities. To promote a capability after a real-transmitter test, set level to 'proven' and add proof (capture + date) here; no code changes. Shared by the Python and C++ implementations.",
+ "version": "1.0",
+ "levels": {
+  "proven": "tested against a real transmitter or capture",
+  "research": "from published specifications; synthetic validation only; not yet tested on a real transmitter"
+ },
+ "technologies": {
+  "wifi_ofdm": {
+   "level": "proven",
+   "proof": "testdata/wifi, LIVE_WIFI_5755MHz, D_20260916-171343 (FCS-valid frames)"
+  },
+  "wifi_nonstandard_clock": {
+   "level": "proven",
+   "proof": "D_20260211-161341 (Microhard, 11 MHz clock), LIVE_MIMOSA_4880MHz"
+  },
+  "wifi_dsss": {
+   "level": "proven",
+   "proof": "live sweep captures (FCS-valid 802.11b)"
+  },
+  "ble": {
+   "level": "proven",
+   "proof": "LIVE_ISM_2452MHz, D_20260916-171343 (CRC-valid adverts)"
+  },
+  "bluetooth": {
+   "level": "proven",
+   "proof": "LIVE_ISM_2452MHz (BR/EDR hops, energy + GFSK only)"
+  },
+  "esb_like_link": {
+   "level": "proven",
+   "proof": "LIVE_ESB2M_2440MHz (CRC-valid frames)"
+  },
+  "expresslrs": {
+   "level": "proven",
+   "proof": "LIVE_ELRS_2G4_2440MHz (PHY; payload not decodable: SX1280 LI coding)"
+  },
+  "lora": {
+   "level": "proven",
+   "proof": "LIVE_LORA_SF5_890MHz (CRC-valid payloads)"
+  },
+  "fsk_rc_link": {
+   "level": "proven",
+   "proof": "drone captures (GFSK hoppers; protocol classes are -like)"
+  },
+  "dji_droneid": {
+   "level": "proven",
+   "proof": "DJI_Mini_2 / DJI_Mini_Pro_4 testdata (CRC-valid DroneID)"
+  },
+  "dji_ocusync_uplink": {
+   "level": "proven",
+   "proof": "D_20260916-171343, DJI_Mini_2 (RC uplink bursts)"
+  },
+  "dji_ocusync": {
+   "level": "proven",
+   "proof": "DJI_Mini_2, DJI_Mini_Pro_4 testdata"
+  },
+  "hdzero": {
+   "level": "proven",
+   "proof": "LIVE_HDZERO_5658MHz (HDZero Freestyle V2, user-confirmed: R1, 27 MHz mode, 60 fps; continual pilots, CP 1/32, preamble)"
+  },
+  "herelink": {
+   "level": "proven",
+   "proof": "Herelink_20251125-110453 (PSS/SSS, PCI 411)"
+  },
+  "analog_fpv_video": {
+   "level": "proven",
+   "proof": "Analog_20260804-161815, LIVE_ANALOG_VTX_5945MHz (picture decoded)"
+  },
+  "ofdm_data_link": {
+   "level": "proven",
+   "proof": "DJI_Phantom_4, LIVE_OFDM_VTX_5805MHz, D_20260609 (blind CP-OFDM; the family name is -like)"
+  },
+  "fm_voice": {
+   "level": "proven",
+   "proof": "voice testdata (CTCSS / DCS verified)"
+  },
+  "nr": {
+   "level": "proven",
+   "proof": "LIVE_NR_n78_3488MHz (MIB CRC)"
+  },
+  "lte": {
+   "level": "proven",
+   "proof": "LIVE_LTE_B40_2344MHz, cellular testdata (PSS/SSS)"
+  },
+  "lte_or_nr": {
+   "level": "proven",
+   "proof": "cellular sweep captures (rule-based -like)"
+  },
+  "gsm": {
+   "level": "proven",
+   "proof": "LIVE_GSM_940MHz_night (FCCH, SCH CRC)"
+  },
+  "umts": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based -like, band + bandwidth only)"
+  },
+  "mode_s_adsb": {
+   "level": "proven",
+   "proof": "LIVE_ADSB_1090MHz (CRC-24)"
+  },
+  "ssr_interrogation": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based)"
+  },
+  "dme_tacan": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based)"
+  },
+  "pulsed_radar": {
+   "level": "proven",
+   "proof": "LIVE_SBAND_RADAR_2884MHz, LIVE_PULSED_3040MHz"
+  },
+  "dvb_t2": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based -like, band + bandwidth only)"
+  },
+  "tetra": {
+   "level": "proven",
+   "proof": "LIVE_TETRA_390.78MHz, LIVE_400MHz (BSCH CRC)"
+  },
+  "dmr": {
+   "level": "proven",
+   "proof": "LIVE_PMR_860.4MHz (CSBK / sync)"
+  },
+  "nxdn": {
+   "level": "proven",
+   "proof": "LIVE_PMR_860.4MHz (frame sync)"
+  },
+  "pmr": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based)"
+  },
+  "radiosonde": {
+   "level": "proven",
+   "proof": "rule-based (band only)"
+  },
+  "ism_srd": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based)"
+  },
+  "iridium": {
+   "level": "proven",
+   "proof": "sweep captures (rule-based -like, PSK signature)"
+  },
+  "cw_carrier": {
+   "level": "proven",
+   "proof": "sweep captures"
+  },
+  "swept_jammer": {
+   "level": "proven",
+   "proof": "LIVE_JAMMER_SWEEP_2460MHz"
+  },
+  "swept_carrier": {
+   "level": "proven",
+   "proof": "LIVE_JAMMER_SWEEP_2460MHz_jitter"
+  },
+  "lo_leakage": {
+   "level": "proven",
+   "proof": "live bench (bench/live_lo/FINDINGS.md)"
+  },
+  "iq_image": {
+   "level": "proven",
+   "proof": "live bench"
+  },
+  "receiver_spur": {
+   "level": "proven",
+   "proof": "live bench"
+  },
+  "lo_harmonic_response": {
+   "level": "proven",
+   "proof": "live bench (LO dither)"
+  },
+  "unknown": {
+   "level": "proven",
+   "proof": "n/a"
+  },
+  "remote_id_ble": {
+   "level": "research",
+   "sources": "research/drone_transmitters/04_telemetry_remoteid.md",
+   "note": "ASTM F3411 over BLE legacy advertising (AD 0x16, UUID 0xFFFA, app code 0x0D); synthetic: full decode at >= 12 dB SNR per advert; BT5 Long Range (LE Coded PHY S=8 / S=2, ADV_EXT_IND -> AUX_ADV_IND message pack) added 2026-10-22: synthetic only, decodes to ~1 dB in-band SNR (rc_link/ble_coded, bench/ble_coded); China GB 46750-2025 packets (0xFF type byte) in the same element / service data: research, checked against a published DJI Mini 5 Pro frame (PLAN G14)"
+  },
+  "sik_telemetry": {
+   "level": "research",
+   "sources": "research/drone_transmitters/05_sik_mavlink_details.md",
+   "note": "SiK GFSK packet (sync 0x2DD4, PN9, NETID, length, CRC-16) + MAVLink v1/v2 (X.25 + CRC_EXTRA); synthetic: full decode >= 9 dB SNR"
+  },
+  "cofdm_video_link": {
+   "level": "research",
+   "sources": "research/drone_transmitters/06_dvbt_cofdm.md",
+   "note": "DVB-T framing (EN 300 744) at 8/7/6/5 MHz and scaled 4/2.5/2 MHz; synthetic: detected and TPS decoded down to 0 dB in-band SNR (2K, 8/7 MHz); DVB-T2 P1 preamble (S1 / S2: profile, FFT size / GI class) added 2026-10-22, synthetic only (spec worked example, -3 dB)"
+  },
+  "crossfire": {
+   "level": "research",
+   "sources": "research/drone_transmitters/08_crossfire_dsm.md",
+   "note": "TBS Crossfire 150 Hz FSK (85.1 kb/s, +-42.48 kHz): 0x3E6B3E sync after the preamble, 23 / 13-byte packets (raw + PN9 de-whitened), 260 kHz grid channel and link; CRC not verifiable (per-hop init unknown). Synthetic only (20 / 12 / 14 dB)"
+  },
+  "frsky": {
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "FrSky D8 / D16 (CC2500, ACCST) on 2.4 GHz: sync 0xD391 / 0xD391D391 after the preamble, length byte, D8 hardware CRC-16 (0x8005, init 0xFFFF), D16 software CRC (KERMIT table MSB first, seed 0) + v2 hardware CRC; variant (D8, D16 v1 / v2 / LBT v1) and TX ID (bytes 1-2). Synthetic only: 18-20/20 at 8 dB, 14/20 at 6 dB; 0.2-0.4 ms per burst"
+  },
+  "afhds2a": {
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "FlySky AFHDS 2A (A7105): 2-FSK 500 kb/s +-186 kHz on 2.4 GHz; ID code 0x5475C52A after the preamble (<= 3 bit errors) -> AFHDS 2A-like; (7,4) Hamming + CRC-16 decoded under candidate conventions (2 FEC layouts x 2 nibble orders x 4 CRC variants), reported only on a CRC pass with a known packet type, naming the convention -> packet type, TX ID, RX ID, binding. Synthetic only: decode 16-20/20 at 8 dB, ID to ~4 dB; 0.3-0.8 ms"
+  },
+  "xn297_toy": {
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "XN297 toy drones / Bayang: GFSK 1 Mb/s 2.4 GHz, prefix 0x710F55 (<= 1 bit error), scramble table from a 7-bit LFSR seeded 0x71 (reproduces the published table start), bit-reversed scrambled payload; Bayang verified by its header byte + 8-bit sum -> address, TX ID / hop channels (bind), sticks / flags (data); CRC length constant unverified (residual reported). Synthetic only: decode ~80 % at ~19 dB in-band (h ~0.32 hard decisions)"
+  },
+  "radiolink": {
+   "level": "research",
+   "sources": "research/drone_transmitters/14_market_gap_survey.md",
+   "note": "RadioLink 2.4 GHz (CC2500; T8FB / T8S air, RC4GS / RC6GS / RC8X surface, DumboRC, RC4G): GFSK 37.99 kBd +-38 kHz, doubled sync 0xABCD / 0xBADC / 0xABA5, PN9 dewhitening, CC2500 CRC-16 + checksum -> sub-protocol, TX ID, 16 x 11-bit channels, hop slot checked against the TX ID's hop table (two LCG shuffles), receiver telemetry. Synthetic only: decodes at 6 dB; the AT9S / AT10 protocol is not published and not covered"
+  },
+  "hubsan": {
+   "level": "research",
+   "sources": "research/drone_transmitters/14_market_gap_survey.md",
+   "note": "Hubsan H107 / H107 Plus / H301 / H501 class (A7105): 2-FSK 100 kb/s +-186 kHz, one of 12 channels 2410-2465 MHz; session ID code after the preamble, 16-byte packet summing to 0 mod 256, model from constant bytes. Synthetic only: decodes at 6 dB"
+  },
+  "toy_drone": {
+   "level": "research",
+   "sources": "research/drone_transmitters/14_market_gap_survey.md",
+   "note": "toy-drone protocols on nRF24 / XN297 at 1 Mb/s: XN297 MJXQ / CX10 / JJRC345 / H8_3D / E016H / Potensic (fixed address, length, payload checksum) and plain nRF24 V2x2 / SymaX / SymaX X5C (fixed address + nRF CRC-16, optional ESB control field) -> protocol, address, TX ID. Synthetic only; 250 kb/s XN297 and non-nRF chips (HS6200, RF2500) not covered"
+  },
+  "ieee802154": {
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "IEEE 802.15.4 2.4 GHz O-QPSK (XBee / Zigbee telemetry): non-coherent template demod (discriminator signs per chip, 16 symbol templates made by modulation), preamble + SFD 0xA7, PHR, FCS CRC-16 KERMIT, MAC header (type, PANs, short / extended addresses); Digi OUI 00 13 A2 -> vendor. Synthetic only: 10/10 frames at ~7 dB in-band, 0.7 ms per frame"
+  },
+  "flarm": {
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "FLARM beacons at 868.2 / 868.4 / 866.0 MHz: 100 kchip/s Manchester 2-FSK +-50 kHz, sync F5 31 FA B6 -> 24-bit radio ID and address type (FLARM / ICAO) from the clear header; the payload is obfuscated and not decoded. Synthetic only: 18/20 at 10 dB, 15/20 at 6 dB; 0.1-0.4 ms"
+  },
+  "mlrs": {
+   "level": "research",
+   "sources": "research/drone_transmitters/12_rc_links_more.md",
+   "note": "mLRS LoRa air modes (preamble 12, IQ never inverted, 91-byte frames: 2.4 GHz SF5-7 812.5 kHz, sub-GHz SF5 / SF6 500 kHz) -> mLRS-like; the SX127x-framed SF6 (19 Hz 7x) mode is decoded: CRC-16/MCRF4XX over bytes 0-88 (byte order / crc1 coverage variants tried) -> FrameSyncWord (per-binding ID). Synthetic only"
+  },
+  "adsl": {
+   "level": "research",
+   "sources": "research/drone_transmitters/16_uat_adsl_fanet_ogn.md",
+   "note": "ADS-L 4 SRD-860 M-band (EASA Issue 2) on the FLARM PHY: sync F5 72 4B + length, CRC-24 (Mode-S 0xFFF409), XXTEA zero-key descrambling (checked against a reference implementation) -> address table / address, payload type, Traffic fields (category 11-13 = UAS, position, exponential speed / altitude / climb). Synthetic only; O-band not covered"
+  },
+  "ogn_tracker": {
+   "level": "research",
+   "sources": "research/drone_transmitters/16_uat_adsl_fanet_ogn.md",
+   "note": "OGN tracker (OGNTP v1) on the FLARM PHY: sync 0A F3 65 6C; verified by zero Manchester violations over the 208 coded bits, header parity and a plausible position (the LDPC matrix exists only in unlicensed / GPL code and is not used: label -like) -> address, address type, aircraft type (13 = UAV), TEA zero-key de-whitened position. Synthetic only"
+  },
+  "fanet": {
+   "level": "research",
+   "sources": "research/drone_transmitters/16_uat_adsl_fanet_ogn.md",
+   "note": "FANET (LoRa SF7 BW250, sync 0xF1; EU 868.2, India 866.2 MHz): MAC header + payload parsed from CRC-valid LoRa packets -> manufacturer + device ID, message type, tracking (aircraft type 7 = UAV, position, altitude, speed, climb, heading), name; sync 0x12 accepted only for a strictly valid tracking packet. Byte-level tests only"
+  },
+  "hott": {
+   "level": "research",
+   "sources": "research/drone_transmitters/17_hott_hitec_r9.md",
+   "note": "Graupner HoTT (CC2500 MSK 249.94 kBd): sync D391 x2, 4x4 de-interleave, K=4 rate-1/2 Viterbi (TI DN504 test vector reproduced), PN9 de-whitening, CRC-16 -> TX / RX IDs, hop table + index, 12 channels, receiver telemetry. Synthetic only; MSK polarity tried both ways"
+  },
+  "hitec": {
+   "level": "research",
+   "sources": "research/drone_transmitters/17_hott_hitec_r9.md",
+   "note": "Hitec Optima / Minima (CC2500 MSK 249.94 kBd): sync word = TX ID (id3 id2 x2; bind D391), PN9, variable length, CRC-16, sync / TX ID cross-check -> TX ID, 9 channels, repeat flag, bind hop table, telemetry. Synthetic only"
+  },
+  "sfhss": {
+   "level": "research",
+   "sources": "research/drone_transmitters/17_hott_hitec_r9.md",
+   "note": "Futaba S-FHSS (CC2500 2-FSK 128.14 kBd +-38 kHz): sync D391, 13 bytes, CRC-16 in CC2400 mode (init undocumented: 0xFFFF / 0x0000 tried, the passing one reported) -> TX ID, model-hint bytes (T8J / T10J / TM-FH), hop index checked against the channel, hop code, 4 x 12-bit channels. Synthetic only"
+  },
+  "uat": {
+   "level": "research",
+   "sources": "research/drone_transmitters/16_uat_adsl_fanet_ogn.md",
+   "note": "UAT 978 MHz ADS-B downlink (DO-282B): CPFSK h 0.6 phase-change slicer centred on the sync, sync 0xEACDDA4E2 (<= 4 errors), clean-room Reed-Solomon GF(256) 0x187 fcr 120 (parity checked against a reference implementation), Long / Basic as dump978 -> address, position, altitude, velocities, emitter category (14 = UAV), callsign. dump978 sample messages + synthetic IQ only (no UAT in India)"
+  },
+  "ssr_mode_ac": {
+   "level": "research",
+   "sources": "research/signal_gaps/05_aviation_radar_jammers.md",
+   "note": "SSR Mode A/C replies (ICAO Annex 10 Vol IV): F1 / F2 20.3 us, 13 positions on the 1.45 us grid, SPI 24.65 us; garbled / off-grid replies refused; Mode A code and Gillham altitude (checked against pyModeS on all 2048 words); no parity: repetition in the block verifies. Synthetic replies only"
+  },
+  "am_voice": {
+   "level": "research",
+   "sources": "research/signal_gaps/05_aviation_radar_jammers.md",
+   "note": "full-carrier AM voice in the aeronautical bands: envelope speech band (300-3400 Hz) >= 4 % of the carrier and 3x the noise share, phase quiet (discriminator speech band at the noise level), 25 kHz channel, 121.5 / 243.0 MHz emergency; envelope audio. Synthetic AM / FM only"
+  },
+  "ils_glide_slope": {
+   "level": "research",
+   "sources": "research/signal_gaps/05_aviation_radar_jammers.md",
+   "note": "carrier on the 40-channel ICAO grid, envelope least squares on 90 / 150 Hz with a common tone scale (0.97-1.03) over whole 1/30 s windows -> m90, m150, DDM, SDM, side; two-frequency systems; synthetic only"
+  },
+  "ils_localizer": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "carrier on the localizer grid (odd tenths 108.10-111.95), 90 / 150 Hz DDM / SDM as for the glide slope; synthetic only"
+  },
+  "vor": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "30 Hz AM and 9960 Hz subcarrier 30 Hz FM over whole 30 Hz periods -> radial (AM - FM phase), AM depth, deviation; synthetic only (radial within 2 deg at 25 dB in one block)"
+  },
+  "gnss_gps_l1": {
+   "level": "research",
+   "sources": "research/signal_gaps/02_gnss.md",
+   "note": "GPS L1 C/A one-block acquisition: 32 PRNs (ICD self-test octals), 4 ms coherent x 4 gate, chi2 threshold P_fa 1e-3 per PRN, refine at 2 samples / chip -> code phase, Doppler, C/N0; synthetic skies only"
+  },
+  "gnss_spoofing": {
+   "level": "research",
+   "sources": "research/signal_gaps/02_gnss.md",
+   "note": "single-snapshot indicators S1 (C/N0 > 55 dB-Hz), S2 (uniform C/N0), S3 (in-band power rise with strong tracking), S4 (multipeak); heuristic thresholds; synthetic only"
+  },
+  "gnss_jamming": {
+   "level": "research",
+   "sources": "research/signal_gaps/02_gnss.md",
+   "note": "in-band J/N >= 6 dB or narrow lines near L1 (receiver lines excluded) without >= 4 strong satellites; synthetic only"
+  },
+  "ble_tracker": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": "content recognizers on CRC-valid BLE adverts: Apple Find My TLV 0x12 (device type, battery), Samsung SmartTag service data 0xFD5A/0xFD59 (state, battery, UWB), Google FMDN 0xFEAA frame 0x40/0x41, Tile 0xFEED/0xFEEC/0xFD84, Chipolo 0xFE33, IETF DULT 0xFCB2; also iBeacon, Eddystone, AirPods, Swift Pair, Fast Pair as devices. Rotating tokens only; synthetic adverts only"
+  },
+  "fm_broadcast": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "100 kHz raster, FM discriminator: deviation, 19 kHz stereo pilot; RDS (IEC 62106): biphase BPSK at 1187.5 bit/s on 3 x pilot, (26,16) block code with offset words (worked example reproduced), error-free blocks only -> PI, PTY, PS, RadioText, clock time; synthetic stations only"
+  },
+  "ais": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "AIS 1 / 2: discriminator + one-bit integration, NRZI, HDLC de-stuffing, CRC-16/X.25 residue 0xF0B8; types 1/2/3, 4, 5, 18, 21, 24; golden vector (gpsd sentence -> on-air bits) reproduced; synthetic GMSK bursts only"
+  },
+  "aprs": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "Bell 202 AFSK 1200 bit/s on narrowband FM (any FM carrier the voice receiver finds), NRZI, HDLC frames with CRC-16/X.25 (worked example FCS 0xB7A6 reproduced), AX.25 UI addresses, APRS uncompressed / compressed (spec example) / Mic-E / status / message; synthetic packets only"
+  },
+  "ax25_packet": {
+   "level": "research",
+   "sources": "research/signal_gaps/06_vhf_below_300.md",
+   "note": "CRC-valid AX.25 UI frames whose information field is not APRS; same chain as aprs"
+  },
+  "radio_altimeter": {
+   "level": "research",
+   "sources": "research/signal_gaps/05_aviation_radar_jammers.md",
+   "note": "STFT ridge tracks fitted as straight crossings -> rate, direction, turnarounds -> sweep bandwidth and period (ITU-R M.2059 types); synthetic only (triangle / sawtooth 104-177 MHz, amplitude down to -10 dB per sample SNR)"
+  },
+  "tpms": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": "FSK 52 us symbols; Continental / VDO (Manchester, CRC-8 0x07 / 0xAA) and Toyota PMV-C210 (differential Manchester, CRC-8 0x07 / 0x80 + inverted pressure), bit conventions from rtl_433 (fact source only); synthetic only, decodes to 0 dB per-sample SNR at 2 MSps"
+  },
+  "ook_remote": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": "EV1527 / PT2262 OOK PWM (sync 1 + 31 Te, 24 bits of 4 Te), no checksum: confidence from identical repeats; PT2262 tri-state reported when it fits; synthetic only (>= 6 dB per-sample SNR at 2 MSps)"
+  },
+  "keeloq_remote": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": "HCS200 / 300 / 301 OOK PWM: 12 warm-up pulses, 10 Te header, 66 bits LSB first -> serial, buttons, battery, repeat (rtl_433 conventions, fact source only); the encrypted hopping part is not reported; synthetic only"
+  },
+  "ism_device": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": ">= 16 OOK pulses of 50-2000 us, or a two-level FSK burst >= 2 ms, that no known protocol matched"
+  },
+  "noise_jammer": {
+   "level": "research",
+   "sources": "research/signal_gaps/05_aviation_radar_jammers.md",
+   "note": "flat plateau, Gaussian envelope (k 2) or constant envelope with Gaussian-like instantaneous frequency, no cyclic prefix (Hann-tapered autocorrelation < 0.025), no cyclic lines, stationary per 1 ms; >= 10 MHz or allocation edges; synthetic only (LTE / NR / Wi-Fi-like OFDM at 0-10 dB rejected)"
+  },
+  "bluetooth_bredr": {
+   "level": "research",
+   "sources": "research/signal_gaps/04_short_range.md",
+   "note": "1 Mb/s GFSK hop sliced (filter +-0.6 MHz, discriminator integrated over a symbol), 64-bit sync word within 3 bits of the (64,30) BCH codeword of its own LAP (PN 0x83848D96BBCC54FC, g 0o260534236651; LAP 0 and GIAC codewords reproduced) -> LAP, inquiry (GIAC / LIAC); UAP / NAP not recovered; synthetic only (>= ~12 dB in band); real: 0-bit-error access codes (LAP DA7476, B4BDD9) in the Phantom 4 testdata capture"
+  }
+ },
+ "field_capabilities": [
+  {
+   "id": "tx_antennas",
+   "decoder": "digital_vtx",
+   "fields": [
+    "tx_antennas"
+   ],
+   "level": "research",
+   "sources": "bench/tx_antennas/FINDINGS.md",
+   "note": "kurtosis + Alamouti pair test; validated on synthetics and real 802.11 (Microhard STBC); one real drone link, antenna count not confirmed"
+  },
+  {
+   "id": "analog_color_standard",
+   "decoder": "analog_vtx",
+   "fields": [
+    "color_standard",
+    "chroma_fsc_hz",
+    "burst_swing_deg",
+    "chroma_candidates",
+    "chroma_gate_note",
+    "secam_db_hz",
+    "secam_dr_hz"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/01_analog_video.md",
+   "note": "line-locked burst phasors at each standard's fsc (NTSC / PAL-M / PAL / PAL-N); synthetic: correct to 7 dB in-band SNR; real capture 2026-10-21: Analog_20260804-161815 (NTSC VTX) -> color_standard ntsc, coherence 0.958, swing 7.1 deg, fsc 3579650 Hz (+29 ppm). real capture 2026-10-22: LIVE_ANALOG_VTX_PAL_5740MHz (PAL colour camera, user-confirmed) -> color_standard pal, coherence 0.875, swing 45.5 deg, fsc 4433716 Hz (+22 ppm; needed the per-line detrend of the burst gate); PAL-M / PAL-N not yet seen on a real transmitter; SECAM (2026-10-21, synthetic only): no burst, line-to-line alternation of the back-porch subcarrier between Db 4.250 / Dr 4.40625 MHz (alternation ~0.6-0.7, PAL ~0), rest frequencies measured to 5 kHz; detected at 20 and 10 dB"
+  },
+  {
+   "id": "analog_lowband_40",
+   "decoder": "analog_vtx",
+   "fields": [
+    "channel_note"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/01_analog_video.md",
+   "note": "channel table LB (5333-5613, 40 MHz step) from vendor tables; reported through channel / channel_candidates (LB*)"
+  },
+  {
+   "id": "ble_ad_fields",
+   "decoder": "rc_link",
+   "fields": [
+    "ble_ad"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/04_telemetry_remoteid.md",
+   "note": "BLE AD structures (name, company, UUIDs, tx power) of CRC-valid adverts"
+  },
+  {
+   "id": "digital_vtx_system_catalog",
+   "decoder": "digital_vtx",
+   "fields": [
+    "system_candidates"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/02_digital_video.md",
+   "note": "ranked systems / models (DJI O1/OS1/OS2/O3/O4/O4 AU Lite vs Pro, Walksnail dual vs single antenna, AR8030 family, Lightbridge 2, Herelink, Autel, HDZero, PMP450) from Tu, CP, BW, band, channel raster, antennas, frame"
+  },
+  {
+   "id": "rc_protocol_catalog",
+   "decoder": "rc_link",
+   "fields": [
+    "protocol_candidates"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/03_rc_links.md",
+   "note": "ranked RC / telemetry / FLARM protocols from symbol rate, deviation, band and packet period (FrSky D8/D16/v2/LBT, RadioLink, Crossfire 150 Hz, mLRS FSK, FLARM, S-FHSS, HoTT, Hitec, ELRS GFSK/FLRC, AFHDS 2A, nRF24/XN297, OpenLRS-ng, XBee 900HP, SiK rates with h~2)"
+  },
+  {
+   "id": "droneid_payload_state",
+   "decoder": "dji",
+   "fields": [
+    "droneid_payload_state"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/04_telemetry_remoteid.md",
+   "note": "CRC-24 valid + inner CRC-16 failed = DroneID present, payload opaque (newer firmware may encrypt); Python decoder only"
+  },
+  {
+   "id": "ble_coherent_demod",
+   "decoder": "rc_link",
+   "fields": [
+    "ble_coherent"
+   ],
+   "level": "research",
+   "sources": "bench/ble_lowsnr (PLAN L1)",
+   "note": "coherent h~0.5 GFSK (Laurent C0 matched filter, squared-symbol carrier / drift track, first-pass h estimate) + CRC-24 Chase (<=3 b-symbol flips of the 16 least reliable): BLE adverts decode ~4-5 dB lower (Remote ID: 8 dB for a 1000-bit pack, 6 dB for a 376-bit BLE 4 advert, was 12 dB). Synthetic only; every output is CRC-verified; real captures 2026-10-21 (testdata regression): every BLE advert in D_20251119-183758 and LIVE_ELRS_2G4_2440MHz decodes on the coherent path with 0 corrections, measured h 0.48-0.52, and 2 adverts the slicer missed are now CRC-valid (a SCAN_RSP from the device whose ADV_IND precedes it; an ADV_IND at 10 dB). Low-SNR gain still synthetic only"
+  },
+  {
+   "id": "analog_audio",
+   "decoder": "analog_vtx",
+   "fields": [
+    "audio_subcarrier_hz",
+    "audio_dev_rms_khz",
+    "audio_peak_hz",
+    "audio_peak_db",
+    "audio_flatness"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/01_analog_video.md (PLAN A5)",
+   "note": "audio FM subcarrier (5.5-7 MHz) sliced +-100 kHz and FM-discriminated: exact subcarrier, RMS audio deviation, dominant tone 50 Hz-8 kHz (propeller blade-pass on a drone microphone) to ~2 Hz, spectral flatness; only above 15 dB subcarrier prominence. Synthetic only (20 / 12 dB); real capture 2026-10-22: Analog_20260804-161815 (NTSC VTX) -> subcarrier 6499966 Hz, 5.16 kHz rms, tone 239.1 Hz (21.4 dB), flatness 0.13 (content of the audio not known)"
+  },
+  {
+   "id": "elrs_identity",
+   "decoder": "rc_link",
+   "fields": [
+    "elrs_identity"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/07_elrs_details.md",
+   "note": "ExpressLRS 2.4 GHz LoRa: SX1280 IQ inversion = UID[5] bit 0 (or binding mode); sub-GHz never inverted. One identity bit of the binding phrase"
+  },
+  {
+   "id": "droneid_frame",
+   "decoder": "dji",
+   "fields": [
+    "droneid_frame"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/09_ble_coded_droneid_legacy.md",
+   "note": "DroneID 9-symbol (OcuSync 2/3: Mini 2, Air 2 and later) vs 8-symbol legacy (Mavic 2 / older; first symbol dropped, ZC in symbols 3/5): the CP score is ambiguous by one symbol, so the ZC pair is tested at +-1 symbol and the first slot's CP decides. Synthetic only (10 / 3 dB); also fixed the integer-bin carrier (all-symbol DC dip, iterative re-slice)"
+  },
+  {
+   "id": "elrs_sync",
+   "decoder": "rc_link",
+   "fields": [
+    "elrs_sync"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/07_elrs_details.md",
+   "note": "ExpressLRS sub-GHz SYNC (OTA4/OTA8): implicit-header LoRa decode (validated against gr-lora_sdr), CRC-14 0x2E57 / CRC-16 0x3D65 seeded by the packet's own UID4/UID5 (OTA 4 and 3, binding) -> fhss index, nonce, rate, TLM ratio, UID4/UID5 (+UID3 on 3.x). Synthetic SYNC packets decode to 0 dB (SF9). Model-match packets stay unverified"
+  },
+  {
+   "id": "frsky",
+   "decoder": "rc_link",
+   "fields": [
+    "frsky"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "FrSky packets, CRC passes, variants and TX IDs (synthetic only)"
+  },
+  {
+   "id": "fsk_frame",
+   "decoder": "rc_link",
+   "fields": [
+    "fsk_frame"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "blind frame structure of any undecoded FSK packet (20 kBd-1.2 MBd, >= 10 dB): preamble length, 24/32-bit sync-word candidate, payload length; known sync words (CC2500 D391 / D391D391, A7105 5475C52A, Crossfire 3E6B3E, SiK 2DD4) named as -like candidates. Synthetic only"
+  },
+  {
+   "id": "afhds2a",
+   "decoder": "rc_link",
+   "fields": [
+    "afhds2a"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "AFHDS 2A packets, CRC passes, TX / RX IDs, packet types, binding, the FEC / CRC convention that passed (synthetic only)"
+  },
+  {
+   "id": "model",
+   "decoder": null,
+   "fields": [
+    "model"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/11_model_level_identification.md",
+   "note": "model-level block {family, model, candidates, basis, evidence, unresolved_reason}: DJI DroneID product type -> model, Remote ID CTA-2063-A manufacturer code -> manufacturer (BLE + Wi-Fi), DroneID frame layout -> generation only. Tables from published sources; synthetic / table tests only"
+  },
+  {
+   "id": "rc_more",
+   "decoder": "rc_link",
+   "fields": [
+    "radiolink",
+    "hubsan",
+    "toy_drone",
+    "afhds1",
+    "elrs_gfsk"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/14_market_gap_survey.md",
+   "note": "PLAN G3-G6 (synthetic only): RadioLink sub-protocol / TX ID / hop check, Hubsan ID codes / model, toy-drone protocol / TX ID, FlySky AFHDS 1 TX ID / hop table check (CRC convention unverified; header + channels + hop table otherwise), ExpressLRS LR1121 GFSK SYNC (UID4 / UID5 = sync word; whitening bit order unverified, both tried)"
+  },
+  {
+   "id": "drone_links_in_frames",
+   "decoder": null,
+   "fields": [
+    "wfb_ng",
+    "esp_now",
+    "elrs_backpack",
+    "mavlink"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/14_market_gap_survey.md",
+   "note": "PLAN G1 / G2 / G7 (synthetic frames only): wfb-ng / OpenIPC / OpenHD raw 802.11 (TA = BSSID = 57:42 + link_id + radio port; default link domain 0x7505D6; content encrypted, not decrypted), ESP-NOW vendor action frames and the ExpressLRS Backpack (MSP v2 CRC-8, bind UID = MAC, VTX band / channel from the default VTX table), MAVLink in open-Wi-Fi UDP / TCP and transparent LoRa payloads (CRC_EXTRA verified)"
+  },
+  {
+   "id": "xn297",
+   "decoder": "rc_link",
+   "fields": [
+    "xn297"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "XN297 / Bayang packets, addresses, TX IDs, packet kinds, CRC residuals (synthetic only)"
+  },
+  {
+   "id": "ieee802154",
+   "decoder": "rc_link",
+   "fields": [
+    "ieee802154"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "802.15.4 frames, CRC passes, channels, PAN IDs, addresses, vendors (synthetic only)"
+  },
+  {
+   "id": "flarm",
+   "decoder": "rc_link",
+   "fields": [
+    "flarm"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/10_cc2500_a7105_xn297_flarm_xbee.md",
+   "note": "FLARM beacons, radio IDs, address types (synthetic only)"
+  },
+  {
+   "id": "mlrs",
+   "decoder": "rc_link",
+   "fields": [
+    "mlrs"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/12_rc_links_more.md",
+   "note": "mLRS packets, CRC passes, FrameSyncWords, air modes (synthetic only)"
+  },
+  {
+   "id": "cc2500_rc",
+   "decoder": "rc_link",
+   "fields": [
+    "cc2500_rc"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/17_hott_hitec_r9.md",
+   "note": "PLAN G12 (synthetic only): HoTT / Hitec / S-FHSS TX and RX IDs, packet kinds, hop table / hop check, S-FHSS model hint"
+  },
+  {
+   "id": "air_tracking",
+   "decoder": "rc_link",
+   "fields": [
+    "adsl",
+    "ogn",
+    "fanet"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/16_uat_adsl_fanet_ogn.md",
+   "note": "PLAN G10 (synthetic / byte-level only): ADS-L, OGN tracker and FANET addresses, aircraft category / type (UAS / UAV flags), positions"
+  },
+  {
+   "id": "wifi_he_sig_a",
+   "decoder": "wifi_ofdm",
+   "fields": [
+    "he_airtime_ms_by_direction",
+    "he_formats",
+    "he_bss_colors",
+    "he_bss_from_color"
+   ],
+   "level": "proven",
+   "proof": "testdata/live/LIVE_WIFI_5755MHz: 44 / 44 real HE SU PPDUs pass HE-SIG-A CRC-4 (2026-10-25)",
+   "sources": "research/drone_transmitters/18_wifi_field_gaps.md",
+   "note": "PLAN W2: 802.11ax HE-SIG-A (SU / MU / TB): UL/DL, BSS colour, MCS, streams, bandwidth, TXOP; colour -> BSSID through a beacon's HE Operation element; synthetic: 100 % from 8 dB in-band SNR"
+  },
+  {
+   "id": "wifi_drone_links",
+   "decoder": null,
+   "fields": [
+    "drone_links",
+    "wifi_links"
+   ],
+   "level": "research",
+   "sources": "research/drone_transmitters/18_wifi_field_gaps.md",
+   "note": "PLAN W1 (wifi_ofdm / wifi_ofdm_scaled / wifi_dsss): per-BSS link profiles and a drone-link verdict from identity (Remote ID, Tello SDK, MAVLink, wfb-ng, ESP-NOW, SSID / OUI) or behaviour (one client, downlink-dominant, sustained, small uplink -> 0.55 / 0.65 -like); synthetic only; an IP camera or phone hotspot streaming video looks the same in one block. W3 / W4 (hotspot names, Tello SDK, video datagrams) surface through the per-frame drone flag; W6 / W7 (beacon flood, sequence-counter MAC linking) are report-level devices findings"
+  }
+ ]
+}

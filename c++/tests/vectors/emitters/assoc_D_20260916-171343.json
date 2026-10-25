@@ -1,0 +1,288 @@
+{
+ "emissions": [
+  {
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "start_us": 5588.541666666667,
+   "end_us": 6102.083333333334,
+   "center_mhz": 5774.48424390903,
+   "snr_db": 8.1,
+   "features": {
+    "scs_khz": 15.0,
+    "bw_mhz": 1.14,
+    "symbol_us": 70.01,
+    "burst_us": 513.5416666666665,
+    "nsym": 7,
+    "profile": "1.4MHz",
+    "cp_score": 0.4403562137341928,
+    "tracked": false,
+    "source": "assoc_bursts",
+    "t_start_us": 5595.3514053565505,
+    "t_sigma_us": 0.011642539845230435,
+    "carrier_hz": 5774484044.606389,
+    "carrier_sigma_hz": 23.163816195228122,
+    "t_cp_us": 5595.548389973896,
+    "carrier_cp_hz": 5774484158.242324,
+    "timing_source": "reference_symbols",
+    "ref_corr": 0.898,
+    "n_occ_sc": 76,
+    "cp_peaks": 6,
+    "snr_meas_db": 8.1
+   }
+  },
+  {
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "start_us": 9590.625,
+   "end_us": 10100.0,
+   "center_mhz": 5796.498384279621,
+   "snr_db": 11.5,
+   "features": {
+    "scs_khz": 15.0,
+    "bw_mhz": 1.1175,
+    "symbol_us": 71.39,
+    "burst_us": 509.37499999999943,
+    "nsym": 7,
+    "profile": "1.4MHz",
+    "cp_score": 0.4846407398040737,
+    "tracked": false,
+    "source": "assoc_bursts",
+    "t_start_us": 9595.739135624945,
+    "t_sigma_us": 0.010014615730341627,
+    "carrier_hz": 5796484073.790694,
+    "carrier_sigma_hz": 19.702579627024928,
+    "t_cp_us": 9595.649102992838,
+    "carrier_cp_hz": 5796484075.217184,
+    "timing_source": "reference_symbols",
+    "ref_corr": 0.956,
+    "n_occ_sc": 75,
+    "cp_peaks": 7,
+    "snr_meas_db": 11.5
+   }
+  },
+  {
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "start_us": 15589.0625,
+   "end_us": 16102.604166666666,
+   "center_mhz": 5796.4826080416415,
+   "snr_db": 12.0,
+   "features": {
+    "scs_khz": 15.0,
+    "bw_mhz": 1.14,
+    "symbol_us": 71.32,
+    "burst_us": 513.5416666666656,
+    "nsym": 7,
+    "profile": "1.4MHz",
+    "cp_score": 0.458573702053449,
+    "tracked": false,
+    "source": "assoc_bursts",
+    "t_start_us": 15595.70569653373,
+    "t_sigma_us": 0.010486471525601865,
+    "carrier_hz": 5796483781.815713,
+    "carrier_sigma_hz": 20.70993564686349,
+    "t_cp_us": 15595.249973468384,
+    "carrier_cp_hz": 5796483501.949478,
+    "timing_source": "reference_symbols",
+    "ref_corr": 0.955,
+    "n_occ_sc": 76,
+    "cp_peaks": 7,
+    "snr_meas_db": 12.0
+   }
+  },
+  {
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "start_us": 19588.541666666668,
+   "end_us": 20101.5625,
+   "center_mhz": 5774.483460821594,
+   "snr_db": 12.1,
+   "features": {
+    "scs_khz": 15.0,
+    "bw_mhz": 1.155,
+    "symbol_us": 71.35,
+    "burst_us": 513.0208333333323,
+    "nsym": 7,
+    "profile": "1.4MHz",
+    "cp_score": 0.4306620976739671,
+    "tracked": false,
+    "source": "assoc_bursts",
+    "t_start_us": 19595.36512940341,
+    "t_sigma_us": 0.01487461817324585,
+    "carrier_hz": 5774483635.25813,
+    "carrier_sigma_hz": 29.95399711601885,
+    "t_cp_us": 19595.709698805058,
+    "carrier_cp_hz": 5774483483.221066,
+    "timing_source": "reference_symbols",
+    "ref_corr": 0.949,
+    "n_occ_sc": 77,
+    "cp_peaks": 7,
+    "snr_meas_db": 12.1
+   }
+  },
+  {
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "start_us": 25591.666666666664,
+   "end_us": 26099.479166666668,
+   "center_mhz": 5770.586376694742,
+   "snr_db": 7.9,
+   "features": {
+    "scs_khz": 15.0,
+    "bw_mhz": 1.155,
+    "symbol_us": 71.65,
+    "burst_us": 507.81250000000307,
+    "nsym": 7,
+    "profile": "1.4MHz",
+    "cp_score": 0.29151042117865233,
+    "tracked": true,
+    "source": "assoc_bursts",
+    "t_start_us": 25595.399988035184,
+    "t_sigma_us": 0.04212600736765943,
+    "carrier_hz": 5770482488.580123,
+    "carrier_sigma_hz": 1534.1810964234562,
+    "t_cp_us": 25598.78216771954,
+    "carrier_cp_hz": 5770482488.580123,
+    "timing_source": "reference_symbols",
+    "ref_corr": 0.373,
+    "n_occ_sc": 77,
+    "cp_peaks": 5,
+    "snr_meas_db": 7.9
+   }
+  }
+ ],
+ "emitters": [
+  {
+   "emitter_id": "E1",
+   "family": "dji_ocusync",
+   "label": "ocusync_uplink",
+   "members": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "frequencies": [
+    5770.482,
+    5774.484,
+    5796.484
+   ],
+   "hop_pattern": {
+    "n_bursts": 5,
+    "n_channels": 3,
+    "sequence": [
+     [
+      5.5954,
+      5774.484
+     ],
+     [
+      9.5957,
+      5796.498
+     ],
+     [
+      15.5957,
+      5796.483
+     ],
+     [
+      19.5954,
+      5774.483
+     ],
+     [
+      25.5954,
+      5770.586
+     ]
+    ],
+    "intervals_ms": [
+     4.0004,
+     6.0,
+     3.9997,
+     6.0
+    ],
+    "frame_ms": 10.0,
+    "slot_offsets_in_frame_ms": [
+     0.0,
+     4.0
+    ],
+    "frame_phase_us": 5595.352
+   },
+   "frame_period_ms": 10.0000133,
+   "fingerprint": {
+    "carrier_ppm": -2.7886,
+    "carrier_ppm_sigma": 0.0299,
+    "carrier_ppm_spread": 0.0428,
+    "carrier_ppm_source": "raster 0.5 MHz",
+    "carrier_offset_hz_per_hop": [
+     -15955.0,
+     -15926.0,
+     -16218.0,
+     -16365.0,
+     -17512.0
+    ],
+    "timing_residual_rms_ns": 228.8,
+    "timing_residual_ns": [
+     -0.9,
+     381.5,
+     340.0,
+     -5.9,
+     21.0
+    ],
+    "clock_ppm": -1.335,
+    "clock_ppm_sigma": 3.016,
+    "clock_minus_carrier_ppm": 1.454,
+    "clock_carrier_z": 0.46,
+    "clock_carrier_consistent": true,
+    "timing_source": {
+     "reference_symbols": 5
+    },
+    "snr_db": [
+     8.1,
+     11.5,
+     12.0,
+     12.1,
+     7.9
+    ],
+    "bw_mhz": 1.14,
+    "burst_us": 513.0
+   },
+   "confidence": 1.0,
+   "evidence": [
+    "cohesion: weakest member's mean LLR to the rest +10.7 nats (mean pairwise +11.6)",
+    "timing: 5 burst starts on ONE frame clock (10 ms frame, slots at [0.0, 4.0] ms, phase 5.5954 ms): residual rms 229 ns over 20.0 ms; an independent radio's start is uniform over ~0.5 ms",
+    "oscillator: carrier offset -2.789 ppm on all 5 hops (weighted spread 0.043 ppm) across 5770.5-5796.5 MHz: one crystal; two radios differ by ~2.8 ppm rms",
+    "clock/carrier: frame clock -1.33 +- 3.02 ppm vs carrier -2.789 ppm (consistent with one reference crystal)"
+   ],
+   "separation": [],
+   "linked": []
+  }
+ ],
+ "pair01": {
+  "llr": 11.65280134419606,
+  "evidence": [
+   {
+    "cue": "oscillator_ppm",
+    "llr": 3.82,
+    "detail": "carrier ppm vs raster 0.5 MHz: -2.763 vs -2.748 ppm, diff +0.016 ppm (+90 Hz); one crystal => 0 +- 0.060, independent crystals => 0 +- 2.83 ppm",
+    "dppm": 0.01552178384333791
+   },
+   {
+    "cue": "timing_lattice",
+    "llr": 7.23,
+    "detail": "dt +4.0004 ms = 8 x 0.5 ms + 0 ms +377 ns (sigma 442 ns, cross-channel); an independent radio's phase is uniform over ~0.5 ms",
+    "residual_us": 0.37670900016973974,
+    "sigma_us": 0.44158894332478776
+   },
+   {
+    "cue": "power",
+    "llr": 0.61,
+    "detail": "SNR 8.1 vs 11.5 dB (hop-to-hop fading ~4 dB; different ranges ~10 dB)"
+   },
+   {
+    "cue": "total",
+    "llr": 11.65,
+    "detail": "sum LLR +11.7 nats -> P(same | prior 0.5) = 1",
+    "p_same": 0.9999913054141213
+   }
+  ]
+ }
+}

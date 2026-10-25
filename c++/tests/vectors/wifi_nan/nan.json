@@ -1,0 +1,56 @@
+{
+ "hex": "d0000000ffffffffffff9c5a44010203506f9a0101ff00000409506f9a130372008869199d92090100106807f2190402123135383146364d3234413730303330305858585800000012205a280478220e119028052ec008c408bc085b33393000004205208a0d1100c9032e01000000000000118e0815cd5b07005200494e442d4f502d3737323100000000000000000000000000000000",
+ "remote_id": {
+  "standard": "ASTM F3411 / ASD-STAN prEN 4709-002 (Open Drone ID)",
+  "transport": "Wi-Fi NAN service discovery",
+  "messages": [
+   "basic_id",
+   "location",
+   "system",
+   "operator_id"
+  ],
+  "message_counter": 7,
+  "id_type": "serial number (CTA-2063-A)",
+  "ua_type": "multirotor",
+  "uas_id": "1581F6M24A700300XXXX",
+  "manufacturer": {
+   "code": "1581",
+   "maker": "DJI",
+   "kind": "aircraft"
+  },
+  "protocol_version": 2,
+  "status": "airborne",
+  "height_type": "above takeoff",
+  "track_deg": 90,
+  "speed_mps": 10.0,
+  "vertical_speed_mps": 2.0,
+  "lat": 28.6139,
+  "lon": 77.209,
+  "pressure_altitude_m": 120.0,
+  "geodetic_altitude_m": 122.0,
+  "height_m": 118.0,
+  "accuracy": {
+   "horizontal": "<3 m",
+   "vertical": "<3 m",
+   "speed": "<1 m/s",
+   "barometric": "<25 m"
+  },
+  "timestamp_s_into_hour": 1234.5,
+  "operator_location_type": "live GNSS (operator moving)",
+  "classification_type": "EU",
+  "operator_lat": 28.61,
+  "operator_lon": 77.2,
+  "ua_class_eu": "open",
+  "ua_category_eu": 1,
+  "operator_altitude_m": 95.0,
+  "timestamp_s_since_2019": 123456789,
+  "operator_id_type": "CAA-issued",
+  "operator_id": "IND-OP-7721"
+ },
+ "drone": {
+  "platform": "1581F6M24A700300XXXX",
+  "source": "Remote ID broadcast",
+  "confidence": 0.99,
+  "evidence": "REMOTE ID UAS 1581F6M24A700300XXXX (multirotor) AIRBORNE at 28.613900,77.209000 118 m AGL 10.0 m/s hdg 90 OPERATOR at 28.610000,77.200000 operator ID IND-OP-7721"
+ }
+}

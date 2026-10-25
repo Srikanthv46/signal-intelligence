@@ -1,0 +1,382 @@
+{
+ "fs": 250000.0,
+ "fc": 446100000.0,
+ "candidates": [
+  {
+   "f_hz": 446090979.8603841,
+   "peak_db": 57.074893951416016,
+   "width_hz": 2594.2167296308157,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446127037.9122637,
+   "peak_db": 45.45025634765625,
+   "width_hz": 4820.320043845328,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446053694.2925751,
+   "peak_db": 39.49585723876953,
+   "width_hz": 7369.49926853434,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446165537.8056057,
+   "peak_db": 33.53887176513672,
+   "width_hz": 9508.707949710384,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446109020.84348434,
+   "peak_db": 28.820592880249023,
+   "width_hz": 2241.09715155916,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446015383.5783943,
+   "peak_db": 28.168676376342773,
+   "width_hz": 11700.490250344017,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446203567.96353745,
+   "peak_db": 17.2198543548584,
+   "width_hz": 13611.51780058745,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446072984.2895159,
+   "peak_db": 16.266265869140625,
+   "width_hz": 4783.01161994014,
+   "noise_density": 0.0064006272
+  },
+  {
+   "f_hz": 446146360.39224184,
+   "peak_db": 10.401277542114258,
+   "width_hz": 6787.23410264729,
+   "noise_density": 0.0064006272
+  }
+ ],
+ "measure": [
+  {
+   "f_hz": 446091001.1125623,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.002807996701449156,
+   "deviation_hz": 610.1284425614659,
+   "voice_rms_hz": 21.955342826717633,
+   "voice_kurtosis": 297.18293046394433,
+   "voice_activity": 0.0,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D053N",
+    "dcs_aliases": [
+     "D452I",
+     "D524I",
+     "D765I"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 466.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 46.909576416015625,
+   "peak_db": 57.074893951416016
+  },
+  {
+   "f_hz": 446126996.6614038,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.0060959081165492535,
+   "deviation_hz": 1844.8614484428679,
+   "voice_rms_hz": 67.88744012846655,
+   "voice_kurtosis": 318.19102734950275,
+   "voice_activity": 0.025,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D452N",
+    "dcs_aliases": [
+     "D053I",
+     "D524N",
+     "D765N"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 1399.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 36.617000579833984,
+   "peak_db": 45.45025634765625
+  },
+  {
+   "f_hz": 446055006.71611464,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.011179947294294834,
+   "deviation_hz": 3059.9306711116546,
+   "voice_rms_hz": 96.39089312689464,
+   "voice_kurtosis": 82.12346279636748,
+   "voice_activity": 0.025,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D053N",
+    "dcs_aliases": [
+     "D452I",
+     "D524I",
+     "D765I"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 2332.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 31.072185516357422,
+   "peak_db": 39.49585723876953
+  },
+  {
+   "f_hz": 446162991.9538487,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.022953104227781296,
+   "deviation_hz": 4285.301017240904,
+   "voice_rms_hz": 123.22856222044845,
+   "voice_kurtosis": 16.940794122196696,
+   "voice_activity": 0.0,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D452N",
+    "dcs_aliases": [
+     "D053I",
+     "D524N",
+     "D765N"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 3262.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 25.4002742767334,
+   "peak_db": 33.53887176513672
+  },
+  {
+   "f_hz": 446108998.28015405,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.05622294545173645,
+   "deviation_hz": 872.6480600468205,
+   "voice_rms_hz": 199.7198148958295,
+   "voice_kurtosis": 804.5885241157557,
+   "voice_activity": 0.05,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D452N",
+    "dcs_aliases": [
+     "D053I",
+     "D524N",
+     "D765N"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 464.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 18.669132232666016,
+   "peak_db": 28.820592880249023
+  },
+  {
+   "f_hz": 446019011.2237033,
+   "keyed_s": 0.8,
+   "duration_s": 0.8,
+   "envelope_cv": 0.042439959943294525,
+   "deviation_hz": 5453.129295908953,
+   "voice_rms_hz": 208.56964529404215,
+   "voice_kurtosis": 557.5776742449656,
+   "voice_activity": 0.025,
+   "subaudible": {
+    "type": "DCS",
+    "dcs_code": "D053N",
+    "dcs_aliases": [
+     "D452I",
+     "D524I",
+     "D765I"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 4199.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "snr_db": 20.57023811340332,
+   "peak_db": 28.168676376342773
+  },
+  {
+   "f_hz": 446200837.10407704,
+   "keyed_s": 0.78,
+   "duration_s": 0.8,
+   "envelope_cv": 0.35318613052368164,
+   "deviation_hz": 10137.384348376223,
+   "voice_rms_hz": 2024.2114783185098,
+   "voice_kurtosis": 13.405283851144036,
+   "voice_activity": 0.8974358974358975,
+   "subaudible": {
+    "type": "CTCSS",
+    "ctcss_hz": null,
+    "ctcss_measured_hz": 134.38,
+    "ctcss_snr_db": 22.3,
+    "ctcss_standard": false,
+    "ctcss_deviation_hz": 5971.0
+   },
+   "snr_db": 11.13508415222168,
+   "peak_db": 17.2198543548584
+  },
+  null,
+  null
+ ],
+ "detect_s": 0.05597686767578125,
+ "emissions": [
+  {
+   "family": "voice_fm",
+   "label": "nbfm_voice_pmr446_ch8",
+   "start_us": 0.0,
+   "end_us": 800000.0,
+   "f_lo_mhz": 446.0869909841197,
+   "f_hi_mhz": 446.0950112410049,
+   "center_mhz": 446.0910011125623,
+   "snr_db": 46.9,
+   "confidence": 0.95,
+   "decoded": {
+    "type": "DCS",
+    "dcs_code": "D053N",
+    "dcs_aliases": [
+     "D452I",
+     "D524I",
+     "D765I"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 466.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation"
+   },
+   "features": {
+    "center_mhz": 446.091001,
+    "deviation_hz": 610,
+    "channel_bw_khz": 12.5,
+    "keyed_s": 0.8,
+    "keyed_fraction": 1.0,
+    "envelope_cv": 0.003,
+    "voice_activity": 0.0,
+    "voice_rms_hz": 22,
+    "voice_kurtosis": 297.18,
+    "snr_db": 46.9,
+    "evidence": [
+     "constant-envelope narrowband FM carrier",
+     "peak deviation 610 Hz",
+     "keyed 0.80 s",
+     "DCS D053N (15 Golay-verified words)",
+     "PMR446 channel 8 (-2749 Hz)"
+    ],
+    "service": "PMR446",
+    "channel": 8,
+    "nominal_mhz": 446.09375,
+    "offset_hz": -2749,
+    "offset_ppm": -6.16,
+    "receiver_ppm_applied": 0.0,
+    "type": "DCS",
+    "dcs_code": "D053N",
+    "dcs_aliases": [
+     "D452I",
+     "D524I",
+     "D765I"
+    ],
+    "dcs_standard": true,
+    "dcs_words_verified": 15,
+    "dcs_bits": 107,
+    "dcs_bit_repeat_agreement": 1.0,
+    "dcs_deviation_hz": 466.0,
+    "dcs_note": "Golay(23,12)-verified; N/I assumes a 1 bit = positive deviation",
+    "suppressed_artifacts": [
+     {
+      "f_mhz": 446.127,
+      "of_mhz": 446.091,
+      "k": -3
+     },
+     {
+      "f_mhz": 446.05501,
+      "of_mhz": 446.091,
+      "k": 5
+     },
+     {
+      "f_mhz": 446.16299,
+      "of_mhz": 446.091,
+      "k": -7
+     },
+     {
+      "f_mhz": 446.109,
+      "of_mhz": 446.091,
+      "k": -1
+     },
+     {
+      "f_mhz": 446.01901,
+      "of_mhz": 446.091,
+      "k": 9
+     }
+    ],
+    "segments_s": [
+     [
+      0.0,
+      0.8
+     ]
+    ]
+   }
+  }
+ ],
+ "fields": {
+  "center_mhz": 446.091001,
+  "deviation_hz": 610,
+  "channel_bw_khz": 12.5
+ },
+ "audio": {
+  "fs": 16000.0,
+  "meta": {
+   "squelch_open": 0.9999739583333334,
+   "snr_db": 48.8,
+   "center_mhz": 446.091001
+  },
+  "n": 12800
+ },
+ "stream": [
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 47.0,
+   "center_mhz": 446.091001
+  },
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 47.1,
+   "center_mhz": 446.091001
+  },
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 47.7,
+   "center_mhz": 446.091001
+  },
+  {
+   "squelch_open": 0.9998958333333333,
+   "snr_db": 46.3,
+   "center_mhz": 446.091001
+  }
+ ]
+}

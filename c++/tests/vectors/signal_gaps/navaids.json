@@ -1,0 +1,1412 @@
+{
+ "channels": [
+  [
+   "ils_gs",
+   334.7,
+   108.1
+  ],
+  [
+   "ils_gs",
+   334.55,
+   108.15
+  ],
+  [
+   "ils_gs",
+   334.1,
+   108.3
+  ],
+  [
+   "ils_gs",
+   333.95,
+   108.35
+  ],
+  [
+   "ils_gs",
+   329.9,
+   108.5
+  ],
+  [
+   "ils_gs",
+   329.75,
+   108.55
+  ],
+  [
+   "ils_gs",
+   330.5,
+   108.7
+  ],
+  [
+   "ils_gs",
+   330.35,
+   108.75
+  ],
+  [
+   "ils_gs",
+   329.3,
+   108.9
+  ],
+  [
+   "ils_gs",
+   329.15,
+   108.95
+  ],
+  [
+   "ils_gs",
+   331.4,
+   109.1
+  ],
+  [
+   "ils_gs",
+   331.25,
+   109.15
+  ],
+  [
+   "ils_gs",
+   332.0,
+   109.3
+  ],
+  [
+   "ils_gs",
+   331.85,
+   109.35
+  ],
+  [
+   "ils_gs",
+   332.6,
+   109.5
+  ],
+  [
+   "ils_gs",
+   332.45,
+   109.55
+  ],
+  [
+   "ils_gs",
+   333.2,
+   109.7
+  ],
+  [
+   "ils_gs",
+   333.05,
+   109.75
+  ],
+  [
+   "ils_gs",
+   333.8,
+   109.9
+  ],
+  [
+   "ils_gs",
+   333.65,
+   109.95
+  ],
+  [
+   "ils_gs",
+   334.4,
+   110.1
+  ],
+  [
+   "ils_gs",
+   334.25,
+   110.15
+  ],
+  [
+   "ils_gs",
+   335.0,
+   110.3
+  ],
+  [
+   "ils_gs",
+   334.85,
+   110.35
+  ],
+  [
+   "ils_gs",
+   329.6,
+   110.5
+  ],
+  [
+   "ils_gs",
+   329.45,
+   110.55
+  ],
+  [
+   "ils_gs",
+   330.2,
+   110.7
+  ],
+  [
+   "ils_gs",
+   330.05,
+   110.75
+  ],
+  [
+   "ils_gs",
+   330.8,
+   110.9
+  ],
+  [
+   "ils_gs",
+   330.65,
+   110.95
+  ],
+  [
+   "ils_gs",
+   331.7,
+   111.1
+  ],
+  [
+   "ils_gs",
+   331.55,
+   111.15
+  ],
+  [
+   "ils_gs",
+   332.3,
+   111.3
+  ],
+  [
+   "ils_gs",
+   332.15,
+   111.35
+  ],
+  [
+   "ils_gs",
+   332.9,
+   111.5
+  ],
+  [
+   "ils_gs",
+   332.75,
+   111.55
+  ],
+  [
+   "ils_gs",
+   333.5,
+   111.7
+  ],
+  [
+   "ils_gs",
+   333.35,
+   111.75
+  ],
+  [
+   "ils_gs",
+   331.1,
+   111.9
+  ],
+  [
+   "ils_gs",
+   330.95,
+   111.95
+  ],
+  [
+   "ils_loc",
+   108.1,
+   334.7
+  ],
+  [
+   "ils_loc",
+   108.15,
+   334.55
+  ],
+  [
+   "ils_loc",
+   108.3,
+   334.1
+  ],
+  [
+   "ils_loc",
+   108.35,
+   333.95
+  ],
+  [
+   "ils_loc",
+   108.5,
+   329.9
+  ],
+  [
+   "ils_loc",
+   108.55,
+   329.75
+  ],
+  [
+   "ils_loc",
+   108.7,
+   330.5
+  ],
+  [
+   "ils_loc",
+   108.75,
+   330.35
+  ],
+  [
+   "ils_loc",
+   108.9,
+   329.3
+  ],
+  [
+   "ils_loc",
+   108.95,
+   329.15
+  ],
+  [
+   "ils_loc",
+   109.1,
+   331.4
+  ],
+  [
+   "ils_loc",
+   109.15,
+   331.25
+  ],
+  [
+   "ils_loc",
+   109.3,
+   332.0
+  ],
+  [
+   "ils_loc",
+   109.35,
+   331.85
+  ],
+  [
+   "ils_loc",
+   109.5,
+   332.6
+  ],
+  [
+   "ils_loc",
+   109.55,
+   332.45
+  ],
+  [
+   "ils_loc",
+   109.7,
+   333.2
+  ],
+  [
+   "ils_loc",
+   109.75,
+   333.05
+  ],
+  [
+   "ils_loc",
+   109.9,
+   333.8
+  ],
+  [
+   "ils_loc",
+   109.95,
+   333.65
+  ],
+  [
+   "ils_loc",
+   110.1,
+   334.4
+  ],
+  [
+   "ils_loc",
+   110.15,
+   334.25
+  ],
+  [
+   "ils_loc",
+   110.3,
+   335.0
+  ],
+  [
+   "ils_loc",
+   110.35,
+   334.85
+  ],
+  [
+   "ils_loc",
+   110.5,
+   329.6
+  ],
+  [
+   "ils_loc",
+   110.55,
+   329.45
+  ],
+  [
+   "ils_loc",
+   110.7,
+   330.2
+  ],
+  [
+   "ils_loc",
+   110.75,
+   330.05
+  ],
+  [
+   "ils_loc",
+   110.9,
+   330.8
+  ],
+  [
+   "ils_loc",
+   110.95,
+   330.65
+  ],
+  [
+   "ils_loc",
+   111.1,
+   331.7
+  ],
+  [
+   "ils_loc",
+   111.15,
+   331.55
+  ],
+  [
+   "ils_loc",
+   111.3,
+   332.3
+  ],
+  [
+   "ils_loc",
+   111.35,
+   332.15
+  ],
+  [
+   "ils_loc",
+   111.5,
+   332.9
+  ],
+  [
+   "ils_loc",
+   111.55,
+   332.75
+  ],
+  [
+   "ils_loc",
+   111.7,
+   333.5
+  ],
+  [
+   "ils_loc",
+   111.75,
+   333.35
+  ],
+  [
+   "ils_loc",
+   111.9,
+   331.1
+  ],
+  [
+   "ils_loc",
+   111.95,
+   330.95
+  ],
+  [
+   "vor",
+   108.0,
+   null
+  ],
+  [
+   "vor",
+   108.05,
+   null
+  ],
+  [
+   "vor",
+   108.2,
+   null
+  ],
+  [
+   "vor",
+   108.25,
+   null
+  ],
+  [
+   "vor",
+   108.4,
+   null
+  ],
+  [
+   "vor",
+   108.45,
+   null
+  ],
+  [
+   "vor",
+   108.6,
+   null
+  ],
+  [
+   "vor",
+   108.65,
+   null
+  ],
+  [
+   "vor",
+   108.8,
+   null
+  ],
+  [
+   "vor",
+   108.85,
+   null
+  ],
+  [
+   "vor",
+   109.0,
+   null
+  ],
+  [
+   "vor",
+   109.05,
+   null
+  ],
+  [
+   "vor",
+   109.2,
+   null
+  ],
+  [
+   "vor",
+   109.25,
+   null
+  ],
+  [
+   "vor",
+   109.4,
+   null
+  ],
+  [
+   "vor",
+   109.45,
+   null
+  ],
+  [
+   "vor",
+   109.6,
+   null
+  ],
+  [
+   "vor",
+   109.65,
+   null
+  ],
+  [
+   "vor",
+   109.8,
+   null
+  ],
+  [
+   "vor",
+   109.85,
+   null
+  ],
+  [
+   "vor",
+   110.0,
+   null
+  ],
+  [
+   "vor",
+   110.05,
+   null
+  ],
+  [
+   "vor",
+   110.2,
+   null
+  ],
+  [
+   "vor",
+   110.25,
+   null
+  ],
+  [
+   "vor",
+   110.4,
+   null
+  ],
+  [
+   "vor",
+   110.45,
+   null
+  ],
+  [
+   "vor",
+   110.6,
+   null
+  ],
+  [
+   "vor",
+   110.65,
+   null
+  ],
+  [
+   "vor",
+   110.8,
+   null
+  ],
+  [
+   "vor",
+   110.85,
+   null
+  ],
+  [
+   "vor",
+   111.0,
+   null
+  ],
+  [
+   "vor",
+   111.05,
+   null
+  ],
+  [
+   "vor",
+   111.2,
+   null
+  ],
+  [
+   "vor",
+   111.25,
+   null
+  ],
+  [
+   "vor",
+   111.4,
+   null
+  ],
+  [
+   "vor",
+   111.45,
+   null
+  ],
+  [
+   "vor",
+   111.6,
+   null
+  ],
+  [
+   "vor",
+   111.65,
+   null
+  ],
+  [
+   "vor",
+   111.8,
+   null
+  ],
+  [
+   "vor",
+   111.85,
+   null
+  ],
+  [
+   "vor",
+   112.0,
+   null
+  ],
+  [
+   "vor",
+   112.05,
+   null
+  ],
+  [
+   "vor",
+   112.1,
+   null
+  ],
+  [
+   "vor",
+   112.15,
+   null
+  ],
+  [
+   "vor",
+   112.2,
+   null
+  ],
+  [
+   "vor",
+   112.25,
+   null
+  ],
+  [
+   "vor",
+   112.3,
+   null
+  ],
+  [
+   "vor",
+   112.35,
+   null
+  ],
+  [
+   "vor",
+   112.4,
+   null
+  ],
+  [
+   "vor",
+   112.45,
+   null
+  ],
+  [
+   "vor",
+   112.5,
+   null
+  ],
+  [
+   "vor",
+   112.55,
+   null
+  ],
+  [
+   "vor",
+   112.6,
+   null
+  ],
+  [
+   "vor",
+   112.65,
+   null
+  ],
+  [
+   "vor",
+   112.7,
+   null
+  ],
+  [
+   "vor",
+   112.75,
+   null
+  ],
+  [
+   "vor",
+   112.8,
+   null
+  ],
+  [
+   "vor",
+   112.85,
+   null
+  ],
+  [
+   "vor",
+   112.9,
+   null
+  ],
+  [
+   "vor",
+   112.95,
+   null
+  ],
+  [
+   "vor",
+   113.0,
+   null
+  ],
+  [
+   "vor",
+   113.05,
+   null
+  ],
+  [
+   "vor",
+   113.1,
+   null
+  ],
+  [
+   "vor",
+   113.15,
+   null
+  ],
+  [
+   "vor",
+   113.2,
+   null
+  ],
+  [
+   "vor",
+   113.25,
+   null
+  ],
+  [
+   "vor",
+   113.3,
+   null
+  ],
+  [
+   "vor",
+   113.35,
+   null
+  ],
+  [
+   "vor",
+   113.4,
+   null
+  ],
+  [
+   "vor",
+   113.45,
+   null
+  ],
+  [
+   "vor",
+   113.5,
+   null
+  ],
+  [
+   "vor",
+   113.55,
+   null
+  ],
+  [
+   "vor",
+   113.6,
+   null
+  ],
+  [
+   "vor",
+   113.65,
+   null
+  ],
+  [
+   "vor",
+   113.7,
+   null
+  ],
+  [
+   "vor",
+   113.75,
+   null
+  ],
+  [
+   "vor",
+   113.8,
+   null
+  ],
+  [
+   "vor",
+   113.85,
+   null
+  ],
+  [
+   "vor",
+   113.9,
+   null
+  ],
+  [
+   "vor",
+   113.95,
+   null
+  ],
+  [
+   "vor",
+   114.0,
+   null
+  ],
+  [
+   "vor",
+   114.05,
+   null
+  ],
+  [
+   "vor",
+   114.1,
+   null
+  ],
+  [
+   "vor",
+   114.15,
+   null
+  ],
+  [
+   "vor",
+   114.2,
+   null
+  ],
+  [
+   "vor",
+   114.25,
+   null
+  ],
+  [
+   "vor",
+   114.3,
+   null
+  ],
+  [
+   "vor",
+   114.35,
+   null
+  ],
+  [
+   "vor",
+   114.4,
+   null
+  ],
+  [
+   "vor",
+   114.45,
+   null
+  ],
+  [
+   "vor",
+   114.5,
+   null
+  ],
+  [
+   "vor",
+   114.55,
+   null
+  ],
+  [
+   "vor",
+   114.6,
+   null
+  ],
+  [
+   "vor",
+   114.65,
+   null
+  ],
+  [
+   "vor",
+   114.7,
+   null
+  ],
+  [
+   "vor",
+   114.75,
+   null
+  ],
+  [
+   "vor",
+   114.8,
+   null
+  ],
+  [
+   "vor",
+   114.85,
+   null
+  ],
+  [
+   "vor",
+   114.9,
+   null
+  ],
+  [
+   "vor",
+   114.95,
+   null
+  ],
+  [
+   "vor",
+   115.0,
+   null
+  ],
+  [
+   "vor",
+   115.05,
+   null
+  ],
+  [
+   "vor",
+   115.1,
+   null
+  ],
+  [
+   "vor",
+   115.15,
+   null
+  ],
+  [
+   "vor",
+   115.2,
+   null
+  ],
+  [
+   "vor",
+   115.25,
+   null
+  ],
+  [
+   "vor",
+   115.3,
+   null
+  ],
+  [
+   "vor",
+   115.35,
+   null
+  ],
+  [
+   "vor",
+   115.4,
+   null
+  ],
+  [
+   "vor",
+   115.45,
+   null
+  ],
+  [
+   "vor",
+   115.5,
+   null
+  ],
+  [
+   "vor",
+   115.55,
+   null
+  ],
+  [
+   "vor",
+   115.6,
+   null
+  ],
+  [
+   "vor",
+   115.65,
+   null
+  ],
+  [
+   "vor",
+   115.7,
+   null
+  ],
+  [
+   "vor",
+   115.75,
+   null
+  ],
+  [
+   "vor",
+   115.8,
+   null
+  ],
+  [
+   "vor",
+   115.85,
+   null
+  ],
+  [
+   "vor",
+   115.9,
+   null
+  ],
+  [
+   "vor",
+   115.95,
+   null
+  ],
+  [
+   "vor",
+   116.0,
+   null
+  ],
+  [
+   "vor",
+   116.05,
+   null
+  ],
+  [
+   "vor",
+   116.1,
+   null
+  ],
+  [
+   "vor",
+   116.15,
+   null
+  ],
+  [
+   "vor",
+   116.2,
+   null
+  ],
+  [
+   "vor",
+   116.25,
+   null
+  ],
+  [
+   "vor",
+   116.3,
+   null
+  ],
+  [
+   "vor",
+   116.35,
+   null
+  ],
+  [
+   "vor",
+   116.4,
+   null
+  ],
+  [
+   "vor",
+   116.45,
+   null
+  ],
+  [
+   "vor",
+   116.5,
+   null
+  ],
+  [
+   "vor",
+   116.55,
+   null
+  ],
+  [
+   "vor",
+   116.6,
+   null
+  ],
+  [
+   "vor",
+   116.65,
+   null
+  ],
+  [
+   "vor",
+   116.7,
+   null
+  ],
+  [
+   "vor",
+   116.75,
+   null
+  ],
+  [
+   "vor",
+   116.8,
+   null
+  ],
+  [
+   "vor",
+   116.85,
+   null
+  ],
+  [
+   "vor",
+   116.9,
+   null
+  ],
+  [
+   "vor",
+   116.95,
+   null
+  ],
+  [
+   "vor",
+   117.0,
+   null
+  ],
+  [
+   "vor",
+   117.05,
+   null
+  ],
+  [
+   "vor",
+   117.1,
+   null
+  ],
+  [
+   "vor",
+   117.15,
+   null
+  ],
+  [
+   "vor",
+   117.2,
+   null
+  ],
+  [
+   "vor",
+   117.25,
+   null
+  ],
+  [
+   "vor",
+   117.3,
+   null
+  ],
+  [
+   "vor",
+   117.35,
+   null
+  ],
+  [
+   "vor",
+   117.4,
+   null
+  ],
+  [
+   "vor",
+   117.45,
+   null
+  ],
+  [
+   "vor",
+   117.5,
+   null
+  ],
+  [
+   "vor",
+   117.55,
+   null
+  ],
+  [
+   "vor",
+   117.6,
+   null
+  ],
+  [
+   "vor",
+   117.65,
+   null
+  ],
+  [
+   "vor",
+   117.7,
+   null
+  ],
+  [
+   "vor",
+   117.75,
+   null
+  ],
+  [
+   "vor",
+   117.8,
+   null
+  ],
+  [
+   "vor",
+   117.85,
+   null
+  ],
+  [
+   "vor",
+   117.9,
+   null
+  ],
+  [
+   "vor",
+   117.95,
+   null
+  ]
+ ],
+ "nav_vhf": {
+  "fs": 4000000.0,
+  "fc": 110000000.0,
+  "ppm": 5.0,
+  "emissions": [
+   {
+    "label": "ils_loc",
+    "features": {
+     "kind": "ils_loc",
+     "channel_mhz": 109.9,
+     "carrier_mhz": 109.899443,
+     "offset_hz": -8,
+     "line_db": 54.0,
+     "receiver_ppm_applied": 5.0,
+     "two_frequency_hz": 9003,
+     "paired_mhz": 333.8,
+     "m90": 0.2376,
+     "m150": 0.154,
+     "ddm": 0.0836,
+     "sdm": 0.3915,
+     "side": "left of course",
+     "tone_scale": 0.998,
+     "depth_sigma": 0.00368,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "confidence": 0.8,
+    "f_lo_mhz": 109.89744281524926,
+    "f_hi_mhz": 109.9104457478006
+   },
+   {
+    "label": "vor",
+    "features": {
+     "kind": "vor",
+     "channel_mhz": 109.0,
+     "carrier_mhz": 108.999443,
+     "offset_hz": -12,
+     "line_db": 53.1,
+     "receiver_ppm_applied": 5.0,
+     "radial_deg": 211.1,
+     "am_depth": 0.303,
+     "deviation_hz": 488,
+     "subcarrier_db": 24.2,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "confidence": 0.8,
+    "f_lo_mhz": 108.98694281524926,
+    "f_hi_mhz": 109.01194281524927
+   }
+  ],
+  "signals": [
+   {
+    "label": "VOR beacon (109.00 MHz)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "kind": "vor",
+     "channel_mhz": 109.0,
+     "carrier_mhz": 108.999443,
+     "offset_hz": -557,
+     "line_db": 53.1,
+     "receiver_ppm_applied": 0.0,
+     "radial_deg": 211.1,
+     "am_depth": 0.303,
+     "deviation_hz": 488,
+     "subcarrier_db": 24.2,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "f0": 108986942.81524926,
+    "f1": 109011942.81524926
+   },
+   {
+    "label": "ILS localizer (109.90 MHz, paired GS 333.80 MHz, two-frequency)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "kind": "ils_loc",
+     "channel_mhz": 109.9,
+     "carrier_mhz": 109.899443,
+     "offset_hz": -557,
+     "line_db": 53.9,
+     "receiver_ppm_applied": 0.0,
+     "two_frequency_hz": 9003,
+     "paired_mhz": 333.8,
+     "m90": 0.2376,
+     "m150": 0.154,
+     "ddm": 0.0836,
+     "sdm": 0.3915,
+     "side": "left of course",
+     "tone_scale": 0.998,
+     "depth_sigma": 0.00368,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "f0": 109897442.81524926,
+    "f1": 109910445.74780059
+   }
+  ]
+ },
+ "nav_uhf": {
+  "fs": 4000000.0,
+  "fc": 331500000.0,
+  "ppm": 0.0,
+  "emissions": [
+   {
+    "label": "ils_gs",
+    "features": {
+     "kind": "ils_gs",
+     "channel_mhz": 332.3,
+     "carrier_mhz": 332.3,
+     "offset_hz": 0,
+     "line_db": 57.7,
+     "receiver_ppm_applied": 0.0,
+     "paired_mhz": 111.3,
+     "m90": 0.2009,
+     "m150": 0.1988,
+     "ddm": 0.0021,
+     "sdm": 0.3997,
+     "side": "above path",
+     "tone_scale": 0.9996,
+     "depth_sigma": 0.00119,
+     "window_s": 0.0333,
+     "verified_structure": false
+    },
+    "confidence": 0.55,
+    "f_lo_mhz": 332.298,
+    "f_hi_mhz": 332.302
+   },
+   {
+    "label": "ils_gs",
+    "features": {
+     "kind": "ils_gs",
+     "channel_mhz": 330.95,
+     "carrier_mhz": 330.95,
+     "offset_hz": 0,
+     "line_db": 57.5,
+     "receiver_ppm_applied": 0.0,
+     "paired_mhz": 111.95,
+     "m90": 0.3279,
+     "m150": 0.4693,
+     "ddm": -0.1415,
+     "sdm": 0.7972,
+     "side": "below path",
+     "tone_scale": 1.012,
+     "depth_sigma": 0.00224,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "confidence": 0.8,
+    "f_lo_mhz": 330.948,
+    "f_hi_mhz": 330.952
+   }
+  ],
+  "signals": [
+   {
+    "label": "ILS glide slope (330.95 MHz, paired LOC 111.95 MHz)",
+    "status": "partial",
+    "confidence": 0.8,
+    "fields": {
+     "kind": "ils_gs",
+     "channel_mhz": 330.95,
+     "carrier_mhz": 330.95,
+     "offset_hz": 0,
+     "line_db": 57.5,
+     "receiver_ppm_applied": 0.0,
+     "paired_mhz": 111.95,
+     "m90": 0.3279,
+     "m150": 0.4693,
+     "ddm": -0.1415,
+     "sdm": 0.7972,
+     "side": "below path",
+     "tone_scale": 1.012,
+     "depth_sigma": 0.00224,
+     "window_s": 0.0333,
+     "verified_structure": true
+    },
+    "f0": 330948000.0,
+    "f1": 330952000.0
+   },
+   {
+    "label": "ILS glide slope-like (332.30 MHz, paired LOC 111.30 MHz)",
+    "status": "partial",
+    "confidence": 0.55,
+    "fields": {
+     "kind": "ils_gs",
+     "channel_mhz": 332.3,
+     "carrier_mhz": 332.3,
+     "offset_hz": 0,
+     "line_db": 57.7,
+     "receiver_ppm_applied": 0.0,
+     "paired_mhz": 111.3,
+     "m90": 0.2009,
+     "m150": 0.1988,
+     "ddm": 0.0021,
+     "sdm": 0.3997,
+     "side": "above path",
+     "tone_scale": 0.9996,
+     "depth_sigma": 0.00119,
+     "window_s": 0.0333,
+     "verified_structure": false
+    },
+    "f0": 332298000.0,
+    "f1": 332302000.0
+   }
+  ]
+ }
+}

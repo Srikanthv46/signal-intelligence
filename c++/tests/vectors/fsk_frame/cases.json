@@ -1,0 +1,69 @@
+{
+ "fs": 7680000.0,
+ "fc": 2440000000.0,
+ "labels": [
+  "elrs_gfsk_like",
+  "elrs_gfsk_like",
+  "elrs_gfsk_like",
+  "elrs_gfsk_like"
+ ],
+ "frames": [
+  {
+   "preamble_bits": 37,
+   "preamble_last_bit": 0,
+   "sync32_hex": "68F179C6",
+   "payload_bits": 248,
+   "polarity": "bit 1 = higher frequency"
+  },
+  {
+   "preamble_bits": 38,
+   "preamble_last_bit": 0,
+   "sync32_hex": "68F179C5",
+   "payload_bits": 248,
+   "polarity": "bit 1 = higher frequency"
+  },
+  {
+   "preamble_bits": 34,
+   "preamble_last_bit": 0,
+   "sync32_hex": "68F179C4",
+   "payload_bits": 250,
+   "polarity": "bit 1 = higher frequency"
+  },
+  {
+   "preamble_bits": 33,
+   "preamble_last_bit": 1,
+   "sync32_hex": "A723A722",
+   "payload_bits": 248,
+   "polarity": "bit 1 = higher frequency",
+   "known_sync": {
+    "name": "FrSky D16-like (CC2500)",
+    "sync_hex": "D391D391",
+    "offset_bits": -1,
+    "inverted": false,
+    "bit_errors": 0
+   }
+  }
+ ],
+ "field": {
+  "packets": 4,
+  "sync24_candidates": [
+   [
+    "68F179",
+    3
+   ],
+   [
+    "A723A7",
+    1
+   ]
+  ],
+  "preamble_bits": [
+   33,
+   34,
+   37,
+   38
+  ],
+  "known_sync": [
+   "FrSky D16-like (CC2500)"
+  ]
+ }
+}
